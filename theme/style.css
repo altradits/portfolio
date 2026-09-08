@@ -1,0 +1,17 @@
+/*
+Theme Name: Altradits Syndicate
+Theme URI: https://altradits.com
+Author: Stanley Chege Thuita
+Description: Custom obsidian and glassmorphic lifestyle portfolio theme for remote work, extreme expeditions, and Bitcoin freedom.
+Version: 1.0.0
+License: MIT License
+*/
+
+body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
