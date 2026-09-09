@@ -1,14 +1,14 @@
-# ALTRADITS BRAND IDENTITY & VECTOR LOCKUP SPECIFICATION
-### Master Vector Geometry, Typography, and Color Standard
+# ALTRADITS BRAND IDENTITY & VECTOR LOGO SPECIFICATION
+### Single Unified Master Vector Lockup Standard
 **Brand Entity**: Altradits Engineering Syndicate (Founded by Stanley Chege Thuita)  
-**Specification Version**: 3.0 (Exact Vector Lockup Standard)  
-**Status**: Formally Approved by the Altradits Executive Board  
+**Specification Version**: 4.0 (Exact Master Standard)  
+**Status**: Formally Approved & Synchronized  
 
 ---
 
-## 1. Master Vector Logo Lockup Specifications
+## 1. Master Vector Logo Lockup Standard
 
-The Altradits brand lockup consists of two core elements unified with balanced padding and mathematical alignment:
+The Altradits brand lockup consists of the title-case typography and the dynamic asymmetric wave ribbon swoosh unified in exact mathematical geometry:
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -21,64 +21,39 @@ The Altradits brand lockup consists of two core elements unified with balanced p
 ```
 
 ### 1.1 Typography Specifications
-* **Text String**: `"Altradits"` (Strict Title Case: capital `'A'` followed by lowercase `'ltradits'`).
-* **Font Family**: `Open Sans` (Weights: Bold 700 / ExtraBold 800).
-* **Letter Spacing (Tracking)**: `20px` expanded kerning.
-* **Color**: Solid Periwinkle / Medium Cornflower Blue (`#4A6FA5` / `rgb(74, 111, 165)`).
-* **Horizontal Alignment**: Center-anchored (`x="510" y="148"` within `1000x360` viewBox to account for trailing tracking).
+* **Text String**: `"Altradits"` (*Title Case*: Capital `'A'` followed by lowercase `'ltradits'`).
+* **Font Family**: `Open Sans` (Bold 700 with standalone embedded font geometry).
+* **Color**: Solid Cornflower Blue (`#4A6FC3` / `rgb(74, 111, 195)`).
+* **Kerning**: Standard balanced Open Sans tracking.
+* **Anchor**: Center-anchored (`x="510" y="194"` within `1024x450` viewBox).
 
 ### 1.2 Swoosh Graphic Specifications
 * **Placement**: Positioned directly centered underneath the wordmark.
-* **Shape**: A fluid, asymmetric horizontal wave ribbon featuring needle-sharp tapered ends:
-  * **Left Tip**: Starts at `(215, 195)`, pointing sharply up-left.
-  * **Right Tip**: Terminates at `(785, 275)`, pointing sharply down-right.
-  * **Middle Body**: Swells volumetrically between `X=380` and `X=620` with a smooth ~48px organic thickness.
-* **Color**: Solid vivid Coral-Red (`#E55252` / `rgb(229, 82, 82)`).
-* **3D Contour Finish**: Multi-stop linear gradient (`#FF6B6B` ➔ `#E55252` ➔ `#D43D3D` ➔ `#A82020`) creating a soft inner shadow gradient along its lower contour and specular sheen along its upper edge.
+* **Shape**: Fluid, asymmetric horizontal wave ribbon:
+  * **Left Needle Tip**: Points up-left (`92, 238`).
+  * **Trough**: Curves downwards through `(197.5, 331.8)` to `(315.4, 358.9)`.
+  * **Upward Sweep**: Rises through `(476.6, 293.9)` to crest at `(782.0, 222.9)`.
+  * **Right Needle Tip**: Terminates at `(924, 287)` pointing down-right.
+  * **Lower Contour**: Swells volumetrically to ~65px thickness at `(312.5, 428.8)` and tapers smoothly back to both needle tips.
+* **Color & 3D Depth**: Solid vivid Coral-Red (`#E64F56` / `rgb(230, 79, 86)`) with a multi-stop linear gradient (`#FF636B` ➔ `#E64F56` ➔ `#D43A42` ➔ `#B32028`) creating a soft inner shadow along its lower contour and specular sheen along its upper edge.
 
-### 1.3 Composition & Alignment
-* **Vertical Alignment**: Clean, balanced vertical padding between the baseline of the wordmark and the top crest of the swoosh.
-* **Background**: Pure transparent SVG canvas (`viewBox="0 0 1000 360"`).
-* **Deliverable Formats**:
-  * `theme/assets/logo.svg` & `assets/logo.svg` — Master Scalable Vector Graphic with embedded Open Sans font.
-  * `theme/assets/logo-badge.svg` & `assets/logo-badge.svg` — Solid white badge container lockup.
-  * `theme/assets/logo.png` & `assets/logo.png` — 4x Super-sampled rasterized PNG with badge container.
-  * `theme/assets/logo-transparent.png` & `assets/logo-transparent.png` — 4x Super-sampled transparent PNG.
-  * `theme/assets/favicon.svg` & `public/favicon.svg` — Standalone coral-red wave ribbon icon.
+### 1.3 Active Logo Deliverables
+All non-matching variations and obsolete files have been purged. The active assets are:
+
+* `theme/assets/logo.svg` (and mirrored in `assets/logo.svg`, `public/logo.svg`) — **Master Scalable Vector Graphic**
+* `theme/assets/logo.png` (and mirrored in `assets/logo.png`, `public/logo.png`) — **High-DPI 4x Badge Raster PNG**
+* `theme/assets/logo-transparent.png` (and mirrored) — **High-DPI 4x Transparent Raster PNG**
+* `theme/assets/favicon.svg` & `favicon.png` — **Active Favicon Icon**
+* `theme/assets/hero-watermark.svg` — **Ambient Hero Section Texture**
 
 ---
 
-## 2. Master Color Palette Architecture
+## 2. Color Palette Values
 
-| Color Role | Color Name | Hex Code | RGB | Strategic Purpose |
+| Role | Color Name | Hex | RGB | Usage |
 | :--- | :--- | :--- | :--- | :--- |
-| **Primary Wordmark** | Cornflower Blue | `#4A6FA5` | `74, 111, 165` | "Altradits" Title Case Wordmark |
-| **Primary Swoosh** | Vivid Coral-Red | `#E55252` | `229, 82, 82` | Centered 3D Wave Ribbon Underneath |
-| **Swoosh Light Sheen**| Coral Highlight | `#FF6B6B` | `255, 107, 107` | Upper Contour Specular Highlight |
-| **Swoosh Deep Shadow**| Deep Crimson | `#A82020` | `168, 32, 32` | Lower Contour Depth Gradient |
-| **Canvas Background**| Obsidian Black | `#09090B` | `9, 9, 11` | Primary Syndicate Dark Mode Surface |
-| **Accent Accent** | Bitcoin Gold | `#F59E0B` | `245, 158, 11` | Value Rails & Settlement Badges |
-| **Accent Telemetry** | Lightning Emerald| `#10B981` | `16, 185, 129` | Node Health & Live Network Telemetry |
-
----
-
-## 3. Mathematical Vector Path Definition
-
-```xml
-<!-- Typography (Title Case "Altradits", 20px Tracking, Open Sans 800) -->
-<text x="510" y="148" 
-      font-family="'Open Sans', sans-serif" 
-      font-size="94" 
-      font-weight="800" 
-      letter-spacing="20px" 
-      fill="#4A6FA5" 
-      text-anchor="middle">Altradits</text>
-
-<!-- Fluid Asymmetric Wave Ribbon Swoosh (Needle Tips + Volumetric Body) -->
-<path d="M 215,195 
-         C 270,222 365,262 495,256 
-         C 610,250 715,188 785,275 
-         C 715,255 595,292 488,298 
-         C 355,306 262,238 215,195 Z" 
-      fill="url(#coral3DGradient)" />
-```
+| **Wordmark** | Cornflower Blue | `#4A6FC3` | `74, 111, 195` | "Altradits" Wordmark |
+| **Swoosh Body** | Coral-Red | `#E64F56` | `230, 79, 86` | Wave Ribbon Swoosh |
+| **Swoosh Highlight**| Coral Sheen | `#FF636B` | `255, 99, 107` | Upper Contour Sheen |
+| **Swoosh Shadow** | Deep Crimson | `#B32028` | `179, 32, 40` | Lower Contour Depth |
+| **Obsidian** | Void Black | `#09090B` | `9, 9, 11` | Primary Syndicate Canvas |
