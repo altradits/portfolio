@@ -78,7 +78,7 @@
 
 <main id="primary" class="site-main flex-1 w-full">
 
-    <!-- HERO SECTION (Light Luminous Canvas with Story Slideshow) -->
+    <!-- HERO SECTION (Light Luminous Canvas with Story Slideshow & Interactive Particle Mesh) -->
     <section class="relative min-h-screen w-full bg-[#FAFAFA] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12 overflow-hidden">
         
         <!-- Background Cinematic Slideshow -->
@@ -93,6 +93,9 @@
         <div class="absolute inset-0 z-1 bg-gradient-to-b from-white/92 via-white/80 to-[#FAFAFA] pointer-events-none"></div>
         <div class="absolute inset-0 z-1 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.70)_0%,rgba(255,255,255,0.95)_70%,#FAFAFA_100%)] pointer-events-none"></div>
         <div class="absolute inset-0 z-1 bg-[radial-gradient(circle_at_center,rgba(229,82,82,0.08)_0%,transparent_60%)] pointer-events-none"></div>
+
+        <!-- Interactive Luminous Particle Effect Canvas -->
+        <canvas id="hero-particle-canvas" class="absolute inset-0 z-2 pointer-events-none w-full h-full"></canvas>
 
         <!-- Hero Section Watermark -->
         <div class="absolute inset-0 z-1 flex items-center justify-center pointer-events-none select-none overflow-hidden">
@@ -491,6 +494,201 @@
     }
 
     resetSlideTimer();
+
+    // Interactive Luminous Particle & Velocity Constellation Engine
+    class ParticleNetwork {
+        constructor(canvasId) {
+            this.canvas = document.getElementById(canvasId);
+            if (!this.canvas) return;
+            this.ctx = this.canvas.getContext('2d');
+            this.particles = [];
+            this.mouse = { x: null, y: null, radius: 170 };
+            this.animId = null;
+            this.isVisible = true;
+
+            this.colors = [
+                { r: 74, g: 111, b: 195 },  // Altradits Blue #4A6FC3
+                { r: 229, g: 82, b: 82 },   // Coral-Red #E55252
+                { r: 217, g: 119, b: 6 },   // Bitcoin Gold #D97706
+                { r: 5, g: 150, b: 105 }    // Emerald Velocity #059669
+            ];
+
+            this.init();
+        }
+
+        init() {
+            this.resize();
+            this.createParticles();
+            this.bindEvents();
+            this.animate();
+        }
+
+        resize() {
+            const dpr = window.devicePixelRatio || 1;
+            const hero = this.canvas.parentElement;
+            if (!hero) return;
+            const rect = hero.getBoundingClientRect();
+            this.width = rect.width;
+            this.height = rect.height;
+            this.canvas.width = this.width * dpr;
+            this.canvas.height = this.height * dpr;
+            this.ctx.scale(dpr, dpr);
+        }
+
+        createParticles() {
+            this.particles = [];
+            const count = Math.floor(Math.min(95, Math.max(35, (this.width * this.height) / 13500)));
+            for (let i = 0; i < count; i++) {
+                const color = this.colors[Math.floor(Math.random() * this.colors.length)];
+                this.particles.push({
+                    x: Math.random() * this.width,
+                    y: Math.random() * this.height,
+                    vx: (Math.random() - 0.5) * 0.7,
+                    vy: (Math.random() - 0.5) * 0.7,
+                    radius: Math.random() * 2.2 + 1.2,
+                    color: color,
+                    alpha: Math.random() * 0.5 + 0.35,
+                    pulseSpeed: Math.random() * 0.03 + 0.015,
+                    pulseVal: Math.random() * Math.PI
+                });
+            }
+        }
+
+        bindEvents() {
+            window.addEventListener('resize', () => {
+                this.resize();
+                this.createParticles();
+            });
+
+            const hero = this.canvas.parentElement;
+            if (hero) {
+                hero.addEventListener('mousemove', (e) => {
+                    const rect = this.canvas.getBoundingClientRect();
+                    this.mouse.x = e.clientX - rect.left;
+                    this.mouse.y = e.clientY - rect.top;
+                });
+
+                hero.addEventListener('mouseleave', () => {
+                    this.mouse.x = null;
+                    this.mouse.y = null;
+                });
+
+                hero.addEventListener('touchmove', (e) => {
+                    if (e.touches.length > 0) {
+                        const rect = this.canvas.getBoundingClientRect();
+                        this.mouse.x = e.touches[0].clientX - rect.left;
+                        this.mouse.y = e.touches[0].clientY - rect.top;
+                    }
+                }, { passive: true });
+
+                hero.addEventListener('touchend', () => {
+                    this.mouse.x = null;
+                    this.mouse.y = null;
+                });
+
+                const observer = new IntersectionObserver((entries) => {
+                    this.isVisible = entries[0].isIntersecting;
+                    if (this.isVisible && !this.animId) {
+                        this.animate();
+                    }
+                }, { threshold: 0.1 });
+                observer.observe(hero);
+            }
+        }
+
+        animate() {
+            if (!this.isVisible) {
+                this.animId = null;
+                return;
+            }
+
+            this.ctx.clearRect(0, 0, this.width, this.height);
+
+            // Draw & Update Particles
+            for (let i = 0; i < this.particles.length; i++) {
+                const p = this.particles[i];
+
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > this.width) p.vx *= -1;
+                if (p.y < 0 || p.y > this.height) p.vy *= -1;
+
+                p.pulseVal += p.pulseSpeed;
+                const currentR = p.radius + Math.sin(p.pulseVal) * 0.6;
+
+                // Mouse interaction
+                if (this.mouse.x !== null && this.mouse.y !== null) {
+                    const dx = this.mouse.x - p.x;
+                    const dy = this.mouse.y - p.y;
+                    const dist = Math.hypot(dx, dy);
+                    if (dist < this.mouse.radius) {
+                        const force = (1 - dist / this.mouse.radius) * 1.5;
+                        p.x -= (dx / dist) * force;
+                        p.y -= (dy / dist) * force;
+
+                        const rayAlpha = (1 - dist / this.mouse.radius) * 0.35;
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(p.x, p.y);
+                        this.ctx.lineTo(this.mouse.x, this.mouse.y);
+                        this.ctx.strokeStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${rayAlpha})`;
+                        this.ctx.lineWidth = 1;
+                        this.ctx.stroke();
+                    }
+                }
+
+                // Halo glow
+                const gradient = this.ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, currentR * 3);
+                gradient.addColorStop(0, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${p.alpha})`);
+                gradient.addColorStop(0.5, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${p.alpha * 0.4})`);
+                gradient.addColorStop(1, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, 0)`);
+
+                this.ctx.beginPath();
+                this.ctx.arc(p.x, p.y, currentR * 3, 0, Math.PI * 2);
+                this.ctx.fillStyle = gradient;
+                this.ctx.fill();
+
+                // Core dot
+                this.ctx.beginPath();
+                this.ctx.arc(p.x, p.y, currentR, 0, Math.PI * 2);
+                this.ctx.fillStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${p.alpha * 1.2})`;
+                this.ctx.fill();
+            }
+
+            // Connecting Lines
+            const maxDist = 130;
+            for (let i = 0; i < this.particles.length; i++) {
+                for (let j = i + 1; j < this.particles.length; j++) {
+                    const p1 = this.particles[i];
+                    const p2 = this.particles[j];
+                    const dx = p1.x - p2.x;
+                    const dy = p1.y - p2.y;
+                    const dist = Math.hypot(dx, dy);
+
+                    if (dist < maxDist) {
+                        const lineAlpha = (1 - dist / maxDist) * 0.22;
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(p1.x, p1.y);
+                        this.ctx.lineTo(p2.x, p2.y);
+                        this.ctx.strokeStyle = `rgba(${p1.color.r}, ${p1.color.g}, ${p1.color.b}, ${lineAlpha})`;
+                        this.ctx.lineWidth = 0.85;
+                        this.ctx.stroke();
+                    }
+                }
+            }
+
+            this.animId = requestAnimationFrame(() => this.animate());
+        }
+    }
+
+    // Initialize Particle Network on DOM ready
+    document.addEventListener('DOMContentLoaded', () => {
+        new ParticleNetwork('hero-particle-canvas');
+    });
+    // Fallback immediate initialization
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        new ParticleNetwork('hero-particle-canvas');
+    }
 </script>
 
 </body>
