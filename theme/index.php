@@ -18,11 +18,6 @@ get_header();
         </div>
         
         <div class="relative z-10 max-w-4xl mx-auto text-center mt-20">
-            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-semibold uppercase tracking-wider mb-6">
-                <span class="w-2 h-2 rounded-full bg-[#E55252] animate-pulse"></span>
-                <span>Stanley Chege Thuita. Software Engineer.</span>
-            </div>
-            
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
                 Build Fast Software. Settle Payments Anywhere.
             </h1>
