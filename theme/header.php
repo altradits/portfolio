@@ -13,11 +13,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="<?php echo function_exists('get_stylesheet_uri') ? get_stylesheet_uri() : 'theme/style.css'; ?>">
 </head>
-<body <?php body_class('bg-zinc-950 text-zinc-100 antialiased selection:bg-[#E55252] selection:text-white overflow-x-hidden'); ?>>
+<body <?php body_class('bg-zinc-950 text-zinc-100 antialiased selection:bg-[#E55252] selection:text-white overflow-x-hidden min-h-screen flex flex-col'); ?>>
 
 <!-- Floating Glass Navbar with Solid White Logo Badge -->
 <header class="fixed top-4 sm:top-6 left-0 right-0 z-50 flex justify-center px-4">
-    <nav class="flex items-center justify-between w-full max-w-5xl px-5 sm:px-6 py-3 bg-zinc-950/85 backdrop-blur-xl border border-zinc-800/80 rounded-full shadow-2xl">
+    <nav class="flex items-center justify-between w-full max-w-7xl 2xl:max-w-[1600px] px-5 sm:px-8 py-3 bg-zinc-950/85 backdrop-blur-xl border border-zinc-800/80 rounded-full shadow-2xl">
         
         <!-- Logo with Solid White Background Badge -->
         <div class="bg-white px-3.5 py-1.5 rounded-lg shadow-md flex items-center hover:opacity-95 transition-opacity">
