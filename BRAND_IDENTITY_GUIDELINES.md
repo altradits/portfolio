@@ -26,10 +26,10 @@ The Altradits brand lockup consists of the title-case typography and the dynamic
 * **Font Sizing & Presence**: `font-size: 205px` (Commanding Dominance, occupying ~80% of the lockup vertical visual weight).
 * **Color**: Solid Cornflower Blue (`#4A6FC3` / `rgb(74, 111, 195)`).
 * **Kerning**: Standard balanced Open Sans tracking.
-* **Anchor**: Center-anchored (`x="510" y="180"` within `viewBox="55 20 910 340"`).
+* **Anchor**: Center-anchored (`x="510" y="180"` within `viewBox="50 15 920 380"`).
 
 ### 1.2 Swoosh Graphic Specifications
-* **Placement**: Positioned directly centered underneath the wordmark as a dynamic velocity underline ribbon.
+* **Placement**: Positioned directly centered underneath the wordmark as a dynamic velocity underline ribbon with an exact 1-pixel hairline breathing space separation (`gap ~ 1px` between bottom of letters and top contour of swoosh).
 * **Shape**: Fluid, asymmetric horizontal wave ribbon:
   * **Left Needle Tip**: Points up-left.
   * **Trough**: Curves downwards smoothly.
@@ -41,7 +41,7 @@ The Altradits brand lockup consists of the title-case typography and the dynamic
 ### 1.3 Active Logo & Favicon Deliverables
 All non-matching variations and obsolete files have been purged. The active assets are:
 
-* `theme/assets/logo.svg` (and mirrored in `assets/logo.svg`, `public/logo.svg`) — **Master Scalable Vector Graphic** with dominant text ratio, tight `viewBox="55 20 910 340"`, transparent background, and standalone embedded Open Sans Bold font.
+* `theme/assets/logo.svg` (and mirrored in `assets/logo.svg`, `public/logo.svg`) — **Master Scalable Vector Graphic** with dominant text ratio, 1-pixel hairline separation, tight `viewBox="50 15 920 380"`, transparent background, and standalone embedded Open Sans Bold font.
 * `theme/assets/logo.png` (and mirrored in `assets/logo.png`, `public/logo.png`) — **High-DPI 4x Badge Raster PNG**.
 * `theme/assets/logo-transparent.png` (and mirrored) — **High-DPI 4x Transparent Raster PNG**.
 * `theme/assets/favicon.svg` (and mirrored in `assets/favicon.svg`, `public/favicon.svg`) — **Master White Favicon SVG** featuring pure white rounded square base (`#FFFFFF`, `rx="112"`), Cornflower Blue (`#4A6FC3`) `"A"` monogram, and centered Coral-Red (`#E55252`) wave ribbon swoosh.
