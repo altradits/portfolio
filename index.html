@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altradits Syndicate | Stanley Chege Thuita</title>
+    <title>Stanley Chege Thuita | Software Engineer</title>
     <link rel="icon" type="image/svg+xml" href="theme/assets/favicon.svg">
     <!-- Google Fonts: Open Sans & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +13,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="theme/style.css">
 </head>
-<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-[#E55252] selection:text-white">
+<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-[#E55252] selection:text-white overflow-x-hidden">
 
 <!-- Floating Glass Navbar with Solid White Logo Badge -->
-<header class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-    <nav class="flex items-center justify-between w-full max-w-5xl px-6 py-3 bg-zinc-950/80 backdrop-blur-xl border border-zinc-800/80 rounded-full shadow-2xl">
+<header class="fixed top-4 sm:top-6 left-0 right-0 z-50 flex justify-center px-4">
+    <nav class="flex items-center justify-between w-full max-w-5xl px-5 sm:px-6 py-3 bg-zinc-950/85 backdrop-blur-xl border border-zinc-800/80 rounded-full shadow-2xl">
         
         <!-- Logo with Solid White Background Badge -->
         <div class="bg-white px-3.5 py-1.5 rounded-lg shadow-md flex items-center hover:opacity-95 transition-opacity">
@@ -25,11 +25,11 @@
                 <img src="theme/assets/logo.svg" 
                      onerror="this.onerror=null; this.src='assets/logo.svg'; if(!this.complete || this.naturalWidth === 0){ this.src='theme/assets/logo.png'; }" 
                      alt="Altradits" 
-                     class="h-7 sm:h-8 w-auto object-contain block" />
+                     class="h-6 sm:h-7.5 w-auto object-contain block" />
             </a>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Desktop Navigation Links -->
         <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-300">
             <a href="#gigs" class="hover:text-white transition-colors">Gigs</a>
             <a href="#expeditions" class="hover:text-white transition-colors">Expeditions</a>
@@ -38,16 +38,34 @@
             <a href="#code" class="hover:text-white transition-colors">Code</a>
         </div>
 
-        <!-- Connect Action Button -->
-        <div>
-            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-colors rounded-full shadow-lg">
+        <!-- Action Button & Mobile Menu Toggle -->
+        <div class="flex items-center space-x-3">
+            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-all rounded-full shadow-lg">
                 Connect
             </a>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-zinc-300 hover:text-white p-1.5 focus:outline-none" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
     </nav>
 </header>
 
+<!-- Mobile Navigation Dropdown Menu -->
+<div id="mobile-menu" class="fixed inset-x-4 top-20 z-40 hidden md:hidden bg-zinc-900/95 backdrop-blur-2xl border border-zinc-800 rounded-2xl p-6 shadow-2xl">
+    <div class="flex flex-col space-y-4 text-base font-semibold text-zinc-200">
+        <a href="#gigs" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2 border-b border-zinc-800">Gigs</a>
+        <a href="#expeditions" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2 border-b border-zinc-800">Expeditions</a>
+        <a href="#network" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2 border-b border-zinc-800">Network</a>
+        <a href="#shop" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2 border-b border-zinc-800">Shop</a>
+        <a href="#code" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2">Code</a>
+    </div>
+</div>
+
 <main id="primary" class="site-main">
+
+    <!-- HERO SECTION (Full-Screen Immersive Canvas) -->
     <section class="relative min-h-screen bg-zinc-950 text-white flex flex-col items-center justify-center px-6 overflow-hidden">
         
         <!-- Background Cinematic Slideshow -->
@@ -63,7 +81,7 @@
         <div class="absolute inset-0 z-1 bg-[radial-gradient(ellipse_at_center,rgba(9,9,11,0.45)_0%,rgba(9,9,11,0.92)_70%,#09090b_100%)] pointer-events-none"></div>
         <div class="absolute inset-0 z-1 bg-[radial-gradient(circle_at_center,rgba(229,82,82,0.12)_0%,transparent_60%)] pointer-events-none"></div>
 
-        <!-- Hero Section Watermark (Ambient Subtle Texture) -->
+        <!-- Hero Section Watermark -->
         <div class="absolute inset-0 z-1 flex items-center justify-center pointer-events-none select-none overflow-hidden">
             <img src="theme/assets/hero-watermark.svg" 
                  alt="" 
@@ -71,7 +89,7 @@
         </div>
         
         <!-- Hero Foreground Content -->
-        <div class="relative z-10 max-w-4xl mx-auto text-center mt-20">
+        <div class="relative z-10 max-w-4xl mx-auto text-center mt-24 sm:mt-20">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight drop-shadow-md">
                 Build Fast Software. Settle Payments Anywhere.
             </h1>
@@ -81,16 +99,16 @@
             </p>
 
             <div class="flex flex-wrap items-center justify-center gap-4">
-                <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-semibold text-sm transition-all shadow-xl hover:scale-105 active:scale-95">
+                <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-semibold text-sm transition-all shadow-xl hover:scale-105 active:scale-95">
                     Hire Me Today
                 </a>
-                <a href="#code" class="px-7 py-3.5 rounded-full bg-zinc-900/90 hover:bg-zinc-800/90 border border-zinc-700/80 backdrop-blur-md text-zinc-100 font-semibold text-sm transition-all hover:scale-105 active:scale-95 shadow-lg">
+                <a href="#code" class="px-8 py-3.5 rounded-full bg-zinc-900/90 hover:bg-zinc-800/90 border border-zinc-700/80 backdrop-blur-md text-zinc-100 font-semibold text-sm transition-all hover:scale-105 active:scale-95 shadow-lg">
                     View My Code
                 </a>
             </div>
         </div>
 
-        <!-- Subtle Story Slideshow Indicator Bars -->
+        <!-- Story Slideshow Indicator Bars -->
         <div class="absolute bottom-8 z-10 flex items-center space-x-2.5">
             <button onclick="setSlide(0)" class="hero-indicator active" id="ind-0" aria-label="Slide 1 - Collaboration Hub"></button>
             <button onclick="setSlide(1)" class="hero-indicator" id="ind-1" aria-label="Slide 2 - Mountain Expedition"></button>
@@ -98,6 +116,278 @@
             <button onclick="setSlide(3)" class="hero-indicator" id="ind-3" aria-label="Slide 4 - Overland Route"></button>
         </div>
     </section>
+
+    <!-- 1. ENGINEERING SERVICES SECTION (#gigs) -->
+    <section id="gigs" class="py-24 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Engineering Services
+            </h2>
+            <p class="text-zinc-400 text-base sm:text-lg">
+                You get dedicated engineering sprints with clean architecture.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service Card 1 -->
+            <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-8 hover:border-[#E55252]/50 transition-all hover:-translate-y-1 shadow-lg">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-[#4A6FC3] flex items-center justify-center font-bold text-lg mb-6">
+                    FS
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Full Stack Systems</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                    Build high-load web applications with React, TypeScript, Python, and Node.js. Your interface loads fast and handles heavy user volume with zero downtime.
+                </p>
+                <div class="text-xs text-zinc-500 font-medium">React • TypeScript • Python • Next.js</div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-8 hover:border-[#E55252]/50 transition-all hover:-translate-y-1 shadow-lg">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-6">
+                    LN
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Payment Rail Integration</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                    Settle money instantly using Bitcoin Lightning Network and mobile money APIs. Your transactions clear in seconds across borders with minimal fees.
+                </p>
+                <div class="text-xs text-zinc-500 font-medium">Bitcoin LND • BTCPay • M-Pesa Daraja</div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-8 hover:border-[#E55252]/50 transition-all hover:-translate-y-1 shadow-lg">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-6">
+                    DB
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Database And Infrastructure</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                    Deploy scalable PostgreSQL databases, Redis cache layers, and Docker containers. Your backend runs with sub-second response times and rock solid security.
+                </p>
+                <div class="text-xs text-zinc-500 font-medium">PostgreSQL • Redis • Docker • Linux</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. EXPEDITIONS & ENDURANCE SECTION (#expeditions) -->
+    <section id="expeditions" class="py-24 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Expeditions And Endurance
+            </h2>
+            <p class="text-zinc-400 text-base sm:text-lg">
+                High-altitude mountain summits and overland endurance routes.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="group relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
+                <div class="h-64 overflow-hidden">
+                    <img src="theme/assets/hero/slide-2-mountain.jpg" alt="Mount Kenya Ascent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Mount Kenya Summit Routes</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        High-altitude speed ascents and technical ridge traverses across extreme terrain. Demanding environments require relentless focus and physical grit.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
+                <div class="h-64 overflow-hidden">
+                    <img src="theme/assets/hero/slide-4-expedition.jpg" alt="Overland Expedition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Cross Country Expeditions</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Long-distance motorcycle expeditions across remote African corridors. Self-supported navigation through desert tracks and mountain passes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
+                <div class="h-64 overflow-hidden">
+                    <img src="theme/assets/hero/slide-1-hub.jpg" alt="Trail Marathon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Ultra Endurance Trail Runs</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        50 kilometer and 100 kilometer mountain trail events. Testing human endurance limits through disciplined training and mental stamina.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. NETWORK TELEMETRY SECTION (#network) -->
+    <section id="network" class="py-24 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Live Network Telemetry
+            </h2>
+            <p class="text-zinc-400 text-base sm:text-lg">
+                Direct connections to global payment rails and open source systems.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 text-center">
+                <div class="text-3xl font-extrabold text-[#E55252] mb-2">100%</div>
+                <div class="text-white font-semibold text-base mb-1">Bitcoin Node Verified</div>
+                <div class="text-zinc-500 text-xs">Block height verified. Zero failed transactions.</div>
+            </div>
+
+            <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 text-center">
+                <div class="text-3xl font-extrabold text-emerald-400 mb-2">24 / 7</div>
+                <div class="text-white font-semibold text-base mb-1">Lightning Node Active</div>
+                <div class="text-zinc-500 text-xs">Active channels open. Routing payments globally.</div>
+            </div>
+
+            <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 text-center">
+                <div class="text-3xl font-extrabold text-[#4A6FC3] mb-2">50+</div>
+                <div class="text-white font-semibold text-base mb-1">Developer Community</div>
+                <div class="text-zinc-500 text-xs">Active builder network across Africa and worldwide.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SHOP & HARDWARE GEAR SECTION (#shop) -->
+    <section id="shop" class="py-24 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Equipment And Toolkits
+            </h2>
+            <p class="text-zinc-400 text-base sm:text-lg">
+                Field-tested gear, developer hardware kits, and vector assets.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Item 1 -->
+            <div class="bg-zinc-900/70 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                <div>
+                    <div class="text-xs font-semibold text-[#E55252] uppercase tracking-wider mb-2">Hardware</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Cold Storage Backup Kit</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Stainless steel seed backup plates and offline signing hardware. Secure your digital wealth with physical defense.
+                    </p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-zinc-800">
+                    <span class="text-lg font-bold text-white">$120 / 180k sats</span>
+                    <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-white transition-colors">Order Kit</a>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-zinc-900/70 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                <div>
+                    <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2">Field Gear</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Expedition Field Pack</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Lightweight trail running packs, navigation compasses, and solar charging units tested in extreme conditions.
+                    </p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-zinc-800">
+                    <span class="text-lg font-bold text-white">$85 / 130k sats</span>
+                    <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-white transition-colors">Order Gear</a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-zinc-900/70 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                <div>
+                    <div class="text-xs font-semibold text-[#4A6FC3] uppercase tracking-wider mb-2">Digital Toolkit</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Vector Asset Toolkit</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Complete scalable SVG and PNG asset bundle for builders. Clean vector geometry and typography standards.
+                    </p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-zinc-800">
+                    <span class="text-lg font-bold text-white">$45 / 70k sats</span>
+                    <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-white transition-colors">Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CODE REPOSITORIES SECTION (#code) -->
+    <section id="code" class="py-24 px-6 max-w-6xl mx-auto border-t border-zinc-900">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Public Code Repositories
+            </h2>
+            <p class="text-zinc-400 text-base sm:text-lg">
+                Inspect live code, audit commits, and clone repositories.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="https://github.com/altradits/portfolio" target="_blank" rel="noopener noreferrer" class="group bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 hover:border-zinc-700 transition-all hover:-translate-y-1 block shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="font-mono text-xs text-emerald-400">altradits/portfolio</span>
+                    <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
+                </div>
+                <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors mb-2">portfolio</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">
+                    Core personal portfolio and custom WordPress theme with dark obsidian architecture.
+                </p>
+            </a>
+
+            <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="group bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 hover:border-zinc-700 transition-all hover:-translate-y-1 block shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="font-mono text-xs text-amber-400">altradits/lightning</span>
+                    <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
+                </div>
+                <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors mb-2">lightning-gateway</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">
+                    High-speed Bitcoin Lightning payment processor with automated webhook notifications.
+                </p>
+            </a>
+
+            <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="group bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 hover:border-zinc-700 transition-all hover:-translate-y-1 block shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="font-mono text-xs text-[#4A6FC3]">altradits/payments</span>
+                    <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
+                </div>
+                <h3 class="text-lg font-bold text-white group-hover:text-[#4A6FC3] transition-colors mb-2">daraja-mobile-payments</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">
+                    Production ready mobile money SDK for instant payment settlements.
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 6. CONTACT & FOOTER SECTION -->
+    <section class="py-24 px-6 max-w-4xl mx-auto text-center border-t border-zinc-900">
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mb-6">
+            Start Your Project Today
+        </h2>
+        <p class="text-lg text-zinc-300 max-w-xl mx-auto mb-10 leading-relaxed">
+            Reach out directly on WhatsApp or email. You get a direct response within two hours.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-semibold text-sm transition-all shadow-xl hover:scale-105 active:scale-95">
+                WhatsApp Chat
+            </a>
+            <a href="mailto:stanley@altradits.com" class="px-8 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 font-semibold text-sm transition-all hover:scale-105 active:scale-95">
+                Send Email
+            </a>
+            <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 font-semibold text-sm transition-all hover:scale-105 active:scale-95">
+                GitHub Profile
+            </a>
+        </div>
+
+        <div class="pt-12 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+            <div class="flex items-center space-x-2">
+                <img src="theme/assets/favicon.svg" alt="" class="w-6 h-6 object-contain" />
+                <span>Altradits Engineering Syndicate</span>
+            </div>
+            <div>© 2026 Stanley Chege Thuita. All rights reserved.</div>
+        </div>
+    </section>
+
 </main>
 
 <script>
@@ -131,6 +421,13 @@
     function resetSlideTimer() {
         clearInterval(slideTimer);
         slideTimer = setInterval(nextSlide, 5500);
+    }
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu) {
+            menu.classList.toggle('hidden');
+        }
     }
 
     resetSlideTimer();
