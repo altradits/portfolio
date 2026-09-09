@@ -25,23 +25,18 @@ get_header();
         <div id="hero-tilt-card" class="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center justify-center transition-transform duration-200 ease-out will-change-transform">
             
             <!-- Two-Line Animated H1 (Line 1 Constant, Line 2 Action Pain Points) -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-950 mb-6 leading-[1.15] text-center w-full max-w-4xl mx-auto">
-                <span class="block text-zinc-950">I Build Software That</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-950 mb-8 sm:mb-12 leading-[1.15] text-center w-full max-w-4xl mx-auto">
+                <span class="block text-zinc-950">High-Performance Software That</span>
                 <span id="hero-animated-painpoint" class="block text-[#E55252] mt-1 sm:mt-2 transition-all duration-300 ease-out transform translate-y-0 opacity-100">
                     Eliminates Server Bottlenecks.
                 </span>
             </h1>
-            
-            <!-- Direct Short Guide Subtext -->
-            <p class="text-lg sm:text-xl md:text-2xl text-zinc-600 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-normal">
-                Full stack engineer. Web applications, Bitcoin Lightning corridors, and clean APIs delivered on schedule.
-            </p>
 
             <!-- Minimalist Primary Call to Action -->
             <div class="flex flex-wrap items-center justify-center gap-4 w-full">
                 <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" 
                    class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
-                    Hire Me Today
+                    Start A Project
                 </a>
                 <a href="#code" 
                    class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-zinc-50 border border-zinc-200/90 text-zinc-900 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-sm">
