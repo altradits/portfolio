@@ -2,57 +2,59 @@
 Theme Name: Altradits Syndicate
 Theme URI: https://altradits.com
 Author: Stanley Chege Thuita
-Description: Custom obsidian and glassmorphic lifestyle portfolio theme for remote work, extreme expeditions, and Bitcoin freedom.
-Version: 2.0.0
+Description: Custom light luxury lifestyle portfolio theme for remote software engineering, extreme expeditions, and Bitcoin rails.
+Version: 3.0.0
 License: MIT License
 */
 
 :root {
-  /* Brand Primary: Electric Cobalt */
-  --al-cobalt-light: #60A5FA;
-  --al-cobalt-core:  #3B82F6;
-  --al-cobalt-deep:  #1D4ED8;
-  --al-cobalt-dark:  #1E3A8A;
-  --al-cobalt-glow:  rgba(59, 130, 246, 0.4);
+  /* Brand Primary: Cornflower / Periwinkle Blue */
+  --al-blue-light: #6A8EDD;
+  --al-blue-core:  #4A6FC3;
+  --al-blue-deep:  #3657A8;
+  --al-blue-dark:  #253D7A;
+  --al-blue-glow:  rgba(74, 111, 195, 0.25);
 
-  /* Brand Action: Kinetic Crimson (Elevated Swoosh) */
-  --al-crimson-light: #FF6B81;
-  --al-crimson-core:  #F43F5E;
-  --al-crimson-deep:  #E11D48;
-  --al-crimson-dark:  #BE123C;
-  --al-crimson-glow:  rgba(244, 63, 94, 0.45);
+  /* Brand Action: Vivid Coral-Red (Swoosh Standard) */
+  --al-coral-light: #FF6E75;
+  --al-coral-core:  #E55252;
+  --al-coral-deep:  #C93B3B;
+  --al-coral-dark:  #A32828;
+  --al-coral-glow:  rgba(229, 82, 82, 0.35);
 
   /* Sound Money: Bitcoin Gold */
-  --al-gold-bright: #FDE047;
-  --al-gold-core:   #F59E0B;
-  --al-gold-deep:   #D97706;
-  --al-gold-glow:   rgba(245, 158, 11, 0.35);
+  --al-gold-bright: #FBBF24;
+  --al-gold-core:   #D97706;
+  --al-gold-deep:   #B45309;
+  --al-gold-glow:   rgba(217, 119, 6, 0.25);
 
   /* Settlement: Emerald Velocity */
   --al-emerald-light: #34D399;
-  --al-emerald-core:  #10B981;
-  --al-emerald-deep:  #059669;
-  --al-emerald-glow:  rgba(16, 185, 129, 0.35);
+  --al-emerald-core:  #059669;
+  --al-emerald-deep:  #047857;
+  --al-emerald-glow:  rgba(5, 150, 105, 0.25);
 
-  /* Luxury Obsidian Canvas */
-  --al-obsidian-void: #040C07;
-  --al-obsidian-surf: rgba(8, 22, 14, 0.85);
-  --al-obsidian-card: rgba(13, 36, 24, 0.70);
-  --al-surface-dark:  #09090b;
+  /* Luxury Light Canvas Foundation */
+  --al-surface-bg:    #FAFAFA;
+  --al-surface-card:  #FFFFFF;
+  --al-surface-subtle:#F4F4F5;
+  --al-border-light:  rgba(0, 0, 0, 0.08);
+  --al-border-hover:  rgba(229, 82, 82, 0.40);
 
   /* Typography Colors */
-  --al-text-primary: #F4F4F5;
-  --al-text-muted:   #A1A1AA;
-  --al-text-soft:    #71717A;
+  --al-text-primary:  #09090B;
+  --al-text-secondary:#52525B;
+  --al-text-muted:    #71717A;
 
   /* Glass Borders & Shadows */
-  --al-glass-border: rgba(255, 255, 255, 0.10);
-  --al-glass-border-bright: rgba(255, 255, 255, 0.22);
-  --al-shadow-glow: 0 0 25px rgba(59, 130, 246, 0.15);
+  --al-glass-bg:      rgba(255, 255, 255, 0.88);
+  --al-glass-border:  rgba(0, 0, 0, 0.08);
+  --al-shadow-card:   0 4px 20px rgba(0, 0, 0, 0.05);
+  --al-shadow-hover:  0 12px 32px rgba(0, 0, 0, 0.10);
 }
 
 body {
-  background-color: var(--al-surface-dark);
+  background-color: var(--al-surface-bg);
   color: var(--al-text-primary);
   font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
@@ -61,48 +63,34 @@ body {
 }
 
 ::selection {
-  background-color: var(--al-crimson-core);
+  background-color: var(--al-coral-core);
   color: #FFFFFF;
 }
 
-/* Glassmorphism Capsule Navbar */
+/* Glassmorphism Light Capsule Navbar */
 .al-glass-nav {
-  background: rgba(9, 9, 11, 0.75);
+  background: var(--al-glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--al-glass-border);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 /* Brand Logo Badge */
 .al-logo-badge {
   background: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 6px 14px;
   display: flex;
   align-items: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
 }
 
 .al-logo-badge:hover {
   transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(244, 63, 94, 0.25);
-}
-
-/* CTA Buttons */
-.al-btn-connect {
-  background: linear-gradient(135deg, var(--al-emerald-light) 0%, var(--al-emerald-core) 100%);
-  color: #040C07;
-  font-weight: 700;
-  box-shadow: 0 4px 14px var(--al-emerald-glow);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.al-btn-connect:hover {
-  transform: translateY(-1px) scale(1.03);
-  box-shadow: 0 6px 22px rgba(16, 185, 129, 0.5);
-  filter: brightness(1.05);
+  box-shadow: 0 6px 20px rgba(229, 82, 82, 0.20);
 }
 
 /* Hero Cinematic Slideshow */
@@ -125,16 +113,15 @@ body {
 
 .hero-indicator {
   width: 24px;
-  height: 3px;
+  height: 3.5px;
   border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.20);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .hero-indicator.active {
   width: 44px;
-  background-color: #E55252;
-  box-shadow: 0 0 10px rgba(229, 82, 82, 0.6);
+  background-color: var(--al-coral-core);
+  box-shadow: 0 0 10px rgba(229, 82, 82, 0.5);
 }
-

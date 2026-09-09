@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +13,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="theme/style.css">
 </head>
-<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-[#E55252] selection:text-white overflow-x-hidden min-h-screen flex flex-col">
+<body class="bg-[#FAFAFA] text-zinc-900 antialiased selection:bg-[#E55252] selection:text-white overflow-x-hidden min-h-screen flex flex-col">
 
 <!-- Floating Glass Navbar with Solid White Logo Badge -->
 <header class="fixed top-4 sm:top-6 left-0 right-0 z-50 flex justify-center px-4">
-    <nav class="flex items-center justify-between w-full max-w-7xl 2xl:max-w-[1600px] px-5 sm:px-8 py-3 bg-zinc-950/85 backdrop-blur-xl border border-zinc-800/80 rounded-full shadow-2xl">
+    <nav class="flex items-center justify-between w-full max-w-7xl 2xl:max-w-[1600px] px-5 sm:px-8 py-3 bg-white/85 backdrop-blur-xl border border-zinc-200/80 rounded-full shadow-lg">
         
         <!-- Logo with Solid White Background Badge -->
-        <div class="bg-white px-3.5 py-1.5 rounded-lg shadow-md flex items-center hover:opacity-95 transition-opacity">
+        <div class="bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-zinc-100 flex items-center hover:opacity-95 transition-opacity">
             <a href="#" class="flex items-center">
                 <img src="theme/assets/logo.svg" 
                      onerror="this.onerror=null; this.src='assets/logo.svg'; if(!this.complete || this.naturalWidth === 0){ this.src='theme/assets/logo.png'; }" 
@@ -30,20 +30,20 @@
         </div>
 
         <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-300">
-            <a href="#gigs" class="hover:text-white transition-colors">Gigs</a>
-            <a href="#expeditions" class="hover:text-white transition-colors">Expeditions</a>
-            <a href="#network" class="hover:text-white transition-colors">Network</a>
-            <a href="#shop" class="hover:text-white transition-colors">Shop</a>
-            <a href="#code" class="hover:text-white transition-colors">Code</a>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-zinc-600">
+            <a href="#gigs" class="hover:text-zinc-950 transition-colors">Gigs</a>
+            <a href="#expeditions" class="hover:text-zinc-950 transition-colors">Expeditions</a>
+            <a href="#network" class="hover:text-zinc-950 transition-colors">Network</a>
+            <a href="#shop" class="hover:text-zinc-950 transition-colors">Shop</a>
+            <a href="#code" class="hover:text-zinc-950 transition-colors">Code</a>
         </div>
 
         <!-- Action Button & Mobile Menu Toggle -->
         <div class="flex items-center space-x-3">
-            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-all rounded-full shadow-lg">
+            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-all rounded-full shadow-md">
                 Connect
             </a>
-            <button onclick="toggleMobileMenu()" class="md:hidden text-zinc-300 hover:text-white p-1.5 focus:outline-none" aria-label="Toggle navigation menu">
+            <button onclick="toggleMobileMenu()" class="md:hidden text-zinc-700 hover:text-zinc-950 p-1.5 focus:outline-none" aria-label="Toggle navigation menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -53,20 +53,20 @@
 </header>
 
 <!-- Mobile Navigation Dropdown Menu -->
-<div id="mobile-menu" class="fixed inset-x-4 top-20 z-40 hidden md:hidden bg-zinc-900/95 backdrop-blur-2xl border border-zinc-800 rounded-2xl p-6 shadow-2xl">
-    <div class="flex flex-col space-y-4 text-base font-semibold text-zinc-200">
-        <a href="#gigs" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2 border-b border-zinc-800">Gigs</a>
-        <a href="#expeditions" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2 border-b border-zinc-800">Expeditions</a>
-        <a href="#network" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2 border-b border-zinc-800">Network</a>
-        <a href="#shop" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2 border-b border-zinc-800">Shop</a>
-        <a href="#code" onclick="toggleMobileMenu()" class="hover:text-white transition-colors py-2">Code</a>
+<div id="mobile-menu" class="fixed inset-x-4 top-20 z-40 hidden md:hidden bg-white/95 backdrop-blur-2xl border border-zinc-200 rounded-2xl p-6 shadow-xl">
+    <div class="flex flex-col space-y-4 text-base font-semibold text-zinc-800">
+        <a href="#gigs" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2 border-b border-zinc-100">Gigs</a>
+        <a href="#expeditions" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2 border-b border-zinc-100">Expeditions</a>
+        <a href="#network" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2 border-b border-zinc-100">Network</a>
+        <a href="#shop" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2 border-b border-zinc-100">Shop</a>
+        <a href="#code" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2">Code</a>
     </div>
 </div>
 
 <main id="primary" class="site-main flex-1 w-full">
 
-    <!-- HERO SECTION (Full-Screen Immersive Canvas) -->
-    <section class="relative min-h-screen w-full bg-zinc-950 text-white flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12 overflow-hidden">
+    <!-- HERO SECTION (Light Luminous Canvas with Story Slideshow) -->
+    <section class="relative min-h-screen w-full bg-[#FAFAFA] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12 overflow-hidden">
         
         <!-- Background Cinematic Slideshow -->
         <div id="hero-slideshow" class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -76,33 +76,33 @@
             <img src="theme/assets/hero/slide-4-expedition.jpg" alt="Overland Expedition" class="hero-slide" id="slide-3" />
         </div>
 
-        <!-- Multi-Layer Dark Vignette Scrim & Ambient Gradients -->
-        <div class="absolute inset-0 z-1 bg-gradient-to-b from-zinc-950/90 via-zinc-950/70 to-zinc-950 pointer-events-none"></div>
-        <div class="absolute inset-0 z-1 bg-[radial-gradient(ellipse_at_center,rgba(9,9,11,0.45)_0%,rgba(9,9,11,0.92)_70%,#09090b_100%)] pointer-events-none"></div>
-        <div class="absolute inset-0 z-1 bg-[radial-gradient(circle_at_center,rgba(229,82,82,0.12)_0%,transparent_60%)] pointer-events-none"></div>
+        <!-- Light Theme Luminous Scrim Overlays -->
+        <div class="absolute inset-0 z-1 bg-gradient-to-b from-white/92 via-white/80 to-[#FAFAFA] pointer-events-none"></div>
+        <div class="absolute inset-0 z-1 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.70)_0%,rgba(255,255,255,0.95)_70%,#FAFAFA_100%)] pointer-events-none"></div>
+        <div class="absolute inset-0 z-1 bg-[radial-gradient(circle_at_center,rgba(229,82,82,0.08)_0%,transparent_60%)] pointer-events-none"></div>
 
         <!-- Hero Section Watermark -->
         <div class="absolute inset-0 z-1 flex items-center justify-center pointer-events-none select-none overflow-hidden">
             <img src="theme/assets/hero-watermark.svg" 
                  alt="" 
-                 class="w-[1400px] max-w-[150vw] opacity-5 blur-[0.5px] transform -rotate-3 scale-110" />
+                 class="w-[1400px] max-w-[150vw] opacity-[0.06] blur-[0.5px] transform -rotate-3 scale-110" />
         </div>
         
         <!-- Hero Foreground Content (Fluid Flex Box Container) -->
         <div class="relative z-10 w-full max-w-5xl 2xl:max-w-6xl mx-auto text-center flex flex-col items-center justify-center mt-24 sm:mt-20">
-            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-6 leading-tight drop-shadow-md">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-zinc-950 mb-6 leading-tight drop-shadow-sm">
                 Build Fast Software. Settle Payments Anywhere.
             </h1>
             
-            <p class="text-lg sm:text-xl lg:text-2xl text-zinc-200 max-w-3xl mx-auto mb-10 leading-relaxed drop-shadow-sm font-normal">
+            <p class="text-lg sm:text-xl lg:text-2xl text-zinc-700 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
                 You get production systems delivered on schedule. I build web applications, integrate Bitcoin and mobile money rails, and run long distance expeditions. Check my code and hire me for your team.
             </p>
 
             <div class="flex flex-wrap items-center justify-center gap-4 w-full">
-                <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-semibold text-sm sm:text-base transition-all shadow-xl hover:scale-105 active:scale-95">
+                <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-semibold text-sm sm:text-base transition-all shadow-lg hover:scale-105 active:scale-95">
                     Hire Me Today
                 </a>
-                <a href="#code" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-zinc-900/90 hover:bg-zinc-800/90 border border-zinc-700/80 backdrop-blur-md text-zinc-100 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-lg">
+                <a href="#code" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-zinc-100 border border-zinc-300 text-zinc-900 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-md">
                     View My Code
                 </a>
             </div>
@@ -117,63 +117,63 @@
         </div>
     </section>
 
-    <!-- 1. ENGINEERING SERVICES SECTION (#gigs - Fluid Grid & Flex System) -->
-    <section id="gigs" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-900 bg-zinc-950">
+    <!-- 1. ENGINEERING SERVICES SECTION (#gigs - Clean Light Cards) -->
+    <section id="gigs" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-[#FAFAFA]">
         <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
                     Engineering Services
                 </h2>
-                <p class="text-zinc-400 text-base sm:text-xl">
+                <p class="text-zinc-600 text-base sm:text-xl">
                     You get dedicated engineering sprints with clean architecture.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
                 <!-- Service Card 1 -->
-                <div class="flex flex-col justify-between h-full bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 transition-all hover:-translate-y-1.5 shadow-lg">
+                <div class="flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 hover:shadow-xl transition-all hover:-translate-y-1.5 shadow-sm">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-[#4A6FC3] flex items-center justify-center font-bold text-xl mb-8 shadow-inner">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 text-[#4A6FC3] flex items-center justify-center font-bold text-xl mb-8 shadow-sm">
                             FS
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Full Stack Systems</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Full Stack Systems</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
                             Build high-load web applications with React, TypeScript, Python, and Node.js. Your interface loads fast and handles heavy user volume with zero downtime.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-zinc-800/80 text-xs sm:text-sm text-zinc-500 font-medium">
+                    <div class="pt-6 border-t border-zinc-100 text-xs sm:text-sm text-zinc-500 font-semibold">
                         React • TypeScript • Python • Next.js
                     </div>
                 </div>
 
                 <!-- Service Card 2 -->
-                <div class="flex flex-col justify-between h-full bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 transition-all hover:-translate-y-1.5 shadow-lg">
+                <div class="flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 hover:shadow-xl transition-all hover:-translate-y-1.5 shadow-sm">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xl mb-8 shadow-inner">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-100 text-amber-600 flex items-center justify-center font-bold text-xl mb-8 shadow-sm">
                             LN
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Payment Rail Integration</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Payment Rail Integration</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
                             Settle money instantly using Bitcoin Lightning Network and mobile money APIs. Your transactions clear in seconds across borders with minimal fees.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-zinc-800/80 text-xs sm:text-sm text-zinc-500 font-medium">
+                    <div class="pt-6 border-t border-zinc-100 text-xs sm:text-sm text-zinc-500 font-semibold">
                         Bitcoin LND • BTCPay • M-Pesa Daraja
                     </div>
                 </div>
 
                 <!-- Service Card 3 -->
-                <div class="flex flex-col justify-between h-full bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 transition-all hover:-translate-y-1.5 shadow-lg">
+                <div class="flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 hover:shadow-xl transition-all hover:-translate-y-1.5 shadow-sm">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xl mb-8 shadow-inner">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl mb-8 shadow-sm">
                             DB
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Database And Infrastructure</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Database And Infrastructure</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
                             Deploy scalable PostgreSQL databases, Redis cache layers, and Docker containers. Your backend runs with sub-second response times and rock solid security.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-zinc-800/80 text-xs sm:text-sm text-zinc-500 font-medium">
+                    <div class="pt-6 border-t border-zinc-100 text-xs sm:text-sm text-zinc-500 font-semibold">
                         PostgreSQL • Redis • Docker • Linux
                     </div>
                 </div>
@@ -181,28 +181,28 @@
         </div>
     </section>
 
-    <!-- 2. EXPEDITIONS & ENDURANCE SECTION (#expeditions - Fluid Photographic Grid) -->
-    <section id="expeditions" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-900 bg-zinc-950">
+    <!-- 2. EXPEDITIONS & ENDURANCE SECTION (#expeditions - Crisp Image Grid) -->
+    <section id="expeditions" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-white">
         <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
                     Expeditions And Endurance
                 </h2>
-                <p class="text-zinc-400 text-base sm:text-xl">
+                <p class="text-zinc-600 text-base sm:text-xl">
                     High-altitude mountain summits and overland endurance routes.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
                 <!-- Card 1 -->
-                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
-                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-950">
+                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-200/80 bg-white shadow-md hover:shadow-xl transition-all">
+                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-100">
                         <img src="theme/assets/hero/slide-2-mountain.jpg" alt="Mount Kenya Ascent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Mount Kenya Summit Routes</h3>
-                            <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            <h3 class="text-2xl font-bold text-zinc-950 mb-3">Mount Kenya Summit Routes</h3>
+                            <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
                                 High-altitude speed ascents and technical ridge traverses across extreme terrain. Demanding environments require relentless focus and physical grit.
                             </p>
                         </div>
@@ -210,14 +210,14 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
-                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-950">
+                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-200/80 bg-white shadow-md hover:shadow-xl transition-all">
+                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-100">
                         <img src="theme/assets/hero/slide-4-expedition.jpg" alt="Overland Expedition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Cross Country Expeditions</h3>
-                            <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            <h3 class="text-2xl font-bold text-zinc-950 mb-3">Cross Country Expeditions</h3>
+                            <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
                                 Long-distance motorcycle expeditions across remote African corridors. Self-supported navigation through desert tracks and mountain passes.
                             </p>
                         </div>
@@ -225,14 +225,14 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
-                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-950">
+                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-200/80 bg-white shadow-md hover:shadow-xl transition-all">
+                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-100">
                         <img src="theme/assets/hero/slide-1-hub.jpg" alt="Trail Marathon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Ultra Endurance Trail Runs</h3>
-                            <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            <h3 class="text-2xl font-bold text-zinc-950 mb-3">Ultra Endurance Trail Runs</h3>
+                            <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
                                 50 kilometer and 100 kilometer mountain trail events. Testing human endurance limits through disciplined training and mental stamina.
                             </p>
                         </div>
@@ -242,158 +242,158 @@
         </div>
     </section>
 
-    <!-- 3. NETWORK TELEMETRY SECTION (#network - Dynamic Flex Metrics) -->
-    <section id="network" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-900 bg-zinc-950">
+    <!-- 3. NETWORK TELEMETRY SECTION (#network - Clean Light Metric Cards) -->
+    <section id="network" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-[#FAFAFA]">
         <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
                     Live Network Telemetry
                 </h2>
-                <p class="text-zinc-400 text-base sm:text-xl">
+                <p class="text-zinc-600 text-base sm:text-xl">
                     Direct connections to global payment rails and open source systems.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
-                <div class="flex flex-col justify-center items-center bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 sm:p-10 text-center shadow-lg hover:border-zinc-700 transition-colors">
+                <div class="flex flex-col justify-center items-center bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 text-center shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#E55252] mb-3">100%</div>
-                    <div class="text-white font-bold text-lg sm:text-xl mb-2">Bitcoin Node Verified</div>
-                    <div class="text-zinc-400 text-xs sm:text-sm">Block height verified. Zero failed transactions.</div>
+                    <div class="text-zinc-950 font-bold text-lg sm:text-xl mb-2">Bitcoin Node Verified</div>
+                    <div class="text-zinc-500 text-xs sm:text-sm">Block height verified. Zero failed transactions.</div>
                 </div>
 
-                <div class="flex flex-col justify-center items-center bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 sm:p-10 text-center shadow-lg hover:border-zinc-700 transition-colors">
-                    <div class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-emerald-400 mb-3">24 / 7</div>
-                    <div class="text-white font-bold text-lg sm:text-xl mb-2">Lightning Node Active</div>
-                    <div class="text-zinc-400 text-xs sm:text-sm">Active channels open. Routing payments globally.</div>
+                <div class="flex flex-col justify-center items-center bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-emerald-600 mb-3">24 / 7</div>
+                    <div class="text-zinc-950 font-bold text-lg sm:text-xl mb-2">Lightning Node Active</div>
+                    <div class="text-zinc-500 text-xs sm:text-sm">Active channels open. Routing payments globally.</div>
                 </div>
 
-                <div class="flex flex-col justify-center items-center bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 sm:p-10 text-center shadow-lg hover:border-zinc-700 transition-colors">
+                <div class="flex flex-col justify-center items-center bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 text-center shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#4A6FC3] mb-3">50+</div>
-                    <div class="text-white font-bold text-lg sm:text-xl mb-2">Developer Community</div>
-                    <div class="text-zinc-400 text-xs sm:text-sm">Active builder network across Africa and worldwide.</div>
+                    <div class="text-zinc-950 font-bold text-lg sm:text-xl mb-2">Developer Community</div>
+                    <div class="text-zinc-500 text-xs sm:text-sm">Active builder network across Africa and worldwide.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. SHOP & HARDWARE GEAR SECTION (#shop - Fluid Flex Product Cards) -->
-    <section id="shop" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-900 bg-zinc-950">
+    <!-- 4. SHOP & HARDWARE GEAR SECTION (#shop - Light Product Cards) -->
+    <section id="shop" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-white">
         <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
                     Equipment And Toolkits
                 </h2>
-                <p class="text-zinc-400 text-base sm:text-xl">
+                <p class="text-zinc-600 text-base sm:text-xl">
                     Field-tested gear, developer hardware kits, and vector assets.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
                 <!-- Item 1 -->
-                <div class="flex flex-col justify-between h-full bg-zinc-900/70 border border-zinc-800 rounded-2xl p-8 sm:p-10 shadow-lg hover:border-zinc-700 transition-colors">
+                <div class="flex flex-col justify-between h-full bg-[#FAFAFA] border border-zinc-200/80 rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-lg transition-all">
                     <div>
                         <div class="text-xs font-semibold text-[#E55252] uppercase tracking-wider mb-3">Hardware</div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Cold Storage Backup Kit</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Cold Storage Backup Kit</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
                             Stainless steel seed backup plates and offline signing hardware. Secure your digital wealth with physical defense.
                         </p>
                     </div>
-                    <div class="flex items-center justify-between pt-6 border-t border-zinc-800/80">
-                        <span class="text-lg sm:text-xl font-bold text-white">$120 / 180k sats</span>
-                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-800 hover:bg-zinc-700 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Order Kit</a>
+                    <div class="flex items-center justify-between pt-6 border-t border-zinc-200">
+                        <span class="text-lg sm:text-xl font-bold text-zinc-950">$120 / 180k sats</span>
+                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Order Kit</a>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="flex flex-col justify-between h-full bg-zinc-900/70 border border-zinc-800 rounded-2xl p-8 sm:p-10 shadow-lg hover:border-zinc-700 transition-colors">
+                <div class="flex flex-col justify-between h-full bg-[#FAFAFA] border border-zinc-200/80 rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-lg transition-all">
                     <div>
-                        <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-3">Field Gear</div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Expedition Field Pack</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        <div class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-3">Field Gear</div>
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Expedition Field Pack</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
                             Lightweight trail running packs, navigation compasses, and solar charging units tested in extreme conditions.
                         </p>
                     </div>
-                    <div class="flex items-center justify-between pt-6 border-t border-zinc-800/80">
-                        <span class="text-lg sm:text-xl font-bold text-white">$85 / 130k sats</span>
-                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-800 hover:bg-zinc-700 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Order Gear</a>
+                    <div class="flex items-center justify-between pt-6 border-t border-zinc-200">
+                        <span class="text-lg sm:text-xl font-bold text-zinc-950">$85 / 130k sats</span>
+                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Order Gear</a>
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="flex flex-col justify-between h-full bg-zinc-900/70 border border-zinc-800 rounded-2xl p-8 sm:p-10 shadow-lg hover:border-zinc-700 transition-colors">
+                <div class="flex flex-col justify-between h-full bg-[#FAFAFA] border border-zinc-200/80 rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-lg transition-all">
                     <div>
                         <div class="text-xs font-semibold text-[#4A6FC3] uppercase tracking-wider mb-3">Digital Toolkit</div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Vector Asset Toolkit</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Vector Asset Toolkit</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
                             Complete scalable SVG and PNG asset bundle for builders. Clean vector geometry and typography standards.
                         </p>
                     </div>
-                    <div class="flex items-center justify-between pt-6 border-t border-zinc-800/80">
-                        <span class="text-lg sm:text-xl font-bold text-white">$45 / 70k sats</span>
-                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-800 hover:bg-zinc-700 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Download</a>
+                    <div class="flex items-center justify-between pt-6 border-t border-zinc-200">
+                        <span class="text-lg sm:text-xl font-bold text-zinc-950">$45 / 70k sats</span>
+                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Download</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. CODE REPOSITORIES SECTION (#code - Responsive Grid Spread) -->
-    <section id="code" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-900 bg-zinc-950">
+    <!-- 5. CODE REPOSITORIES SECTION (#code - Light Grid Cards) -->
+    <section id="code" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-[#FAFAFA]">
         <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
                     Public Code Repositories
                 </h2>
-                <p class="text-zinc-400 text-base sm:text-xl">
+                <p class="text-zinc-600 text-base sm:text-xl">
                     Inspect live code, audit commits, and clone repositories.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
-                <a href="https://github.com/altradits/portfolio" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-zinc-900/60 border border-zinc-800 rounded-2xl p-8 sm:p-10 hover:border-zinc-700 transition-all hover:-translate-y-1.5 shadow-lg">
+                <a href="https://github.com/altradits/portfolio" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-zinc-300 hover:shadow-lg transition-all hover:-translate-y-1.5 shadow-sm">
                     <div>
                         <div class="flex items-center justify-between mb-6">
-                            <span class="font-mono text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">altradits/portfolio</span>
+                            <span class="font-mono text-xs text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">altradits/portfolio</span>
                             <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors mb-3">portfolio</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
-                            Core personal portfolio and custom WordPress theme with dark obsidian architecture.
+                        <h3 class="text-2xl font-bold text-zinc-950 group-hover:text-emerald-600 transition-colors mb-3">portfolio</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                            Core personal portfolio and custom WordPress theme with clean responsive architecture.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-zinc-800/80 text-xs text-zinc-500 font-medium">
+                    <div class="pt-6 border-t border-zinc-100 text-xs text-zinc-500 font-semibold">
                         PHP • HTML • CSS • JavaScript
                     </div>
                 </a>
 
-                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-zinc-900/60 border border-zinc-800 rounded-2xl p-8 sm:p-10 hover:border-zinc-700 transition-all hover:-translate-y-1.5 shadow-lg">
+                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-zinc-300 hover:shadow-lg transition-all hover:-translate-y-1.5 shadow-sm">
                     <div>
                         <div class="flex items-center justify-between mb-6">
-                            <span class="font-mono text-xs text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">altradits/lightning</span>
+                            <span class="font-mono text-xs text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">altradits/lightning</span>
                             <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors mb-3">lightning-gateway</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        <h3 class="text-2xl font-bold text-zinc-950 group-hover:text-amber-600 transition-colors mb-3">lightning-gateway</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
                             High-speed Bitcoin Lightning payment processor with automated webhook notifications.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-zinc-800/80 text-xs text-zinc-500 font-medium">
+                    <div class="pt-6 border-t border-zinc-100 text-xs text-zinc-500 font-semibold">
                         Python • LND • Fastify
                     </div>
                 </a>
 
-                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-zinc-900/60 border border-zinc-800 rounded-2xl p-8 sm:p-10 hover:border-zinc-700 transition-all hover:-translate-y-1.5 shadow-lg">
+                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-zinc-300 hover:shadow-lg transition-all hover:-translate-y-1.5 shadow-sm">
                     <div>
                         <div class="flex items-center justify-between mb-6">
-                            <span class="font-mono text-xs text-[#4A6FC3] bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">altradits/payments</span>
+                            <span class="font-mono text-xs text-[#4A6FC3] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">altradits/payments</span>
                             <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-[#4A6FC3] transition-colors mb-3">daraja-mobile-payments</h3>
-                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        <h3 class="text-2xl font-bold text-zinc-950 group-hover:text-[#4A6FC3] transition-colors mb-3">daraja-mobile-payments</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
                             Production ready mobile money SDK for instant payment settlements.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-zinc-800/80 text-xs text-zinc-500 font-medium">
+                    <div class="pt-6 border-t border-zinc-100 text-xs text-zinc-500 font-semibold">
                         TypeScript • REST API
                     </div>
                 </a>
@@ -401,24 +401,24 @@
         </div>
     </section>
 
-    <!-- 6. CONTACT SECTION (Fluid Centered Flex Box) -->
-    <section class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-900 bg-zinc-950">
+    <!-- 6. CONTACT SECTION (Light Centered Flex Box) -->
+    <section class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-white">
         <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6 tracking-tight">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-6 tracking-tight">
                 Start Your Project Today
             </h2>
-            <p class="text-lg sm:text-xl text-zinc-300 max-w-xl mx-auto mb-10 leading-relaxed">
+            <p class="text-lg sm:text-xl text-zinc-600 max-w-xl mx-auto mb-10 leading-relaxed">
                 Reach out directly on WhatsApp or email. You get a direct response within two hours.
             </p>
 
             <div class="flex flex-wrap items-center justify-center gap-4 w-full">
-                <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-semibold text-sm sm:text-base transition-all shadow-xl hover:scale-105 active:scale-95">
+                <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-semibold text-sm sm:text-base transition-all shadow-lg hover:scale-105 active:scale-95">
                     WhatsApp Chat
                 </a>
-                <a href="mailto:stanley@altradits.com" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95">
+                <a href="mailto:stanley@altradits.com" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-zinc-100 border border-zinc-300 text-zinc-900 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-sm">
                     Send Email
                 </a>
-                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95">
+                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-zinc-100 border border-zinc-300 text-zinc-900 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-sm">
                     GitHub Profile
                 </a>
             </div>
@@ -427,11 +427,11 @@
 
 </main>
 
-<footer class="py-12 px-4 sm:px-8 lg:px-12 border-t border-zinc-900 bg-zinc-950 w-full">
+<footer class="py-12 px-4 sm:px-8 lg:px-12 border-t border-zinc-200 bg-white w-full">
     <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
         <div class="flex items-center space-x-2">
             <img src="theme/assets/favicon.svg" alt="" class="w-6 h-6 object-contain" />
-            <span>Altradits Engineering Syndicate</span>
+            <span class="font-semibold text-zinc-700">Altradits Engineering Syndicate</span>
         </div>
         <div>© 2026 Stanley Chege Thuita. All rights reserved.</div>
     </div>

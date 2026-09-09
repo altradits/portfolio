@@ -50,10 +50,47 @@ All non-matching variations and obsolete files have been purged. The active asse
 
 ## 2. Color Palette Values
 
+### 2.1 Core Identity & Logo Assets
 | Role | Color Name | Hex | RGB | Usage |
 | :--- | :--- | :--- | :--- | :--- |
 | **Wordmark** | Cornflower Blue | `#4A6FC3` | `74, 111, 195` | "Altradits" Wordmark |
-| **Swoosh Body** | Coral-Red | `#E64F56` | `230, 79, 86` | Wave Ribbon Swoosh |
-| **Swoosh Highlight**| Coral Sheen | `#FF636B` | `255, 99, 107` | Upper Contour Sheen |
+| **Swoosh Body** | Coral-Red | `#E55252` | `229, 82, 82` | Wave Ribbon Swoosh & CTA Highlights |
+| **Swoosh Highlight**| Coral Sheen | `#FF6E6E` | `255, 110, 110` | Hover States & Specular Highlight |
 | **Swoosh Shadow** | Deep Crimson | `#B32028` | `179, 32, 40` | Lower Contour Depth |
-| **Obsidian** | Void Black | `#09090B` | `9, 9, 11` | Primary Syndicate Canvas |
+
+### 2.2 Luxury Light Palette (Active Default)
+| Role | Token | Hex | Usage |
+| :--- | :--- | :--- | :--- |
+| **Canvas Background** | `--al-surface-bg` | `#FAFAFA` | Main body & section background canvas |
+| **Surface Cards** | `--al-surface-card` | `#FFFFFF` | Elevated cards, containers, modal menus |
+| **Subtle Card Surface** | `--al-surface-subtle` | `#F4F4F5` | Secondary card fills, code containers |
+| **Card Borders** | `--al-border` | `#E4E4E7` / `rgba(228,228,231,0.8)` | Clean dividing lines & card outlines |
+| **Hover Border** | `--al-border-hover` | `#CBD5E1` | Interactive card hover borders |
+| **Primary Text** | `--al-text-primary` | `#09090B` | H1/H2/H3 titles, prominent headings |
+| **Secondary Text** | `--al-text-secondary` | `#52525B` | Paragraph body copy, card descriptions |
+| **Muted Text** | `--al-text-muted` | `#71717A` | Metadata, tags, footnotes |
+| **Accent Rails** | Bitcoin Gold / Emerald | `#D97706` / `#059669` | Metric numbers and speed velocity tags |
+
+---
+
+## 3. UI & Design Rules
+
+1. **Button Constraints**:
+   - Zero emojis and zero SVG/icon graphics inside buttons.
+   - Text only, bold, uppercase or clear title case.
+   - Primary action buttons: Coral Red `#E55252` background with pure white text and hover shift to `#FF6E6E`.
+   - Secondary action buttons: Pure white `#FFFFFF` surface with `#E4E4E7` border and dark `#18181B` text.
+
+2. **No Top Pill Badges**:
+   - Do not display personal name/title floating pill badges above headings.
+
+3. **Fluid Grid & Flexbox**:
+   - Sections must expand fluidly using CSS Grid and Flexbox up to `max-w-7xl` / `2xl:max-w-[1600px]`.
+   - Grid cards stretch equally using `auto-rows-fr` and `h-full` to avoid ragged empty card bottoms.
+
+4. **Direct-Response Copywriting**:
+   - Short, punchy sentences written in active voice.
+   - Address the reader directly with "you" and "your".
+   - No em dashes (—), en dashes (–), or connector hyphens.
+   - No semicolons.
+   - No AI marketing cliches (e.g., *delve*, *skyrocket*, *game-changer*, *unlock*, *revolutionize*, *tapestry*).
