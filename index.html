@@ -98,10 +98,12 @@
         <div id="hero-tilt-card" class="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center justify-center transition-transform duration-200 ease-out will-change-transform">
             
             <!-- Two-Line Animated H1 (Line 1 Constant, Line 2 Action Pain Points) -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-950 mb-8 sm:mb-12 leading-[1.15] text-center w-full max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-950 mb-8 sm:mb-12 leading-[1.18] text-center w-full max-w-4xl mx-auto flex flex-col items-center select-none">
                 <span class="block text-zinc-950">Websites And Apps That</span>
-                <span id="hero-animated-painpoint" class="block text-[#E55252] mt-1 sm:mt-2 transition-all duration-300 ease-out transform translate-y-0 opacity-100">
-                    Grow Your Business.
+                <span class="inline-flex items-center justify-center min-h-[1.28em] mt-1 sm:mt-2">
+                    <span id="hero-animated-painpoint" class="hero-dynamic-text">
+                        Grow Your Business.
+                    </span>
                 </span>
             </h1>
 
@@ -448,7 +450,7 @@
         }
     }
 
-    // Two-Line Animated H1 Pain Point Rotator
+    // Two-Line Animated H1 Pain Point Rotator (Silky Blur + Spring Slide)
     const painPoints = [
         "Grow Your Business.",
         "Never Crash.",
@@ -460,16 +462,14 @@
     function cyclePainPoint() {
         const el = document.getElementById('hero-animated-painpoint');
         if (!el) return;
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(8px)';
+        el.classList.add('is-transitioning');
         setTimeout(() => {
             currentPainPointIndex = (currentPainPointIndex + 1) % painPoints.length;
             el.textContent = painPoints[currentPainPointIndex];
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        }, 250);
+            el.classList.remove('is-transitioning');
+        }, 320);
     }
-    setInterval(cyclePainPoint, 2800);
+    setInterval(cyclePainPoint, 3000);
 
     // Interactive Plasticity & Framer Physics Canvas Engine
     class HeroPlasticityEngine {
