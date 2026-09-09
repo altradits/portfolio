@@ -76,21 +76,66 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Brand Logo Badge */
-.al-logo-badge {
-  background: #FFFFFF;
-  border-radius: 12px;
-  padding: 6px 14px;
-  display: flex;
+/* Glassmorphic Navlink Hover System */
+.al-nav-link {
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  padding: 0.45rem 1.05rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #52525B;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  user-select: none;
 }
 
-.al-logo-badge:hover {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(229, 82, 82, 0.20);
+.al-nav-link:hover {
+  color: #09090B;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: rgba(228, 228, 231, 0.95);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 1);
+  transform: translateY(-1px) scale(1.04);
+}
+
+.al-nav-link:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.al-nav-link.active {
+  color: #09090B;
+  background: #FFFFFF;
+  border-color: rgba(228, 228, 231, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Glassmorphic Mobile Navlink */
+.al-mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.15rem;
+  border-radius: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #27272A;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.al-mobile-nav-link:hover {
+  color: #09090B;
+  background: rgba(244, 244, 245, 0.90);
+  border-color: rgba(228, 228, 231, 0.85);
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 /* Hero Cinematic Slideshow */

@@ -27,18 +27,18 @@
                  class="h-9 sm:h-10 md:h-11 lg:h-12 w-auto object-contain block transition-all" />
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-zinc-600">
-            <a href="#gigs" class="hover:text-zinc-950 transition-colors">Gigs</a>
-            <a href="#expeditions" class="hover:text-zinc-950 transition-colors">Expeditions</a>
-            <a href="#network" class="hover:text-zinc-950 transition-colors">Network</a>
-            <a href="#shop" class="hover:text-zinc-950 transition-colors">Shop</a>
-            <a href="#code" class="hover:text-zinc-950 transition-colors">Code</a>
+        <!-- Desktop Navigation Links (Glassmorphic Hover System) -->
+        <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+            <a href="#gigs" class="al-nav-link">Gigs</a>
+            <a href="#expeditions" class="al-nav-link">Expeditions</a>
+            <a href="#network" class="al-nav-link">Network</a>
+            <a href="#shop" class="al-nav-link">Shop</a>
+            <a href="#code" class="al-nav-link">Code</a>
         </div>
 
         <!-- Action Button & Mobile Menu Toggle -->
         <div class="flex items-center space-x-3">
-            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-all rounded-full shadow-md">
+            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-all rounded-full shadow-md hover:shadow-lg hover:scale-105 active:scale-95">
                 Connect
             </a>
             <button onclick="toggleMobileMenu()" class="md:hidden text-zinc-700 hover:text-zinc-950 p-1.5 focus:outline-none" aria-label="Toggle navigation menu">
@@ -51,12 +51,27 @@
 </header>
 
 <!-- Mobile Navigation Dropdown Menu -->
-<div id="mobile-menu" class="fixed inset-x-4 top-20 z-40 hidden md:hidden bg-white/95 backdrop-blur-2xl border border-zinc-200 rounded-2xl p-6 shadow-xl">
-    <div class="flex flex-col space-y-4 text-base font-semibold text-zinc-800">
-        <a href="#gigs" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2 border-b border-zinc-100">Gigs</a>
-        <a href="#expeditions" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2 border-b border-zinc-100">Expeditions</a>
-        <a href="#network" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2 border-b border-zinc-100">Network</a>
-        <a href="#shop" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2 border-b border-zinc-100">Shop</a>
-        <a href="#code" onclick="toggleMobileMenu()" class="hover:text-[#E55252] transition-colors py-2">Code</a>
+<div id="mobile-menu" class="fixed inset-x-4 top-20 z-40 hidden md:hidden bg-white/90 backdrop-blur-2xl border border-zinc-200/80 rounded-3xl p-4 shadow-2xl ring-1 ring-black/[0.04]">
+    <div class="flex flex-col space-y-1.5">
+        <a href="#gigs" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Gigs</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">01</span>
+        </a>
+        <a href="#expeditions" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Expeditions</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">02</span>
+        </a>
+        <a href="#network" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Network</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">03</span>
+        </a>
+        <a href="#shop" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Shop</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">04</span>
+        </a>
+        <a href="#code" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Code</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">05</span>
+        </a>
     </div>
 </div>
