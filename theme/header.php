@@ -14,9 +14,12 @@
     <nav class="flex items-center justify-between w-full max-w-5xl px-6 py-3 bg-zinc-950/70 backdrop-blur-xl border border-zinc-800/60 rounded-full shadow-2xl">
         
         <!-- Logo with Solid White Background Badge -->
-        <div class="bg-white px-3 py-1.5 rounded-lg shadow-sm flex items-center">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="Altradits" class="h-6 w-auto object-contain" />
+        <div class="bg-white px-3.5 py-1.5 rounded-lg shadow-md flex items-center hover:opacity-95 transition-opacity">
+            <a href="<?php echo function_exists('home_url') ? esc_url( home_url( '/' ) ) : './'; ?>" class="flex items-center">
+                <img src="<?php echo function_exists('get_template_directory_uri') ? get_template_directory_uri() . '/assets/logo.png' : 'assets/logo.png'; ?>" 
+                     onerror="this.onerror=null; this.src='assets/logo.png'; if(!this.complete || this.naturalWidth === 0){ this.src='theme/assets/logo.png'; }"
+                     alt="Altradits" 
+                     class="h-7 sm:h-8 w-auto object-contain block" />
             </a>
         </div>
 
