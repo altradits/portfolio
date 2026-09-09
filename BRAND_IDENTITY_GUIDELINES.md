@@ -37,14 +37,15 @@ The Altradits brand lockup consists of the title-case typography and the dynamic
   * **Lower Contour**: Swells volumetrically to ~65px thickness at `(312.5, 428.8)` and tapers smoothly back to both needle tips.
 * **Color & 3D Depth**: Solid vivid Coral-Red (`#E64F56` / `rgb(230, 79, 86)`) with a multi-stop linear gradient (`#FF636B` ➔ `#E64F56` ➔ `#D43A42` ➔ `#B32028`) creating a soft inner shadow along its lower contour and specular sheen along its upper edge.
 
-### 1.3 Active Logo Deliverables
+### 1.3 Active Logo & Favicon Deliverables
 All non-matching variations and obsolete files have been purged. The active assets are:
 
-* `theme/assets/logo.svg` (and mirrored in `assets/logo.svg`, `public/logo.svg`) — **Master Scalable Vector Graphic**
-* `theme/assets/logo.png` (and mirrored in `assets/logo.png`, `public/logo.png`) — **High-DPI 4x Badge Raster PNG**
-* `theme/assets/logo-transparent.png` (and mirrored) — **High-DPI 4x Transparent Raster PNG**
-* `theme/assets/favicon.svg` & `favicon.png` — **Active Favicon Icon**
-* `theme/assets/hero-watermark.svg` — **Ambient Hero Section Texture**
+* `theme/assets/logo.svg` (and mirrored in `assets/logo.svg`, `public/logo.svg`) — **Master Scalable Vector Graphic** with optimized tight `viewBox="72 85 872 360"`, transparent background, and standalone embedded Open Sans Bold font.
+* `theme/assets/logo.png` (and mirrored in `assets/logo.png`, `public/logo.png`) — **High-DPI 4x Badge Raster PNG**.
+* `theme/assets/logo-transparent.png` (and mirrored) — **High-DPI 4x Transparent Raster PNG**.
+* `theme/assets/favicon.svg` (and mirrored in `assets/favicon.svg`, `public/favicon.svg`) — **Master White Favicon SVG** featuring pure white rounded square base (`#FFFFFF`, `rx="112"`), Cornflower Blue (`#4A6FC3`) `"A"` monogram, and centered Coral-Red (`#E55252`) wave ribbon swoosh.
+* `theme/assets/favicon.png` — **High-DPI 8x Supersampled White Favicon Raster PNG** (512x512, 192x192, 32x32).
+* `theme/assets/hero-watermark.svg` — **Ambient Hero Section Texture**.
 
 ---
 
