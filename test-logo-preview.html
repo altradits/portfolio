@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Altradits Vector Logo Verification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #09090b;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .card {
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .dark-card {
+      background: #18181b;
+    }
+    .light-card {
+      background: #ffffff;
+      color: #18181b;
+    }
+    .checkered-card {
+      background-image: linear-gradient(45deg, #27272a 25%, transparent 25%), linear-gradient(-45deg, #27272a 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #27272a 75%), linear-gradient(-45deg, transparent 75%, #27272a 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      background-color: #18181b;
+    }
+    .preview-box {
+      width: 500px;
+      max-width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <h1>Altradits Vector Logo Lockup Verification</h1>
+
+  <div class="card dark-card">
+    <h3>1. Dark Background (Obsidian #18181b)</h3>
+    <div class="preview-box">
+      <img src="theme/assets/logo.svg" alt="Altradits Logo on Dark" style="width: 100%;">
+    </div>
+  </div>
+
+  <div class="card light-card">
+    <h3>2. Light / Badge Background (#ffffff)</h3>
+    <div class="preview-box">
+      <img src="theme/assets/logo.svg" alt="Altradits Logo on Light" style="width: 100%;">
+    </div>
+  </div>
+
+  <div class="card checkered-card">
+    <h3>3. Transparent Alpha Background</h3>
+    <div class="preview-box">
+      <img src="theme/assets/logo.svg" alt="Altradits Logo Transparent" style="width: 100%;">
+    </div>
+  </div>
+</body>
+</html>
