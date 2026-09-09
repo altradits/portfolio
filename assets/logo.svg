@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="altraditsBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B80D8" />
+      <stop offset="50%" stop-color="#4A6FC3" />
+      <stop offset="100%" stop-color="#3B5EB0" />
+    </linearGradient>
+    <linearGradient id="altraditsRed" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#F2636A" />
+      <stop offset="40%" stop-color="#E64F56" />
+      <stop offset="100%" stop-color="#D93840" />
+    </linearGradient>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Altradits Typography -->
+  <g id="brand-text" filter="url(#softGlow)">
+    <text x="450" y="165" 
+          font-family="system-ui, -apple-system, 'Plus Jakarta Sans', 'Inter', 'Outfit', 'Segoe UI', Roboto, sans-serif" 
+          font-size="160" 
+          font-weight="800" 
+          letter-spacing="-2px"
+          fill="url(#altraditsBlue)" 
+          text-anchor="middle">Altradits</text>
+  </g>
+
+  <!-- Retraced Mathematical Red Baseline Swoosh -->
+  <!-- Starts under 'l', dips smoothly, crests under 'i', tapers to sharp point under 's' -->
+  <path d="M 230,205 
+           C 275,255 375,302 460,292 
+           C 560,280 670,200 760,210 
+           C 680,205 570,240 480,250 
+           C 400,258 310,230 230,205 Z" 
+        fill="url(#altraditsRed)" />
+</svg>

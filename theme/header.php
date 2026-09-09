@@ -16,8 +16,8 @@
         <!-- Logo with Solid White Background Badge -->
         <div class="bg-white px-3.5 py-1.5 rounded-lg shadow-md flex items-center hover:opacity-95 transition-opacity">
             <a href="<?php echo function_exists('home_url') ? esc_url( home_url( '/' ) ) : './'; ?>" class="flex items-center">
-                <img src="<?php echo function_exists('get_template_directory_uri') ? get_template_directory_uri() . '/assets/logo.png' : 'assets/logo.png'; ?>" 
-                     onerror="this.onerror=null; this.src='assets/logo.png'; if(!this.complete || this.naturalWidth === 0){ this.src='theme/assets/logo.png'; }"
+                <img src="<?php echo function_exists('get_template_directory_uri') ? get_template_directory_uri() . '/assets/logo.svg' : 'assets/logo.svg'; ?>" 
+                     onerror="this.onerror=null; this.src='assets/logo.svg'; if(!this.complete || this.naturalWidth === 0){ this.src='theme/assets/logo.png'; }"
                      alt="Altradits" 
                      class="h-7 sm:h-8 w-auto object-contain block" />
             </a>
