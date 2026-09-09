@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="100%" opacity="0.08">
+  <defs>
+    <linearGradient id="watermarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E55252" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(40, -10)">
+    <path d="M 160,80 C 200,105 280,175 420,172 C 540,170 660,110 760,210 C 680,185 560,215 440,218 C 300,220 210,135 160,80 Z" fill="url(#watermarkGrad)" />
+  </g>
+
+  <g transform="translate(500, 290)">
+    <text x="0" y="0" 
+          font-family="'Open Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="64" 
+          font-weight="800" 
+          letter-spacing="20px"
+          fill="#FFFFFF" 
+          text-anchor="middle">ALTRADITS</text>
+  </g>
+</svg>

@@ -30,14 +30,14 @@
     <path d="M 160,80 C 200,105 280,175 420,172 C 540,170 660,110 760,210 C 680,185 560,215 440,218 C 300,220 210,135 160,80 Z" fill="url(#coralRed3D)" />
   </g>
 
-  <!-- Typography: ALTRADITS (Open Sans, Caps, 20px Letter Spacing) -->
+  <!-- Typography: ALTRADITS (Charcoal on Light) -->
   <g id="typography" transform="translate(500, 290)">
     <text x="0" y="0" 
           font-family="'Open Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
           font-size="64" 
           font-weight="800" 
           letter-spacing="20px"
-          fill="#FFFFFF" 
+          fill="#18181B" 
           text-anchor="middle">ALTRADITS</text>
   </g>
 </svg>

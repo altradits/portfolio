@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altradits Syndicate | Stanley Chege Thuita</title>
+    <link rel="icon" type="image/svg+xml" href="theme/assets/favicon.svg">
+    <!-- Google Fonts: Open Sans & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN for instant rendering -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="theme/style.css">
 </head>
-<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-emerald-500 selection:text-zinc-950">
+<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-[#E55252] selection:text-white">
 
 <!-- Floating Glass Navbar with Solid White Logo Badge -->
 <header class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
@@ -35,7 +40,7 @@
 
         <!-- Connect Action Button -->
         <div>
-            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-colors rounded-full shadow-lg">
+            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-colors rounded-full shadow-lg">
                 Connect ⚡
             </a>
         </div>
@@ -45,7 +50,14 @@
 <main id="primary" class="site-main">
     <section class="relative min-h-screen bg-zinc-950 text-white flex flex-col items-center justify-center px-6 overflow-hidden">
         <!-- Background Ambient Glow -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.08)_0%,transparent_70%)] pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,82,82,0.08)_0%,rgba(16,185,129,0.04)_40%,transparent_70%)] pointer-events-none"></div>
+
+        <!-- Hero Section Watermark (8% Low Opacity Large-Scale Texture) -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+            <img src="theme/assets/hero-watermark.svg" 
+                 alt="" 
+                 class="w-[1200px] max-w-[150vw] opacity-8 blur-[0.5px] transform -rotate-3 scale-110" />
+        </div>
         
         <div class="relative z-10 max-w-4xl mx-auto text-center mt-20">
             <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-6">

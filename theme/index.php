@@ -8,7 +8,14 @@ get_header();
 <main id="primary" class="site-main">
     <section class="relative min-h-screen bg-zinc-950 text-white flex flex-col items-center justify-center px-6 overflow-hidden">
         <!-- Background Ambient Glow -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.08)_0%,transparent_70%)] pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,82,82,0.06)_0%,rgba(16,185,129,0.04)_40%,transparent_70%)] pointer-events-none"></div>
+        
+        <!-- Hero Section Watermark (8% Low Opacity Large-Scale Texture) -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+            <img src="<?php echo function_exists('get_template_directory_uri') ? get_template_directory_uri() . '/assets/hero-watermark.svg' : 'assets/hero-watermark.svg'; ?>" 
+                 alt="" 
+                 class="w-[1200px] max-w-[150vw] opacity-8 blur-[0.5px] transform -rotate-3 scale-110" />
+        </div>
         
         <div class="relative z-10 max-w-4xl mx-auto text-center mt-20">
             <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-6">
