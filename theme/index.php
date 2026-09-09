@@ -21,24 +21,9 @@ get_header();
         <!-- Interactive Plasticity & Framer Physics Canvas (Responds to Hover & Click) -->
         <canvas id="hero-plasticity-canvas" class="absolute inset-0 z-2 w-full h-full cursor-crosshair"></canvas>
 
-        <!-- Live CAD Telemetry HUD (Plasticity Precision Indicator) -->
-        <div id="hero-cad-hud" class="absolute top-24 right-6 sm:right-10 z-10 hidden sm:flex items-center space-x-3 px-3.5 py-1.5 rounded-lg bg-white/80 backdrop-blur-md border border-zinc-200/80 text-[11px] font-mono text-zinc-500 shadow-sm pointer-events-none">
-            <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#059669]"></span>
-            <span id="cad-hud-coords">X: 000 | Y: 000</span>
-            <span class="text-zinc-300">|</span>
-            <span id="cad-hud-mode" class="text-zinc-700 font-semibold">Web Engine</span>
-        </div>
-
         <!-- Hero Foreground Content (Clean, Plain, Direct-Response) -->
         <div id="hero-tilt-card" class="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center justify-center transition-transform duration-200 ease-out will-change-transform">
             
-            <!-- Availability Beacon (Direct Signal) -->
-            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/90 border border-zinc-200/90 shadow-sm backdrop-blur-md mb-6 hover:scale-105 transition-all">
-                <span class="w-2 h-2 rounded-full bg-[#059669] animate-ping"></span>
-                <span class="w-2 h-2 rounded-full bg-[#059669]"></span>
-                <span class="text-xs font-semibold text-zinc-700 tracking-wide">Available for Sprints</span>
-            </div>
-
             <!-- Two-Line Animated H1 (Line 1 Constant, Line 2 Action Pain Points) -->
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-950 mb-6 leading-[1.15] text-center w-full max-w-4xl mx-auto">
                 <span class="block text-zinc-950">I Build Software That</span>
@@ -53,7 +38,7 @@ get_header();
             </p>
 
             <!-- Minimalist Primary Call to Action -->
-            <div class="flex flex-wrap items-center justify-center gap-4 w-full mb-8">
+            <div class="flex flex-wrap items-center justify-center gap-4 w-full">
                 <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" 
                    class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
                     Hire Me Today
@@ -62,58 +47,6 @@ get_header();
                    class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-zinc-50 border border-zinc-200/90 text-zinc-900 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-sm">
                     View Work
                 </a>
-            </div>
-
-            <!-- Figma-style Interactive Capability Switchers (Tactile Plasticity Modes) -->
-            <div class="flex items-center justify-center space-x-2 text-xs font-semibold text-zinc-500 mb-6">
-                <button onclick="setPlasticityMode(0)" id="mode-btn-0" class="mode-pill active px-4 py-2 rounded-full border border-zinc-200 bg-white text-zinc-900 shadow-sm transition-all">
-                    Web Systems
-                </button>
-                <button onclick="setPlasticityMode(1)" id="mode-btn-1" class="mode-pill px-4 py-2 rounded-full border border-transparent hover:border-zinc-200 hover:bg-white/80 transition-all">
-                    Bitcoin Rails
-                </button>
-                <button onclick="setPlasticityMode(2)" id="mode-btn-2" class="mode-pill px-4 py-2 rounded-full border border-transparent hover:border-zinc-200 hover:bg-white/80 transition-all">
-                    Go Services
-                </button>
-            </div>
-
-            <!-- Useful Interactive Reveal Card (Reveals deliverable specs & client pain points on interaction) -->
-            <div id="hero-reveal-card" class="w-full max-w-2xl mx-auto bg-white/95 backdrop-blur-xl border border-zinc-200/90 rounded-2xl p-5 sm:p-6 shadow-xl transition-all duration-300 text-left">
-                <div class="flex items-center justify-between pb-3 mb-3 border-b border-zinc-100">
-                    <div class="flex items-center space-x-2">
-                        <span id="reveal-tag-badge" class="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-blue-50 text-[#4A6FC3] border border-blue-100">
-                            Web Application Sprint
-                        </span>
-                        <span class="text-xs text-zinc-400 font-medium hidden sm:inline">Interactive Blueprint</span>
-                    </div>
-                    <span id="reveal-timeline-badge" class="text-xs font-semibold text-zinc-700 bg-zinc-100 px-2.5 py-1 rounded-full">
-                        14-Day Delivery
-                    </span>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <span class="text-[11px] font-bold text-zinc-400 uppercase tracking-wider block mb-1">Pain Point Solved</span>
-                        <p id="reveal-painpoint" class="text-sm text-zinc-800 font-medium leading-snug">
-                            Eliminates sluggish database queries, brittle frontend state, and slow page loads.
-                        </p>
-                    </div>
-                    <div>
-                        <span class="text-[11px] font-bold text-zinc-400 uppercase tracking-wider block mb-1">Production Deliverable</span>
-                        <p id="reveal-deliverable" class="text-sm text-zinc-800 font-medium leading-snug">
-                            Production React, Next.js, and Node.js web app with sub-second response times.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="mt-4 pt-3 border-t border-zinc-100 flex flex-wrap items-center justify-between gap-2 text-xs">
-                    <span id="reveal-stack" class="text-zinc-500 font-mono">
-                        React • TypeScript • PostgreSQL • Redis
-                    </span>
-                    <a id="reveal-cta-link" href="https://wa.me/254707172370?text=Hi%20Stanley,%20I%20want%20to%20hire%20you%20for%20a%20Web%20Systems%20Sprint" target="_blank" rel="noopener noreferrer" class="font-bold text-[#E55252] hover:underline inline-flex items-center">
-                        Hire for this sprint
-                    </a>
-                </div>
             </div>
 
         </div>
@@ -484,17 +417,17 @@ get_header();
         const el = document.getElementById('hero-animated-painpoint');
         if (!el) return;
         el.style.opacity = '0';
-        el.style.transform = 'translateY(12px)';
+        el.style.transform = 'translateY(8px)';
         setTimeout(() => {
             currentPainPointIndex = (currentPainPointIndex + 1) % painPoints.length;
             el.textContent = painPoints[currentPainPointIndex];
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
-        }, 300);
+        }, 250);
     }
     setInterval(cyclePainPoint, 3200);
 
-    // Interactive Plasticity, Framer & Figma Physics Engine
+    // Interactive Plasticity & Framer Physics Canvas Engine
     class HeroPlasticityEngine {
         constructor(canvasId, cardId) {
             this.canvas = document.getElementById(canvasId);
@@ -504,18 +437,17 @@ get_header();
             this.particles = [];
             this.shockwaves = [];
             this.sparks = [];
-            this.mouse = { x: null, y: null, targetX: null, targetY: null, radius: 180 };
+            this.mouse = { x: null, y: null, radius: 180 };
             this.tilt = { x: 0, y: 0, targetX: 0, targetY: 0 };
-            this.mode = 0; // 0: Web, 1: Bitcoin, 2: Go
             this.time = 0;
             this.animId = null;
             this.isVisible = true;
 
-            this.palettes = [
-                { primary: { r: 74, g: 111, b: 195 }, accent: { r: 229, g: 82, b: 82 }, speed: 1.0 },   // Web
-                { primary: { r: 217, g: 119, b: 6 }, accent: { r: 251, g: 191, b: 36 }, speed: 1.35 },  // Bitcoin
-                { primary: { r: 5, g: 150, b: 105 }, accent: { r: 74, g: 111, b: 195 }, speed: 1.2 }   // Go
-            ];
+            this.palette = {
+                primary: { r: 74, g: 111, b: 195 }, // Cornflower Blue #4A6FC3
+                accent: { r: 229, g: 82, b: 82 },   // Coral Red #E55252
+                speed: 1.0
+            };
 
             this.init();
         }
@@ -571,12 +503,6 @@ get_header();
                     this.mouse.x = x;
                     this.mouse.y = y;
 
-                    // Update CAD HUD coordinates
-                    const hudCoords = document.getElementById('cad-hud-coords');
-                    if (hudCoords) {
-                        hudCoords.textContent = `X: ${Math.round(x).toString().padStart(3, '0')} | Y: ${Math.round(y).toString().padStart(3, '0')}`;
-                    }
-
                     // Compute 3D tilt angles (Framer style spring target)
                     const centerX = this.width / 2;
                     const centerY = this.height / 2;
@@ -620,15 +546,6 @@ get_header();
                             life: 1.0
                         });
                     }
-
-                    // Pulse Reveal Card
-                    const revealCard = document.getElementById('hero-reveal-card');
-                    if (revealCard) {
-                        revealCard.classList.add('ring-2', 'ring-[#E55252]/30');
-                        setTimeout(() => {
-                            revealCard.classList.remove('ring-2', 'ring-[#E55252]/30');
-                        }, 400);
-                    }
                 });
 
                 // Touch handling
@@ -657,78 +574,17 @@ get_header();
             }
         }
 
-        setMode(index) {
-            this.mode = index % this.palettes.length;
-            const data = capabilityData[this.mode];
-
-            // Update mode pills
-            document.querySelectorAll('.mode-pill').forEach((btn, idx) => {
-                if (idx === this.mode) {
-                    btn.classList.add('active', 'bg-white', 'text-zinc-900', 'border-zinc-200', 'shadow-sm');
-                    btn.classList.remove('border-transparent', 'text-zinc-500');
-                } else {
-                    btn.classList.remove('active', 'bg-white', 'text-zinc-900', 'border-zinc-200', 'shadow-sm');
-                    btn.classList.add('border-transparent', 'text-zinc-500');
-                }
-            });
-
-            // Update CAD HUD mode
-            const cadMode = document.getElementById('cad-hud-mode');
-            if (cadMode) {
-                cadMode.textContent = data.modeName;
-            }
-
-            // Update Reveal Card
-            const tagBadge = document.getElementById('reveal-tag-badge');
-            const timelineBadge = document.getElementById('reveal-timeline-badge');
-            const painpointEl = document.getElementById('reveal-painpoint');
-            const deliverableEl = document.getElementById('reveal-deliverable');
-            const stackEl = document.getElementById('reveal-stack');
-            const ctaLink = document.getElementById('reveal-cta-link');
-
-            if (tagBadge && data) {
-                tagBadge.className = `px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider border ${data.tagClass}`;
-                tagBadge.textContent = data.tag;
-            }
-            if (timelineBadge && data) {
-                timelineBadge.textContent = data.timeline;
-            }
-            if (painpointEl && data) {
-                painpointEl.textContent = data.painpoint;
-            }
-            if (deliverableEl && data) {
-                deliverableEl.textContent = data.deliverable;
-            }
-            if (stackEl && data) {
-                stackEl.textContent = data.stack;
-            }
-            if (ctaLink && data) {
-                ctaLink.href = data.ctaUrl;
-                ctaLink.textContent = data.ctaText;
-            }
-
-            // Trigger ripple pulse
-            this.shockwaves.push({
-                x: this.width / 2,
-                y: this.height / 2,
-                radius: 10,
-                maxRadius: 280,
-                alpha: 0.75
-            });
-        }
-
         animate() {
             if (!this.isVisible) {
                 this.animId = null;
                 return;
             }
 
-            this.time += 0.016 * this.palettes[this.mode].speed;
+            this.time += 0.016 * this.palette.speed;
             this.ctx.clearRect(0, 0, this.width, this.height);
 
-            const palette = this.palettes[this.mode];
-            const primary = palette.primary;
-            const accent = palette.accent;
+            const primary = this.palette.primary;
+            const accent = this.palette.accent;
 
             // 1. Damped Spring 3D Tilt on Foreground Card
             if (this.card) {
@@ -738,7 +594,6 @@ get_header();
             }
 
             // 2. Plasticity 3D Curvature NURBS Wave (Parametric Surface Ribbon)
-            const ribbonPoints = [];
             const steps = 60;
             const ribbonY = this.height * 0.52;
             const amp = 35 + 10 * Math.sin(this.time * 1.5);
@@ -752,7 +607,6 @@ get_header();
                 const mouseInfluence = (this.mouse.x !== null) ? Math.exp(-Math.pow((x - this.mouse.x) / 180, 2)) * 40 : 0;
                 const y = ribbonY + wave1 + wave2 - mouseInfluence;
 
-                ribbonPoints.push({ x, y });
                 if (i === 0) this.ctx.moveTo(x, y);
                 else this.ctx.lineTo(x, y);
             }
@@ -863,12 +717,6 @@ get_header();
     }
 
     let plasticityEngine;
-    function setPlasticityMode(idx) {
-        if (plasticityEngine) {
-            plasticityEngine.setMode(idx);
-        }
-    }
-
     document.addEventListener('DOMContentLoaded', () => {
         plasticityEngine = new HeroPlasticityEngine('hero-plasticity-canvas', 'hero-tilt-card');
     });
@@ -879,4 +727,5 @@ get_header();
 
 <?php
 get_footer();
+
 
