@@ -34,8 +34,8 @@
 
         <!-- Connect Action Button -->
         <div>
-            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-zinc-950 bg-emerald-400 hover:bg-emerald-300 transition-colors rounded-full shadow-lg">
-                Connect ⚡
+            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-colors rounded-full shadow-lg">
+                Connect
             </a>
         </div>
     </nav>
