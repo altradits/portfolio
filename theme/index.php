@@ -22,14 +22,16 @@ get_header();
         <canvas id="hero-plasticity-canvas" class="absolute inset-0 z-2 w-full h-full cursor-crosshair"></canvas>
 
         <!-- Hero Foreground Content (Clean, Plain, Direct-Response) -->
-        <div id="hero-tilt-card" class="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center justify-center transition-transform duration-200 ease-out will-change-transform">
+        <div id="hero-tilt-card" class="relative z-10 w-full max-w-5xl mx-auto text-center flex flex-col items-center justify-center transition-transform duration-200 ease-out will-change-transform">
             
-            <!-- Two-Line Animated H1 (Line 1 Constant, Line 2 Action Pain Points) -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-950 mb-8 sm:mb-12 leading-[1.18] text-center w-full max-w-4xl mx-auto flex flex-col items-center select-none">
-                <span class="block text-zinc-950">Websites And Apps That</span>
-                <span class="inline-flex items-center justify-center min-h-[1.28em] mt-1 sm:mt-2">
-                    <span id="hero-animated-painpoint" class="hero-dynamic-text">
-                        Grow Your Business.
+            <!-- Hero Headline (Unchanging prefix on the exact same horizontal level, dynamic action phrase anchored to the right) -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-950 mb-8 sm:mb-12 leading-[1.22] text-center w-full max-w-5xl mx-auto select-none">
+                <span class="inline-flex items-baseline justify-center flex-wrap gap-x-2 sm:gap-x-3">
+                    <span class="text-zinc-950 whitespace-nowrap">Websites And Apps That</span>
+                    <span class="inline-flex items-baseline justify-start text-left min-w-[260px] sm:min-w-[340px] md:min-w-[430px] lg:min-w-[530px]">
+                        <span id="hero-animated-painpoint" class="hero-dynamic-text whitespace-nowrap">
+                            Grow Your Business.
+                        </span>
                     </span>
                 </span>
             </h1>
