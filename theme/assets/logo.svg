@@ -1,37 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 330" width="100%" height="100%">
   <defs>
-    <linearGradient id="altraditsBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5B80D8" />
-      <stop offset="50%" stop-color="#4A6FC3" />
-      <stop offset="100%" stop-color="#3B5EB0" />
+    <!-- Cobalt Wordmark Gradient -->
+    <linearGradient id="altraditsCobalt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="45%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
     </linearGradient>
-    <linearGradient id="altraditsRed" x1="0%" y1="0%" x2="100%" y2="50%">
-      <stop offset="0%" stop-color="#F2636A" />
-      <stop offset="40%" stop-color="#E64F56" />
-      <stop offset="100%" stop-color="#D93840" />
+
+    <!-- Kinetic Crimson Swoosh Gradient -->
+    <linearGradient id="altraditsCrimson" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#FF6B81" />
+      <stop offset="35%" stop-color="#F43F5E" />
+      <stop offset="75%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#BE123C" />
     </linearGradient>
-    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15" />
+
+    <!-- 3D Specular Highlight for Swoosh -->
+    <linearGradient id="swooshShine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.45" />
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Depth Filter -->
+    <filter id="crispShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#040C07" flood-opacity="0.25" />
     </filter>
   </defs>
 
-  <!-- Altradits Typography -->
-  <g id="brand-text" filter="url(#softGlow)">
-    <text x="450" y="165" 
-          font-family="system-ui, -apple-system, 'Plus Jakarta Sans', 'Inter', 'Outfit', 'Segoe UI', Roboto, sans-serif" 
-          font-size="160" 
+  <!-- Typography: Altradits -->
+  <g id="brand-wordmark" filter="url(#crispShadow)">
+    <text x="460" y="172" 
+          font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="168" 
           font-weight="800" 
-          letter-spacing="-2px"
-          fill="url(#altraditsBlue)" 
+          letter-spacing="-3px"
+          fill="url(#altraditsCobalt)" 
           text-anchor="middle">Altradits</text>
   </g>
 
-  <!-- Retraced Mathematical Red Baseline Swoosh -->
-  <!-- Starts under 'l', dips smoothly, crests under 'i', tapers to sharp point under 's' -->
-  <path d="M 230,205 
-           C 275,255 375,302 460,292 
-           C 560,280 670,200 760,210 
-           C 680,205 570,240 480,250 
-           C 400,258 310,230 230,205 Z" 
-        fill="url(#altraditsRed)" />
+  <!-- Polished Aerodynamic Velocity Wave (Swoosh) -->
+  <g id="velocity-swoosh" filter="url(#crispShadow)">
+    <!-- Base Curved Blade -->
+    <path d="M 215,208 
+             C 280,256 385,302 485,294 
+             C 580,286 680,212 768,206 
+             C 695,214 590,254 495,260 
+             C 410,266 315,236 215,208 Z" 
+          fill="url(#altraditsCrimson)" />
+
+    <!-- Specular Highlight Sheen Edge -->
+    <path d="M 235,214 
+             C 300,250 395,288 485,284 
+             C 570,280 665,220 745,208 
+             C 665,216 575,264 490,268 
+             C 410,272 320,244 235,214 Z" 
+          fill="url(#swooshShine)" />
+  </g>
 </svg>

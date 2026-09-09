@@ -1,34 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 370" width="100%" height="100%">
   <defs>
-    <linearGradient id="altraditsBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5B80D8" />
-      <stop offset="50%" stop-color="#4A6FC3" />
-      <stop offset="100%" stop-color="#3B5EB0" />
+    <linearGradient id="altraditsCobalt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="45%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
     </linearGradient>
-    <linearGradient id="altraditsRed" x1="0%" y1="0%" x2="100%" y2="50%">
-      <stop offset="0%" stop-color="#F2636A" />
-      <stop offset="40%" stop-color="#E64F56" />
-      <stop offset="100%" stop-color="#D93840" />
+    <linearGradient id="altraditsCrimson" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#FF6B81" />
+      <stop offset="35%" stop-color="#F43F5E" />
+      <stop offset="75%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#BE123C" />
     </linearGradient>
+    <filter id="badgeShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
   </defs>
 
-  <!-- Solid White Badge Container with Rounded Corners & Soft Shadow -->
-  <rect x="10" y="10" width="920" height="340" rx="36" fill="#FFFFFF" />
+  <!-- Solid White High-Contrast Capsule -->
+  <rect x="15" y="15" width="930" height="340" rx="42" fill="#FFFFFF" filter="url(#badgeShadow)" />
 
   <g transform="translate(20, 20)">
-    <text x="450" y="165" 
-          font-family="system-ui, -apple-system, 'Plus Jakarta Sans', 'Inter', 'Outfit', 'Segoe UI', Roboto, sans-serif" 
-          font-size="160" 
+    <text x="460" y="172" 
+          font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="168" 
           font-weight="800" 
-          letter-spacing="-2px"
-          fill="url(#altraditsBlue)" 
+          letter-spacing="-3px"
+          fill="url(#altraditsCobalt)" 
           text-anchor="middle">Altradits</text>
 
-    <path d="M 230,205 
-             C 275,255 375,302 460,292 
-             C 560,280 670,200 760,210 
-             C 680,205 570,240 480,250 
-             C 400,258 310,230 230,205 Z" 
-          fill="url(#altraditsRed)" />
+    <path d="M 215,208 
+             C 280,256 385,302 485,294 
+             C 580,286 680,212 768,206 
+             C 695,214 590,254 495,260 
+             C 410,266 315,236 215,208 Z" 
+          fill="url(#altraditsCrimson)" />
   </g>
 </svg>
