@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 450" width="100%" height="100%" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
   <defs>
-    <!-- Standalone Open Sans Bold Font Embedding -->
     <style>
       @font-face {
         font-family: 'Open Sans';
@@ -17,11 +16,11 @@
       }
     </style>
 
-    <!-- 3D Dimensional Coral-Red Gradient -->
+    <!-- Ultra-Smooth Coral-Red 3D Volume Gradient -->
     <linearGradient id="swoosh3DGradient" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#FF636B" />
-      <stop offset="40%" stop-color="#E64F56" />
-      <stop offset="80%" stop-color="#D43A42" />
+      <stop offset="35%" stop-color="#E64F56" />
+      <stop offset="75%" stop-color="#D43A42" />
       <stop offset="100%" stop-color="#B32028" />
     </linearGradient>
 
@@ -37,22 +36,22 @@
     <!-- 1. Typography Wordmark: "Altradits" (Title Case, Open Sans Bold, #4A6FC3) -->
     <text x="510" y="194" class="brand-title">Altradits</text>
 
-    <!-- 2. Asymmetric Wave Ribbon Swoosh (Needle Tips + Volumetric Body) -->
+    <!-- 2. Asymmetric Wave Ribbon Swoosh with Strict C1 Continuous Smooth Edges -->
     <g id="coral-swoosh">
       <!-- Base 3D Volume Body -->
-      <path d="M 92.0,238.0 
-               C 197.5,331.8 315.4,358.9 476.6,293.9 
-               C 632.9,219.7 782.0,222.9 924.0,287.0 
-               C 761.9,247.4 684.1,265.0 469.7,380.0 
-               C 312.5,428.8 189.6,352.8 92.0,240.0 Z" 
+      <path d="M 92.00,238.00 
+               C 197.33,335.86 330.61,357.48 479.82,291.85 
+               C 641.38,220.79 774.80,221.96 924.00,287.00 
+               C 743.94,244.42 688.22,272.65 478.88,372.56 
+               C 336.83,440.36 179.36,350.44 92.00,238.00 Z" 
             fill="url(#swoosh3DGradient)" />
 
       <!-- Specular Highlight Contour -->
-      <path d="M 98.0,241.0 
-               C 200.0,332.0 316.0,355.0 476.0,292.0 
-               C 630.0,221.0 778.0,225.0 914.0,284.0 
-               C 765.0,248.0 682.0,268.0 472.0,368.0 
-               C 316.0,412.0 192.0,345.0 98.0,241.0 Z" 
+      <path d="M 98.00,241.00 
+               C 199.00,336.00 331.00,354.00 479.82,290.00 
+               C 638.00,222.00 770.00,224.00 914.00,284.00 
+               C 748.00,246.00 686.00,274.00 478.88,364.00 
+               C 340.00,424.00 185.00,344.00 98.00,241.00 Z" 
             fill="url(#swooshSheen)" />
     </g>
   </g>
