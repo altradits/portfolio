@@ -26,9 +26,9 @@ get_header();
             
             <!-- Two-Line Animated H1 (Line 1 Constant, Line 2 Action Pain Points) -->
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-950 mb-8 sm:mb-12 leading-[1.15] text-center w-full max-w-4xl mx-auto">
-                <span class="block text-zinc-950">High-Performance Software That</span>
+                <span class="block text-zinc-950">Software Engineered To</span>
                 <span id="hero-animated-painpoint" class="block text-[#E55252] mt-1 sm:mt-2 transition-all duration-300 ease-out transform translate-y-0 opacity-100">
-                    Eliminates Server Bottlenecks.
+                    Scale Effortlessly.
                 </span>
             </h1>
 
@@ -357,55 +357,13 @@ get_header();
         if (menu) {
             menu.classList.toggle('hidden');
         }
-    }
-
-    // Capability Data for Interactive Reveal
-    const capabilityData = [
-        {
-            title: "Web Systems",
-            modeName: "Web Engine",
-            tag: "Web Application Sprint",
-            tagClass: "bg-blue-50 text-[#4A6FC3] border-blue-100",
-            timeline: "14-Day Delivery",
-            painpoint: "Eliminates sluggish database queries, brittle frontend state, and slow page loads.",
-            deliverable: "Production React, Next.js, and Node.js web app with sub-second response times.",
-            stack: "React • TypeScript • PostgreSQL • Redis",
-            ctaText: "Hire for this sprint",
-            ctaUrl: "https://wa.me/254707172370?text=Hi%20Stanley,%20I%20want%20to%20hire%20you%20for%20a%20Web%20Systems%20Sprint"
-        },
-        {
-            title: "Bitcoin Rails",
-            modeName: "Bitcoin Rails",
-            tag: "Lightning Payment Rails",
-            tagClass: "bg-amber-50 text-amber-600 border-amber-100",
-            timeline: "7-Day Delivery",
-            painpoint: "Bypasses high merchant fees, slow bank settlements, and chargeback fraud.",
-            deliverable: "Instant 24/7 cross-border settlement using Bitcoin Lightning and M-Pesa APIs.",
-            stack: "Bitcoin LND • BTCPay • Webhooks • Daraja M-Pesa",
-            ctaText: "Hire for this sprint",
-            ctaUrl: "https://wa.me/254707172370?text=Hi%20Stanley,%20I%20want%20to%20hire%20you%20for%20a%20Bitcoin%20Rails%20Sprint"
-        },
-        {
-            title: "Go Services",
-            modeName: "Go Backend",
-            tag: "High-Concurrency Backend",
-            tagClass: "bg-emerald-50 text-emerald-600 border-emerald-100",
-            timeline: "10-Day Delivery",
-            painpoint: "Fixes heavy memory consumption and unscalable synchronous API architectures.",
-            deliverable: "Lean Go microservices handling 50,000+ requests per second with 99.99% uptime.",
-            stack: "Go 1.23 • gRPC • Docker • Linux Kernel Tuning",
-            ctaText: "Hire for this sprint",
-            ctaUrl: "https://wa.me/254707172370?text=Hi%20Stanley,%20I%20want%20to%20hire%20you%20for%20a%20Go%20Backend%20Sprint"
-        }
-    ];
-
     // Two-Line Animated H1 Pain Point Rotator
     const painPoints = [
-        "Eliminates Server Bottlenecks.",
-        "Settles Payments In Milliseconds.",
-        "Scales Without Technical Debt.",
-        "Launches Your MVP In Record Time.",
-        "Protects Your Core Revenue Rails."
+        "Scale Effortlessly.",
+        "Settle Instantly.",
+        "Eliminate Bottlenecks.",
+        "Launch Fast.",
+        "Protect Revenue."
     ];
     let currentPainPointIndex = 0;
     function cyclePainPoint() {
@@ -420,7 +378,7 @@ get_header();
             el.style.transform = 'translateY(0)';
         }, 250);
     }
-    setInterval(cyclePainPoint, 3200);
+    setInterval(cyclePainPoint, 2800);
 
     // Interactive Plasticity & Framer Physics Canvas Engine
     class HeroPlasticityEngine {
