@@ -1,53 +1,775 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-[#080808]">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Christoph Nagel | Web Developer, Photographer & Videographer</title>
-    <meta name="description" content="Christoph Nagel - Web developer, photographer and videographer from Dorsten in the Ruhr area. Code, Camera, Clarity.">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanley Chege Thuita | Full Stack Software Engineer</title>
+    <meta name="description" content="High-performance software engineering, full stack web applications, Bitcoin Lightning payment rails, and high-throughput database architecture.">
+    <meta name="keywords" content="Software Engineer, Full Stack Developer, React, TypeScript, Python, Next.js, Bitcoin Lightning, PostgreSQL, Redis">
+    <link rel="icon" type="image/svg+xml" href="theme/assets/favicon.svg">
+    <!-- Google Fonts: Open Sans & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for instant rendering -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: {
-                            950: '#040405',
-                            900: '#080808',
-                            850: '#0d0e12',
-                            800: '#14151a',
-                            750: '#1b1d24',
-                            700: '#232630',
-                            600: '#323644',
-                        },
-                        accent: {
-                            red: '#ff4b3e',
-                            redGlow: 'rgba(255, 75, 62, 0.2)',
-                            subtle: 'rgba(255, 255, 255, 0.08)',
-                        }
-                    },
-                    fontFamily: {
-                        anton: ['Anton', 'Impact', 'sans-serif'],
-                        sans: ['Manrope', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-                    },
-                    letterSpacing: {
-                        'tighter-condensed': '-0.02em',
-                        'widest-condensed': '0.14em',
+    <link rel="stylesheet" href="theme/style.css">
+</head>
+<body class="bg-[#FAFAFA] text-zinc-900 antialiased selection:bg-[#E55252] selection:text-white overflow-x-hidden min-h-screen flex flex-col">
+
+<!-- Floating Glass Navbar with Seamless Blended Logo -->
+<header class="fixed top-4 sm:top-6 left-0 right-0 z-50 flex justify-center px-4">
+    <nav class="flex items-center justify-between w-full max-w-7xl 2xl:max-w-[1600px] px-5 sm:px-8 py-2.5 sm:py-3 bg-white/90 backdrop-blur-xl border border-zinc-200/80 rounded-full shadow-lg">
+        
+        <!-- Prominent Altradits Brand Logo (Seamlessly Blended) -->
+        <a href="#" class="flex items-center group transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98] py-0.5" aria-label="Altradits Home">
+            <img src="theme/assets/logo.svg" 
+                 onerror="this.onerror=null; this.src='assets/logo.svg'; if(!this.complete || this.naturalWidth === 0){ this.src='theme/assets/logo.png'; }" 
+                 alt="Altradits" 
+                 class="h-9 sm:h-10 md:h-11 lg:h-12 w-auto object-contain block transition-all" />
+        </a>
+
+        <!-- Desktop Navigation Links (Glassmorphic Hover System) -->
+        <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+            <a href="#gigs" class="al-nav-link">Gigs</a>
+            <a href="#expeditions" class="al-nav-link">Expeditions</a>
+            <a href="#network" class="al-nav-link">Network</a>
+            <a href="#shop" class="al-nav-link">Shop</a>
+            <a href="#code" class="al-nav-link">Code</a>
+        </div>
+
+        <!-- Action Button & Mobile Menu Toggle -->
+        <div class="flex items-center space-x-3">
+            <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#E55252] hover:bg-[#ff6e6e] transition-all rounded-full shadow-md hover:shadow-lg hover:scale-105 active:scale-95">
+                Connect
+            </a>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-zinc-700 hover:text-zinc-950 p-1.5 focus:outline-none" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Navigation Dropdown Menu -->
+<div id="mobile-menu" class="fixed inset-x-4 top-20 z-40 hidden md:hidden bg-white/90 backdrop-blur-2xl border border-zinc-200/80 rounded-3xl p-4 shadow-2xl ring-1 ring-black/[0.04]">
+    <div class="flex flex-col space-y-1.5">
+        <a href="#gigs" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Gigs</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">01</span>
+        </a>
+        <a href="#expeditions" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Expeditions</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">02</span>
+        </a>
+        <a href="#network" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Network</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">03</span>
+        </a>
+        <a href="#shop" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Shop</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">04</span>
+        </a>
+        <a href="#code" onclick="toggleMobileMenu()" class="al-mobile-nav-link">
+            <span>Code</span>
+            <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">05</span>
+        </a>
+    </div>
+</div>
+
+<main id="primary" class="site-main flex-1 w-full">
+
+    <!-- HERO SECTION (Figma / Framer / Plasticity Minimalist Interactive Canvas) -->
+    <section id="hero" class="relative min-h-[92vh] sm:min-h-screen w-full bg-[#FAFAFA] flex flex-col items-center justify-center px-4 sm:px-8 lg:px-12 overflow-hidden select-none pt-28 sm:pt-36 pb-16 sm:pb-20">
+        
+        <!-- Subtle Figma Precision Grid Dots -->
+        <div class="absolute inset-0 z-0 opacity-40 pointer-events-none" 
+             style="background-image: radial-gradient(rgba(0,0,0,0.07) 1px, transparent 1px); background-size: 28px 28px;"></div>
+        
+        <!-- Ambient Luminous Scrims -->
+        <div class="absolute inset-0 z-1 bg-gradient-to-b from-white/90 via-white/50 to-[#FAFAFA] pointer-events-none"></div>
+        <div class="absolute inset-0 z-1 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.70)_0%,rgba(255,255,255,0.95)_70%,#FAFAFA_100%)] pointer-events-none"></div>
+
+        <!-- Interactive Plasticity & Framer Physics Canvas (Responds to Hover & Click) -->
+        <canvas id="hero-plasticity-canvas" class="absolute inset-0 z-2 w-full h-full cursor-crosshair"></canvas>
+
+        <!-- Hero Foreground Content (Clean, Plain, Direct-Response) -->
+        <div id="hero-tilt-card" class="relative z-10 w-full max-w-5xl mx-auto text-center flex flex-col items-center justify-center transition-transform duration-200 ease-out will-change-transform">
+            
+            <!-- Hero Headline (Unchanging prefix on the exact same horizontal level, dynamic action phrase anchored to the right) -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-950 mb-8 sm:mb-12 leading-[1.22] text-center w-full max-w-5xl mx-auto select-none">
+                <span class="inline-flex items-baseline justify-center flex-wrap gap-x-2 sm:gap-x-3">
+                    <span class="text-zinc-950 whitespace-nowrap">Websites And Apps That</span>
+                    <span class="inline-flex items-baseline justify-start text-left min-w-[260px] sm:min-w-[340px] md:min-w-[430px] lg:min-w-[530px]">
+                        <span id="hero-animated-painpoint" class="hero-dynamic-text whitespace-nowrap">
+                            Grow Your Business.
+                        </span>
+                    </span>
+                </span>
+            </h1>
+
+            <!-- Minimalist Primary Call to Action -->
+            <div class="flex flex-wrap items-center justify-center gap-4 w-full">
+                <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" 
+                   class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+                    Start Building Today
+                </a>
+                <a href="#code" 
+                   class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-zinc-50 border border-zinc-200/90 text-zinc-900 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-sm">
+                    See Past Work
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 1. ENGINEERING SERVICES SECTION (#gigs - Clean Light Cards) -->
+    <section id="gigs" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-[#FAFAFA]">
+        <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
+                    Engineering Services
+                </h2>
+                <p class="text-zinc-600 text-base sm:text-xl">
+                    You get dedicated engineering sprints with clean architecture.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
+                <!-- Service Card 1 -->
+                <div class="flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 hover:shadow-xl transition-all hover:-translate-y-1.5 shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 text-[#4A6FC3] flex items-center justify-center font-bold text-xl mb-8 shadow-sm">
+                            FS
+                        </div>
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Full Stack Systems</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
+                            Build high-load web applications with React, TypeScript, Python, and Node.js. Your interface loads fast and handles heavy user volume with zero downtime.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-zinc-100 text-xs sm:text-sm text-zinc-500 font-semibold">
+                        React • TypeScript • Python • Next.js
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 hover:shadow-xl transition-all hover:-translate-y-1.5 shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-100 text-amber-600 flex items-center justify-center font-bold text-xl mb-8 shadow-sm">
+                            LN
+                        </div>
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Payment Rail Integration</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
+                            Settle money instantly using Bitcoin Lightning Network and mobile money APIs. Your transactions clear in seconds across borders with minimal fees.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-zinc-100 text-xs sm:text-sm text-zinc-500 font-semibold">
+                        Bitcoin LND • BTCPay • M-Pesa Daraja
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-[#E55252]/50 hover:shadow-xl transition-all hover:-translate-y-1.5 shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl mb-8 shadow-sm">
+                            DB
+                        </div>
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Database And Infrastructure</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
+                            Deploy scalable PostgreSQL databases, Redis cache layers, and Docker containers. Your backend runs with sub-second response times and rock solid security.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-zinc-100 text-xs sm:text-sm text-zinc-500 font-semibold">
+                        PostgreSQL • Redis • Docker • Linux
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. EXPEDITIONS & ENDURANCE SECTION (#expeditions - Crisp Image Grid) -->
+    <section id="expeditions" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-white">
+        <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
+                    Expeditions And Endurance
+                </h2>
+                <p class="text-zinc-600 text-base sm:text-xl">
+                    High-altitude mountain summits and overland endurance routes.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
+                <!-- Card 1 -->
+                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-200/80 bg-white shadow-md hover:shadow-xl transition-all">
+                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-100">
+                        <img src="theme/assets/hero/slide-2-mountain.jpg" alt="Mount Kenya Ascent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-zinc-950 mb-3">Mount Kenya Summit Routes</h3>
+                            <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                                High-altitude speed ascents and technical ridge traverses across extreme terrain. Demanding environments require relentless focus and physical grit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-200/80 bg-white shadow-md hover:shadow-xl transition-all">
+                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-100">
+                        <img src="theme/assets/hero/slide-4-expedition.jpg" alt="Overland Expedition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-zinc-950 mb-3">Cross Country Expeditions</h3>
+                            <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                                Long-distance motorcycle expeditions across remote African corridors. Self-supported navigation through desert tracks and mountain passes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group flex flex-col justify-between h-full rounded-2xl overflow-hidden border border-zinc-200/80 bg-white shadow-md hover:shadow-xl transition-all">
+                    <div class="w-full aspect-[16/10] overflow-hidden bg-zinc-100">
+                        <img src="theme/assets/hero/slide-1-hub.jpg" alt="Trail Marathon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-zinc-950 mb-3">Ultra Endurance Trail Runs</h3>
+                            <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                                50 kilometer and 100 kilometer mountain trail events. Testing human endurance limits through disciplined training and mental stamina.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. NETWORK TELEMETRY SECTION (#network - Clean Light Metric Cards) -->
+    <section id="network" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-[#FAFAFA]">
+        <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
+                    Live Network Telemetry
+                </h2>
+                <p class="text-zinc-600 text-base sm:text-xl">
+                    Direct connections to global payment rails and open source systems.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
+                <div class="flex flex-col justify-center items-center bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#E55252] mb-3">100%</div>
+                    <div class="text-zinc-950 font-bold text-lg sm:text-xl mb-2">Bitcoin Node Verified</div>
+                    <div class="text-zinc-500 text-xs sm:text-sm">Block height verified. Zero failed transactions.</div>
+                </div>
+
+                <div class="flex flex-col justify-center items-center bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-emerald-600 mb-3">24 / 7</div>
+                    <div class="text-zinc-950 font-bold text-lg sm:text-xl mb-2">Lightning Node Active</div>
+                    <div class="text-zinc-500 text-xs sm:text-sm">Active channels open. Routing payments globally.</div>
+                </div>
+
+                <div class="flex flex-col justify-center items-center bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#4A6FC3] mb-3">50+</div>
+                    <div class="text-zinc-950 font-bold text-lg sm:text-xl mb-2">Developer Community</div>
+                    <div class="text-zinc-500 text-xs sm:text-sm">Active builder network across Africa and worldwide.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SHOP & HARDWARE GEAR SECTION (#shop - Light Product Cards) -->
+    <section id="shop" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-white">
+        <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
+                    Equipment And Toolkits
+                </h2>
+                <p class="text-zinc-600 text-base sm:text-xl">
+                    Field-tested gear, developer hardware kits, and vector assets.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
+                <!-- Item 1 -->
+                <div class="flex flex-col justify-between h-full bg-[#FAFAFA] border border-zinc-200/80 rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-lg transition-all">
+                    <div>
+                        <div class="text-xs font-semibold text-[#E55252] uppercase tracking-wider mb-3">Hardware</div>
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Cold Storage Backup Kit</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
+                            Stainless steel seed backup plates and offline signing hardware. Secure your digital wealth with physical defense.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-6 border-t border-zinc-200">
+                        <span class="text-lg sm:text-xl font-bold text-zinc-950">$120 / 180k sats</span>
+                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Order Kit</a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex flex-col justify-between h-full bg-[#FAFAFA] border border-zinc-200/80 rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-lg transition-all">
+                    <div>
+                        <div class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-3">Field Gear</div>
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Expedition Field Pack</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
+                            Lightweight trail running packs, navigation compasses, and solar charging units tested in extreme conditions.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-6 border-t border-zinc-200">
+                        <span class="text-lg sm:text-xl font-bold text-zinc-950">$85 / 130k sats</span>
+                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Order Gear</a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex flex-col justify-between h-full bg-[#FAFAFA] border border-zinc-200/80 rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-lg transition-all">
+                    <div>
+                        <div class="text-xs font-semibold text-[#4A6FC3] uppercase tracking-wider mb-3">Digital Toolkit</div>
+                        <h3 class="text-2xl font-bold text-zinc-950 mb-3">Vector Asset Toolkit</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
+                            Complete scalable SVG and PNG asset bundle for builders. Clean vector geometry and typography standards.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-6 border-t border-zinc-200">
+                        <span class="text-lg sm:text-xl font-bold text-zinc-950">$45 / 70k sats</span>
+                        <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-xs sm:text-sm font-semibold text-white transition-all shadow-md">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CODE REPOSITORIES SECTION (#code - Light Grid Cards) -->
+    <section id="code" class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-[#FAFAFA]">
+        <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-4 tracking-tight">
+                    Public Code Repositories
+                </h2>
+                <p class="text-zinc-600 text-base sm:text-xl">
+                    Inspect live code, audit commits, and clone repositories.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 auto-rows-fr">
+                <a href="https://github.com/altradits/portfolio" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-zinc-300 hover:shadow-lg transition-all hover:-translate-y-1.5 shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono text-xs text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">altradits/portfolio</span>
+                            <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zinc-950 group-hover:text-emerald-600 transition-colors mb-3">portfolio</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                            Core personal portfolio and custom WordPress theme with clean responsive architecture.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-zinc-100 text-xs text-zinc-500 font-semibold">
+                        PHP • HTML • CSS • JavaScript
+                    </div>
+                </a>
+
+                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-zinc-300 hover:shadow-lg transition-all hover:-translate-y-1.5 shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono text-xs text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">altradits/lightning</span>
+                            <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zinc-950 group-hover:text-amber-600 transition-colors mb-3">lightning-gateway</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                            High-speed Bitcoin Lightning payment processor with automated webhook notifications.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-zinc-100 text-xs text-zinc-500 font-semibold">
+                        Python • LND • Fastify
+                    </div>
+                </a>
+
+                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="group flex flex-col justify-between h-full bg-white border border-zinc-200/80 rounded-2xl p-8 sm:p-10 hover:border-zinc-300 hover:shadow-lg transition-all hover:-translate-y-1.5 shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono text-xs text-[#4A6FC3] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">altradits/payments</span>
+                            <span class="text-xs text-zinc-500 font-semibold">GitHub</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zinc-950 group-hover:text-[#4A6FC3] transition-colors mb-3">daraja-mobile-payments</h3>
+                        <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                            Production ready mobile money SDK for instant payment settlements.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-zinc-100 text-xs text-zinc-500 font-semibold">
+                        TypeScript • REST API
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CONTACT SECTION (Light Centered Flex Box) -->
+    <section class="py-24 sm:py-32 px-4 sm:px-8 lg:px-12 w-full border-t border-zinc-200/80 bg-white">
+        <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-zinc-950 mb-6 tracking-tight">
+                Start Your Project Today
+            </h2>
+            <p class="text-lg sm:text-xl text-zinc-600 max-w-xl mx-auto mb-10 leading-relaxed">
+                Reach out directly on WhatsApp or email. You get a direct response within two hours.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 w-full">
+                <a href="https://wa.me/254707172370" target="_blank" rel="noopener noreferrer" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-[#E55252] hover:bg-[#ff6e6e] text-white font-semibold text-sm sm:text-base transition-all shadow-lg hover:scale-105 active:scale-95">
+                    WhatsApp Chat
+                </a>
+                <a href="mailto:stanley@altradits.com" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-zinc-100 border border-zinc-300 text-zinc-900 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-sm">
+                    Send Email
+                </a>
+                <a href="https://github.com/altradits" target="_blank" rel="noopener noreferrer" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-zinc-100 border border-zinc-300 text-zinc-900 font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95 shadow-sm">
+                    GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="py-12 px-4 sm:px-8 lg:px-12 border-t border-zinc-200 bg-white w-full">
+    <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+        <div class="flex items-center space-x-2">
+            <img src="theme/assets/favicon.svg" alt="" class="w-6 h-6 object-contain" />
+            <span class="font-semibold text-zinc-700">Altradits Engineering Syndicate</span>
+        </div>
+        <div>© 2026 Stanley Chege Thuita. All rights reserved.</div>
+    </div>
+</footer>
+
+<script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu) {
+            menu.classList.toggle('hidden');
+        }
+    }
+
+    // Two-Line Animated H1 Pain Point Rotator (Silky Blur + Spring Slide)
+    const painPoints = [
+        "Grow Your Business.",
+        "Never Crash.",
+        "Accept Payments Instantly.",
+        "Launch On Time.",
+        "Turn Visitors Into Customers."
+    ];
+    let currentPainPointIndex = 0;
+    function cyclePainPoint() {
+        const el = document.getElementById('hero-animated-painpoint');
+        if (!el) return;
+        el.classList.add('is-transitioning');
+        setTimeout(() => {
+            currentPainPointIndex = (currentPainPointIndex + 1) % painPoints.length;
+            el.textContent = painPoints[currentPainPointIndex];
+            el.classList.remove('is-transitioning');
+        }, 320);
+    }
+    setInterval(cyclePainPoint, 3000);
+
+    // Interactive Plasticity & Framer Physics Canvas Engine
+    class HeroPlasticityEngine {
+        constructor(canvasId, cardId) {
+            this.canvas = document.getElementById(canvasId);
+            this.card = document.getElementById(cardId);
+            if (!this.canvas) return;
+            this.ctx = this.canvas.getContext('2d');
+            this.particles = [];
+            this.shockwaves = [];
+            this.sparks = [];
+            this.mouse = { x: null, y: null, radius: 180 };
+            this.tilt = { x: 0, y: 0, targetX: 0, targetY: 0 };
+            this.time = 0;
+            this.animId = null;
+            this.isVisible = true;
+
+            this.palette = {
+                primary: { r: 74, g: 111, b: 195 }, // Cornflower Blue #4A6FC3
+                accent: { r: 229, g: 82, b: 82 },   // Coral Red #E55252
+                speed: 1.0
+            };
+
+            this.init();
+        }
+
+        init() {
+            this.resize();
+            this.createParticles();
+            this.bindEvents();
+            this.animate();
+        }
+
+        resize() {
+            const dpr = window.devicePixelRatio || 1;
+            const hero = this.canvas.parentElement;
+            if (!hero) return;
+            const rect = hero.getBoundingClientRect();
+            this.width = rect.width;
+            this.height = rect.height;
+            this.canvas.width = this.width * dpr;
+            this.canvas.height = this.height * dpr;
+            this.ctx.scale(dpr, dpr);
+        }
+
+        createParticles() {
+            this.particles = [];
+            const count = Math.floor(Math.min(75, Math.max(30, (this.width * this.height) / 16000)));
+            for (let i = 0; i < count; i++) {
+                this.particles.push({
+                    x: Math.random() * this.width,
+                    y: Math.random() * this.height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    radius: Math.random() * 2.0 + 1.2,
+                    alpha: Math.random() * 0.45 + 0.3,
+                    pulseSpeed: Math.random() * 0.03 + 0.01,
+                    pulseVal: Math.random() * Math.PI
+                });
+            }
+        }
+
+        bindEvents() {
+            window.addEventListener('resize', () => {
+                this.resize();
+                this.createParticles();
+            });
+
+            const hero = this.canvas.parentElement;
+            if (hero) {
+                hero.addEventListener('mousemove', (e) => {
+                    const rect = this.canvas.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    this.mouse.x = x;
+                    this.mouse.y = y;
+
+                    // Compute 3D tilt angles (Framer style spring target)
+                    const centerX = this.width / 2;
+                    const centerY = this.height / 2;
+                    this.tilt.targetX = ((y - centerY) / centerY) * -5.5; // rotateX
+                    this.tilt.targetY = ((x - centerX) / centerX) * 5.5;  // rotateY
+                });
+
+                hero.addEventListener('mouseleave', () => {
+                    this.mouse.x = null;
+                    this.mouse.y = null;
+                    this.tilt.targetX = 0;
+                    this.tilt.targetY = 0;
+                });
+
+                // Haptic Click Shockwave & Sparks (Plasticity tactile click)
+                hero.addEventListener('click', (e) => {
+                    const rect = this.canvas.getBoundingClientRect();
+                    const clickX = e.clientX - rect.left;
+                    const clickY = e.clientY - rect.top;
+
+                    // Shockwave ring
+                    this.shockwaves.push({
+                        x: clickX,
+                        y: clickY,
+                        radius: 5,
+                        maxRadius: Math.min(300, this.width * 0.35),
+                        alpha: 0.85
+                    });
+
+                    // Kinetic sparks
+                    for (let i = 0; i < 14; i++) {
+                        const angle = Math.random() * Math.PI * 2;
+                        const speed = Math.random() * 5.0 + 2.0;
+                        this.sparks.push({
+                            x: clickX,
+                            y: clickY,
+                            vx: Math.cos(angle) * speed,
+                            vy: Math.sin(angle) * speed,
+                            radius: Math.random() * 2.5 + 1.0,
+                            alpha: 1.0,
+                            life: 1.0
+                        });
+                    }
+                });
+
+                // Touch handling
+                hero.addEventListener('touchmove', (e) => {
+                    if (e.touches.length > 0) {
+                        const rect = this.canvas.getBoundingClientRect();
+                        this.mouse.x = e.touches[0].clientX - rect.left;
+                        this.mouse.y = e.touches[0].clientY - rect.top;
+                    }
+                }, { passive: true });
+
+                hero.addEventListener('touchend', () => {
+                    this.mouse.x = null;
+                    this.mouse.y = null;
+                    this.tilt.targetX = 0;
+                    this.tilt.targetY = 0;
+                });
+
+                const observer = new IntersectionObserver((entries) => {
+                    this.isVisible = entries[0].isIntersecting;
+                    if (this.isVisible && !this.animId) {
+                        this.animate();
+                    }
+                }, { threshold: 0.1 });
+                observer.observe(hero);
+            }
+        }
+
+        animate() {
+            if (!this.isVisible) {
+                this.animId = null;
+                return;
+            }
+
+            this.time += 0.016 * this.palette.speed;
+            this.ctx.clearRect(0, 0, this.width, this.height);
+
+            const primary = this.palette.primary;
+            const accent = this.palette.accent;
+
+            // 1. Damped Spring 3D Tilt on Foreground Card
+            if (this.card) {
+                this.tilt.x += (this.tilt.targetX - this.tilt.x) * 0.12;
+                this.tilt.y += (this.tilt.targetY - this.tilt.y) * 0.12;
+                this.card.style.transform = `perspective(1000px) rotateX(${this.tilt.x.toFixed(2)}deg) rotateY(${this.tilt.y.toFixed(2)}deg)`;
+            }
+
+            // 2. Plasticity 3D Curvature NURBS Wave (Parametric Surface Ribbon)
+            const steps = 60;
+            const ribbonY = this.height * 0.52;
+            const amp = 35 + 10 * Math.sin(this.time * 1.5);
+
+            this.ctx.beginPath();
+            for (let i = 0; i <= steps; i++) {
+                const u = i / steps;
+                const x = u * this.width;
+                const wave1 = Math.sin(u * Math.PI * 3 + this.time * 2.0) * amp;
+                const wave2 = Math.cos(u * Math.PI * 2 - this.time * 1.2) * (amp * 0.5);
+                const mouseInfluence = (this.mouse.x !== null) ? Math.exp(-Math.pow((x - this.mouse.x) / 180, 2)) * 40 : 0;
+                const y = ribbonY + wave1 + wave2 - mouseInfluence;
+
+                if (i === 0) this.ctx.moveTo(x, y);
+                else this.ctx.lineTo(x, y);
+            }
+            this.ctx.strokeStyle = `rgba(${accent.r}, ${accent.g}, ${accent.b}, 0.28)`;
+            this.ctx.lineWidth = 1.8;
+            this.ctx.stroke();
+
+            // 3. Shockwave Rings (Tactile click response)
+            for (let i = this.shockwaves.length - 1; i >= 0; i--) {
+                const sw = this.shockwaves[i];
+                sw.radius += (sw.maxRadius - sw.radius) * 0.08 + 2.5;
+                sw.alpha *= 0.94;
+
+                this.ctx.beginPath();
+                this.ctx.arc(sw.x, sw.y, sw.radius, 0, Math.PI * 2);
+                this.ctx.strokeStyle = `rgba(${accent.r}, ${accent.g}, ${accent.b}, ${sw.alpha})`;
+                this.ctx.lineWidth = 2.0;
+                this.ctx.stroke();
+
+                if (sw.alpha < 0.02 || sw.radius >= sw.maxRadius) {
+                    this.shockwaves.splice(i, 1);
+                }
+            }
+
+            // 4. Kinetic Sparks
+            for (let i = this.sparks.length - 1; i >= 0; i--) {
+                const sp = this.sparks[i];
+                sp.x += sp.vx;
+                sp.y += sp.vy;
+                sp.vx *= 0.95;
+                sp.vy *= 0.95;
+                sp.life -= 0.025;
+                sp.alpha = Math.max(0, sp.life);
+
+                this.ctx.beginPath();
+                this.ctx.arc(sp.x, sp.y, sp.radius * sp.life, 0, Math.PI * 2);
+                this.ctx.fillStyle = `rgba(${accent.r}, ${accent.g}, ${accent.b}, ${sp.alpha})`;
+                this.ctx.fill();
+
+                if (sp.life <= 0) {
+                    this.sparks.splice(i, 1);
+                }
+            }
+
+            // 5. Kinetic Particles & Connecting Mesh
+            for (let i = 0; i < this.particles.length; i++) {
+                const p = this.particles[i];
+
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > this.width) p.vx *= -1;
+                if (p.y < 0 || p.y > this.height) p.vy *= -1;
+
+                p.pulseVal += p.pulseSpeed;
+                const currentR = p.radius + Math.sin(p.pulseVal) * 0.5;
+
+                // Mouse interaction
+                if (this.mouse.x !== null && this.mouse.y !== null) {
+                    const dx = this.mouse.x - p.x;
+                    const dy = this.mouse.y - p.y;
+                    const dist = Math.hypot(dx, dy);
+                    if (dist < this.mouse.radius) {
+                        const force = (1 - dist / this.mouse.radius) * 1.6;
+                        p.x -= (dx / dist) * force;
+                        p.y -= (dy / dist) * force;
+
+                        // Connecting laser ray to cursor
+                        const rayAlpha = (1 - dist / this.mouse.radius) * 0.35;
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(p.x, p.y);
+                        this.ctx.lineTo(this.mouse.x, this.mouse.y);
+                        this.ctx.strokeStyle = `rgba(${primary.r}, ${primary.g}, ${primary.b}, ${rayAlpha})`;
+                        this.ctx.lineWidth = 1;
+                        this.ctx.stroke();
+                    }
+                }
+
+                // Core & Halo
+                this.ctx.beginPath();
+                this.ctx.arc(p.x, p.y, currentR, 0, Math.PI * 2);
+                this.ctx.fillStyle = `rgba(${primary.r}, ${primary.g}, ${primary.b}, ${p.alpha})`;
+                this.ctx.fill();
+            }
+
+            // Mesh Lines
+            const maxDist = 120;
+            for (let i = 0; i < this.particles.length; i++) {
+                for (let j = i + 1; j < this.particles.length; j++) {
+                    const p1 = this.particles[i];
+                    const p2 = this.particles[j];
+                    const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+
+                    if (dist < maxDist) {
+                        const lineAlpha = (1 - dist / maxDist) * 0.18;
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(p1.x, p1.y);
+                        this.ctx.lineTo(p2.x, p2.y);
+                        this.ctx.strokeStyle = `rgba(${primary.r}, ${primary.g}, ${primary.b}, ${lineAlpha})`;
+                        this.ctx.lineWidth = 0.75;
+                        this.ctx.stroke();
                     }
                 }
             }
+
+            this.animId = requestAnimationFrame(() => this.animate());
         }
-    </script>
-    <style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;--bg:#080808;--text:#f4f4f1;--muted:#f4f4f1a6;--line:#ffffff24;--glass:#0e0f12a6}body{color:#f4f4f1;background-color:#080808;font-family:Manrope,sans-serif;overflow-x:hidden}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:#080808}::-webkit-scrollbar-thumb{background:#ffffff2e;border-radius:999px}::-webkit-scrollbar-thumb:hover{background:#ffffff59}.ambient-grain{pointer-events:none;opacity:.038;z-index:99;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");background-repeat:repeat;width:200%;height:200%;position:fixed;inset:-50%}.glass-pill{-webkit-backdrop-filter:blur(16px)saturate(130%);background:#0e0f12a6;border:1px solid #ffffff1f;box-shadow:0 16px 40px #0006}.glass-card{-webkit-backdrop-filter:blur(20px);background:#12131899;border:1px solid #ffffff17}.glass-card:hover{border-color:#fff3;box-shadow:0 20px 50px #0009}</style>
-  <script type="module" crossorigin src="/assets/index-sMgL8P2a.js"></script>
-</head>
-<body class="bg-[#080808] text-[#f4f4f1] antialiased selection:bg-[#ff4b3e] selection:text-white">
-    <div class="ambient-grain" aria-hidden="true"></div>
-    <div id="root"></div>
+    }
+
+    let plasticityEngine;
+    document.addEventListener('DOMContentLoaded', () => {
+        plasticityEngine = new HeroPlasticityEngine('hero-plasticity-canvas', 'hero-tilt-card');
+    });
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        plasticityEngine = new HeroPlasticityEngine('hero-plasticity-canvas', 'hero-tilt-card');
+    }
+</script>
+
 </body>
 </html>
