@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanley Chege Thuita - Open-Source Bitcoin & Protocol CV</title>
+    <title>Stanley Chege Thuita - CV</title>
     <style>
         @page {
             size: letter portrait;
-            margin: 0.22in 0.32in 0.16in 0.32in;
+            margin: 0.42in 0.50in 0.38in 0.50in;
         }
         * {
             box-sizing: border-box;
@@ -16,10 +16,10 @@
         }
         html, body {
             background: #ffffff;
-            color: #111827;
+            color: #1f2937;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-size: 7.9pt;
-            line-height: 1.18;
+            font-size: 8.4pt;
+            line-height: 1.32;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
@@ -32,26 +32,24 @@
         }
         .header {
             text-align: center;
-            border-bottom: 2px solid #0f172a;
-            padding-bottom: 3px;
-            margin-bottom: 3.5px;
+            border-bottom: 1.5px solid #0f172a;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
         }
         .name {
             font-size: 16.5pt;
             font-weight: 800;
             letter-spacing: 0.5px;
-            color: #09090b;
+            color: #0f172a;
             text-transform: uppercase;
-            line-height: 1.05;
-            margin-bottom: 1.5px;
+            line-height: 1.1;
+            margin-bottom: 2px;
         }
         .tagline {
-            font-size: 8.8pt;
-            font-weight: 700;
+            font-size: 8.9pt;
+            font-weight: 600;
             color: #b45309;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
         }
         .contact-bar {
             display: flex;
@@ -59,61 +57,68 @@
             align-items: center;
             flex-wrap: wrap;
             row-gap: 2px;
-            column-gap: 10px;
-            font-size: 7.6pt;
+            column-gap: 12px;
+            font-size: 7.8pt;
             color: #4b5563;
-            font-weight: 500;
         }
         .contact-item {
             white-space: nowrap;
-            display: inline-flex;
-            align-items: center;
-            gap: 3px;
         }
         .contact-bar span.bullet {
-            color: #cbd5e1;
+            color: #9ca3af;
         }
         .contact-bar a {
-            color: #0f172a;
+            color: #1f2937;
             font-weight: 600;
         }
         .contact-bar a:hover {
             color: #b45309;
         }
         .section {
-            margin-bottom: 3.5px;
+            margin-bottom: 7px;
         }
         .section:last-child {
             margin-bottom: 0;
         }
         .section-title {
-            font-size: 8.4pt;
-            font-weight: 800;
+            font-size: 8.8pt;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: #0f172a;
-            border-bottom: 1.2px solid #e2e8f0;
-            padding-bottom: 1px;
-            margin-bottom: 2px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-        .section-title .focus-tag {
-            font-size: 6.6pt;
-            font-weight: 700;
-            color: #b45309;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5px;
+            margin-bottom: 3.5px;
         }
         .objective-text {
-            font-size: 7.7pt;
-            line-height: 1.20;
+            font-size: 8.1pt;
+            line-height: 1.28;
             color: #374151;
-            text-align: justify;
+        }
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .skills-list li {
+            position: relative;
+            padding-left: 10px;
+            margin-bottom: 2px;
+            font-size: 8pt;
+            line-height: 1.26;
+            color: #374151;
+        }
+        .skills-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #b45309;
+            font-weight: bold;
+        }
+        .skills-list strong {
+            color: #0f172a;
         }
         .item {
-            margin-bottom: 2.5px;
+            margin-bottom: 3.5px;
         }
         .item:last-child {
             margin-bottom: 0;
@@ -122,22 +127,22 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.5px;
+            margin-bottom: 1px;
         }
         .item-title {
             font-size: 8.2pt;
             font-weight: 700;
             color: #0f172a;
         }
-        .item-subtitle {
-            font-size: 7.6pt;
-            font-weight: 600;
-            color: #b45309;
+        .item-role {
+            font-size: 7.9pt;
+            font-weight: 500;
+            color: #4b5563;
         }
         .item-date {
-            font-size: 7.4pt;
-            font-weight: 600;
-            color: #4b5563;
+            font-size: 7.6pt;
+            color: #6b7280;
+            white-space: nowrap;
         }
         .bullets {
             list-style: none;
@@ -145,59 +150,21 @@
         }
         .bullets li {
             position: relative;
-            padding-left: 9px;
+            padding-left: 10px;
             margin-bottom: 1px;
-            font-size: 7.6pt;
-            line-height: 1.17;
+            font-size: 7.9pt;
+            line-height: 1.24;
             color: #374151;
         }
         .bullets li::before {
-            content: "▪";
+            content: "•";
             position: absolute;
             left: 0;
             color: #b45309;
-            font-size: 6.2pt;
-            top: -0.5px;
+            font-weight: bold;
         }
         .bullets strong {
             color: #0f172a;
-        }
-        .skills-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .skills-list li {
-            position: relative;
-            padding-left: 9px;
-            margin-bottom: 1px;
-            font-size: 7.6pt;
-            line-height: 1.17;
-            color: #374151;
-        }
-        .skills-list li::before {
-            content: "▪";
-            position: absolute;
-            left: 0;
-            color: #0f172a;
-            font-size: 6.2pt;
-            top: -0.5px;
-        }
-        .skills-list strong {
-            color: #0f172a;
-            font-weight: 700;
-        }
-        .code-tag {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 7.1pt;
-            background: #f1f5f9;
-            padding: 0.5px 2px;
-            border-radius: 2px;
-            color: #0f172a;
-        }
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
         }
     </style>
 </head>
@@ -205,7 +172,7 @@
 
     <header class="header">
         <h1 class="name">Stanley Chege Thuita</h1>
-        <div class="tagline">Open-Source Bitcoin Protocol Engineer & Systems Developer</div>
+        <div class="tagline">Open-Source Bitcoin Developer &amp; Systems Engineer</div>
         <div class="contact-bar">
             <span class="contact-item">Nairobi &amp; Kisumu, Kenya</span>
             <span class="bullet">•</span>
@@ -213,202 +180,173 @@
             <span class="bullet">•</span>
             <span class="contact-item"><a href="tel:+254707172370">+254 707 172 370</a></span>
             <span class="bullet">•</span>
-            <span class="contact-item">GitHub: <a href="https://github.com/altradits">github.com/altradits</a></span>
+            <span class="contact-item">GitHub: <a href="https://github.com/altradits">altradits</a></span>
             <span class="bullet">•</span>
-            <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/stanmobitech/">linkedin.com/in/stanmobitech</a></span>
+            <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/stanmobitech/">stanmobitech</a></span>
             <span class="bullet">•</span>
             <span class="contact-item">Portfolio: <a href="https://altradits-portfolio.vercel.app">altradits-portfolio.vercel.app</a></span>
         </div>
     </header>
 
-    <!-- MISSION & TARGET FOCUS -->
+    <!-- SUMMARY -->
     <section class="section">
-        <div class="section-title">
-            <span>Mission & Target Focus</span>
-            <span class="focus-tag">Open Source Grants • Fellowships • Protocol Development</span>
-        </div>
+        <h2 class="section-title">Professional Summary</h2>
         <p class="objective-text">
-            Systems developer and open-source Bitcoin engineer with a B.Sc. in Mathematics from the University of Nairobi. Specializes in zero-dependency Go architecture, Lightning Network Daemon (LND) gRPC integrations, and sovereign financial infrastructure. Graduate of the Btrust Builders / Africa Free Routing / HRF Lightning Bootcamp and co-founder of BitDevs Kisumu. Actively pursuing full-time upstream Bitcoin Core and Lightning protocol contributions through open-source developer grants (Brink, Btrust, OpenSats, Spiral) and research fellowships.
+            Software engineer with a mathematics degree, specializing in Bitcoin protocol infrastructure, Lightning Network payment rails, and Go backend systems. Graduate of the Btrust Builders cohort and co-founder of BitDevs Kisumu. Seeking open-source developer grants and engineering fellowships to build full-time on Bitcoin core technologies.
         </p>
     </section>
 
-    <!-- TECHNICAL CAPABILITIES -->
+    <!-- TECHNICAL SKILLS -->
     <section class="section">
-        <div class="section-title">
-            <span>Technical Capabilities</span>
-            <span class="focus-tag">ATS-Optimized Categorization</span>
-        </div>
+        <h2 class="section-title">Technical Skills</h2>
         <ul class="skills-list">
-            <li><strong>Bitcoin & Lightning Protocol:</strong> Lightning Network Daemon (LND), LND gRPC client architecture (<span class="code-tag">SendPaymentSync</span>, <span class="code-tag">FeeLimit_Fixed</span>), BOLT-11 HRP invoice parser, LNURL-pay RFC resolution, Regtest cluster automation, <span class="code-tag">bitcoin-cli</span>, <span class="code-tag">OP_RETURN</span> transaction anchoring, WebLN, Cashu / Fedimint architectures.</li>
-            <li><strong>Languages & Frameworks:</strong> Go (Zero-Dependency Architecture, Goroutines, Channels, <span class="code-tag">sync.Mutex</span>/<span class="code-tag">RWMutex</span>, <span class="code-tag">net/http</span>, <span class="code-tag">embed.FS</span>), Ruby on Rails 7.1 (Hotwire Turbo, Solid Queue), TypeScript / React 18, Node.js, SQL (PostgreSQL), Bash/Shell scripting.</li>
-            <li><strong>Applied Cryptography & Infrastructure:</strong> RFC 6238 TOTP, AES-256-GCM AEAD, SHA-256, Ed25519 digital signatures, Docker containerization, Linux systems administration, Git upstream PR workflow (rebase, squash, code review).</li>
+            <li><strong>Bitcoin &amp; Lightning:</strong> LND gRPC, BOLT-11 invoices, LNURL-pay, Regtest automation, bitcoin-cli, OP_RETURN transactions, WebLN.</li>
+            <li><strong>Languages &amp; Frameworks:</strong> Go (concurrency, standard library), Ruby on Rails 7 (Hotwire, Solid Queue), TypeScript, React, SQL (PostgreSQL), Bash.</li>
+            <li><strong>Systems &amp; Security:</strong> Docker, Linux, Git workflows, REST APIs, Webhooks, AES-256-GCM encryption, RFC 6238 TOTP authentication.</li>
         </ul>
     </section>
 
-    <!-- OPEN SOURCE PROTOCOL CONTRIBUTIONS -->
+    <!-- OPEN SOURCE CONTRIBUTIONS -->
     <section class="section">
-        <div class="section-title">
-            <span>Open Source Protocol Contributions & Upstream Pull Requests</span>
-            <span class="focus-tag">Verifiable Impact</span>
-        </div>
+        <h2 class="section-title">Open Source Protocol Contributions</h2>
 
-        <!-- MINMOTO -->
         <div class="item">
             <div class="item-header">
                 <div>
                     <span class="item-title"><a href="https://github.com/minmoto/payment-channels">minmoto/payment-channels</a></span>
-                    <span class="item-subtitle">— Open Source Protocol Contributor</span>
+                    <span class="item-role">— Contributor</span>
                 </div>
-                <span class="item-date">Merged PRs #23, #24, #30 | June 2026 – Present</span>
+                <span class="item-date">June 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Implemented</strong> portable payment channel schemas mapping East African (<a href="https://github.com/minmoto/payment-channels/pull/23">PR #23</a>) and Southern African (<a href="https://github.com/minmoto/payment-channels/pull/24">PR #24</a>) cash corridors using UN M49 geographical classifications and ISO 3166-1/4217 currency standards.</li>
-                <li><strong>Authored</strong> Ethiopian Telebirr payment channel specification (<a href="https://github.com/minmoto/payment-channels/pull/22">PR #22</a>) with E.164 phone number validation and explicit automation enum separation (<span class="code-tag">PaymentChannelAutomation.Manual</span> vs enterprise payout models).</li>
-                <li><strong>Engineered</strong> schema extensions for Western Sahara cash channels (<a href="https://github.com/minmoto/payment-channels/pull/30">PR #30</a>) and continental cash corridor registries utilizing centralized factory constructors.</li>
+                <li>Added payment channel schemas for East and Southern African corridors using UN M49 geography and ISO standards (<a href="https://github.com/minmoto/payment-channels/pull/23">PR #23</a>, <a href="https://github.com/minmoto/payment-channels/pull/24">PR #24</a>).</li>
+                <li>Specified the Ethiopian Telebirr mobile money channel schema with phone validation and payout models (<a href="https://github.com/minmoto/payment-channels/pull/22">PR #22</a>).</li>
+                <li>Created schema extensions for Western Sahara cash corridors using centralized constructors (<a href="https://github.com/minmoto/payment-channels/pull/30">PR #30</a>).</li>
             </ul>
         </div>
 
-        <!-- BTRUST & ECOSYSTEM -->
         <div class="item">
             <div class="item-header">
                 <div>
-                    <span class="item-title"><a href="https://github.com/btrust-builders">Btrust Builders & Lightning Ecosystem</a></span>
-                    <span class="item-subtitle">— Protocol Contributor</span>
+                    <span class="item-title"><a href="https://github.com/btrust-builders">Btrust Builders</a></span>
+                    <span class="item-role">— Cohort Graduate &amp; Contributor</span>
                 </div>
-                <span class="item-date">Merged PRs #139, #186, #133 | June 2026 – Present</span>
+                <span class="item-date">June 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Completed</strong> intensive Addis Ababa Lightning Bootcamp sponsored by Btrust Builders, Africa Free Routing, and Human Rights Foundation (HRF), training on Lightning Network internals, routing gossip, and channel management.</li>
-                <li><strong>Contributed</strong> to African developer milestone registries and open-source portfolio repositories across <a href="https://github.com/btrust-builders/first-open-source-contributions/pull/139">PR #139</a>, <a href="https://github.com/btrust-builders/first-open-source-contributions/pull/186">PR #186</a>, and <a href="https://github.com/btrust-builders/open-source-code-contributions/pull/133">PR #133</a>.</li>
+                <li>Completed the Lightning Bootcamp sponsored by Btrust, Africa Free Routing, and HRF in Addis Ababa, studying routing and channel mechanics.</li>
+                <li>Contributed developer milestone and registry profiles to Btrust open-source repositories (<a href="https://github.com/btrust-builders/first-open-source-contributions/pull/139">PR #139</a>, <a href="https://github.com/btrust-builders/first-open-source-contributions/pull/186">PR #186</a>, <a href="https://github.com/btrust-builders/open-source-code-contributions/pull/133">PR #133</a>).</li>
             </ul>
         </div>
     </section>
 
-    <!-- LIVE DEPLOYMENTS & BITCOIN PROOF OF WORK -->
+    <!-- LIVE DEPLOYMENTS & PROJECTS -->
     <section class="section">
-        <div class="section-title">
-            <span>Live Deployments & Bitcoin Proof Of Work</span>
-            <span class="focus-tag"><a href="https://altradits.vercel.app/#deployments">altradits.vercel.app/#deployments</a></span>
-        </div>
+        <h2 class="section-title">Live Deployments &amp; Projects</h2>
 
-        <!-- BitDevs Kisumu -->
         <div class="item">
             <div class="item-header">
                 <div>
-                    <span class="item-title">BitDevs Kisumu Chapter</span>
-                    <span class="item-subtitle">— Co-Founder & Technical Facilitator</span>
+                    <span class="item-title">YeboBank &amp; Yebente</span>
+                    <span class="item-role">— Community Banking &amp; Settlement</span>
                 </div>
-                <span class="item-date">April 2026 – Present | <a href="https://bitdevs-kisumu.vercel.app">bitdevs-kisumu.vercel.app</a></span>
+                <span class="item-date">June 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Co-founded</strong> Western Kenya's Bitcoin developer community; organized and facilitated inaugural Socratic Seminar #1 at LakeHub Kisumu under the Chatham House Rule.</li>
-                <li><strong>Curated</strong> technical seminar agendas covering Bitcoin Core Pull Requests, BIP proposals (BIP-340/341 Taproot), Layer-2 gossip routing, and onboarding African engineers to protocol contributions.</li>
+                <li>Built a community banking interface (<a href="https://yebobank.vercel.app">yebobank.vercel.app</a>) and payment service (<a href="https://yebente.onrender.com">yebente.onrender.com</a>) bridging mobile money (M-Pesa, Telebirr) to Lightning.</li>
+                <li>Wrote an LND client with macaroon credentials and TLS certificates to handle payments and parse BOLT-11 invoices.</li>
             </ul>
         </div>
 
-        <!-- YeboBank & Yebente -->
         <div class="item">
             <div class="item-header">
                 <div>
-                    <span class="item-title">YeboBank & Yebente Payment Layer</span>
-                    <span class="item-subtitle">— Founder & Systems Architect</span>
+                    <span class="item-title">BitDevs Kisumu</span>
+                    <span class="item-role">— Co-Founder &amp; Facilitator</span>
                 </div>
-                <span class="item-date">June 2026 – Present | <a href="https://yebobank.vercel.app">yebobank.vercel.app</a> | <a href="https://yebente.onrender.com">yebente.onrender.com</a></span>
+                <span class="item-date">April 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Architected</strong> pure-Go community banking engine (<a href="https://yebobank.vercel.app">YeboBank</a>) and settlement layer (<a href="https://yebente.onrender.com">Yebente</a>) executing dual-rail fiat-to-Lightning payment bridging across East African mobile money corridors (M-Pesa, Telebirr, Zaad).</li>
-                <li><strong>Implemented</strong> custom LND gRPC client with <span class="code-tag">MacaroonCredential</span> PerRPCCredentials authentication, TLS x509 cert pool validation, and bounded fee limits (<span class="code-tag">FeeLimit_Fixed</span>) executing synchronized payments via <span class="code-tag">SendPaymentSync</span>.</li>
-                <li><strong>Engineered</strong> custom BOLT-11 HRP invoice decoder parsing multiplier prefixes (<span class="code-tag">m</span>, <span class="code-tag">u</span>, <span class="code-tag">n</span>, <span class="code-tag">p</span>) into satoshis and HTTP client resolving LNURL-pay RFC endpoints with deterministic SHA-256 invoice hashing.</li>
+                <li>Co-founded Western Kenya's Bitcoin developer community (<a href="https://bitdevs-kisumu.vercel.app">bitdevs-kisumu.vercel.app</a>) and hosted technical seminars on Core PRs, BIPs, and Layer-2 routing.</li>
             </ul>
         </div>
 
-        <!-- Buna Beta -->
         <div class="item">
             <div class="item-header">
                 <div>
-                    <span class="item-title">Buna Beta E-Commerce Gateway</span>
-                    <span class="item-subtitle">— Full-Stack & Trade Corridor Architect</span>
+                    <span class="item-title">Buna Beta</span>
+                    <span class="item-role">— E-Commerce Platform</span>
                 </div>
-                <span class="item-date">July 2026 – Present | <a href="https://buna-beta.vercel.app">buna-beta.vercel.app</a></span>
+                <span class="item-date">July 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Built</strong> high-throughput cross-border trade gateway with Ruby on Rails 7.1, Hotwire (Turbo Drive, Turbo Frames, Turbo Streams), Stimulus.js, and PostgreSQL, deployed via serverless containers (<span class="code-tag">Dockerfile.vercel</span>).</li>
-                <li><strong>Implemented</strong> database-backed asynchronous background workers with Solid Queue processing Safaricom Daraja STK Push IPN webhooks, decoupling physical trade logistics from financial settlement layers.</li>
+                <li>Created a trade portal (<a href="https://buna-beta.vercel.app">buna-beta.vercel.app</a>) in Rails 7, using background jobs to process mobile payment webhooks and separate order workflows from settlements.</li>
             </ul>
         </div>
 
-        <!-- AltSocial & TouchType -->
         <div class="item">
             <div class="item-header">
                 <div>
                     <span class="item-title">AltSocial &amp; TouchType</span>
-                    <span class="item-subtitle">— P2P Coordination &amp; Zero-Dependency Go</span>
+                    <span class="item-role">— Web Applications &amp; Go Tools</span>
                 </div>
-                <span class="item-date">April 2026 – Present | <a href="https://altsocial-one.vercel.app">altsocial-one.vercel.app</a></span>
+                <span class="item-date">April 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Engineered</strong> <a href="https://altsocial-one.vercel.app">AltSocial</a> in React 18, TypeScript, Vite, Node.js/Express, and Google Gemini API, integrating Bitcoin Lightning Network payment support for automated subscription billing.</li>
-                <li><strong>Built</strong> <a href="https://touchtype-72i6.onrender.com">TouchType</a> and backend engines in pure Go standard library (zero external dependencies in <span class="code-tag">go.mod</span>), leveraging <span class="code-tag">sync.Mutex</span> concurrency, <span class="code-tag">embed.FS</span> asset packaging, and Docker containerization.</li>
+                <li>Developed a content scheduling tool (<a href="https://altsocial-one.vercel.app">altsocial-one.vercel.app</a>) with React, Node.js, and Lightning subscription billing.</li>
+                <li>Programmed an interactive typing tool (<a href="https://touchtype-72i6.onrender.com">touchtype-72i6.onrender.com</a>) in standard library Go using mutex synchronization and Docker packaging.</li>
             </ul>
         </div>
 
-        <!-- ProofChain & Authentification -->
         <div class="item">
             <div class="item-header">
                 <div>
-                    <span class="item-title">ProofChain & Authentification</span>
-                    <span class="item-subtitle">— Applied Cryptography & Bitcoin Core Regtest Automation</span>
+                    <span class="item-title">ProofChain &amp; Authentification</span>
+                    <span class="item-role">— Security &amp; Regtest Tools</span>
                 </div>
-                <span class="item-date">August 2026 – Present | <a href="https://github.com/altradits">github.com/altradits</a></span>
+                <span class="item-date">August 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Automated</strong> local Bitcoin Core Regtest testbeds using shell automation and <span class="code-tag">bitcoin-cli</span>, scripting 101-block coinbase maturation and anchoring SHA-256 certificate hashes into blockchain transactions via <span class="code-tag">OP_RETURN</span> script outputs.</li>
-                <li><strong>Implemented</strong> RFC 6238 Time-Based One-Time Password (TOTP) from first principles in Go using <span class="code-tag">crypto/hmac</span>, <span class="code-tag">crypto/sha1</span>, big-endian binary buffers, dynamic 4-bit truncation modulo 10^6, and AES-256-GCM authenticated symmetric encryption.</li>
+                <li>Automated local regtest block mining to anchor document hashes onto Bitcoin via OP_RETURN (<a href="https://github.com/altradits">github.com/altradits</a>).</li>
+                <li>Implemented two-factor TOTP authentication and symmetric encryption from scratch in Go.</li>
             </ul>
         </div>
     </section>
 
-    <!-- APPRENTICESHIP & EDUCATION -->
-    <div class="two-col">
-        <section class="section">
-            <div class="section-title">
-                <span>Engineering Apprenticeship</span>
-            </div>
-            <div class="item">
-                <div class="item-header">
-                    <div>
-                        <span class="item-title">Zone01, Kisumu</span>
-                    </div>
-                    <span class="item-date">April 2026 – Present</span>
+    <!-- APPRENTICESHIP -->
+    <section class="section">
+        <h2 class="section-title">Apprenticeship</h2>
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <span class="item-title">Zone01 Kisumu</span>
+                    <span class="item-role">— Software Engineering Apprentice</span>
                 </div>
-                <div class="item-subtitle" style="margin-bottom: 1px;">Software Engineering Apprentice</div>
-                <ul class="bullets">
-                    <li>Completed 158 structured Go challenges mastering concurrency, pointers, channels, and network protocols.</li>
-                    <li>Maintained strict Git hygiene, branch rebasing, and peer review rigor across distributed microservice and CLI projects.</li>
-                    <li>Configured Docker containerization across Linux server production environments.</li>
-                </ul>
+                <span class="item-date">April 2026 – Present</span>
             </div>
-        </section>
+            <ul class="bullets">
+                <li>Completed 158 peer-reviewed programming projects covering Go concurrency, data structures, and containerized deployment.</li>
+                <li>Maintained clean Git workflows with branch rebasing, code reviews, and Linux server management.</li>
+            </ul>
+        </div>
+    </section>
 
-        <section class="section">
-            <div class="section-title">
-                <span>Education & Mathematics</span>
-            </div>
-            <div class="item">
-                <div class="item-header">
-                    <div>
-                        <span class="item-title">University of Nairobi</span>
-                    </div>
-                    <span class="item-date">Graduated Dec 2021</span>
+    <!-- EDUCATION -->
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <span class="item-title">University of Nairobi</span>
+                    <span class="item-role">— B.Sc. in Mathematics (Second Class Upper)</span>
                 </div>
-                <div class="item-subtitle" style="margin-bottom: 1px;">B.Sc. in Mathematics (Second Class Upper)</div>
-                <ul class="bullets">
-                    <li><strong>Rigorous Coursework:</strong> Number Theory, Linear Algebra, Abstract Algebra, Discrete Mathematics, Probability &amp; Statistics, and Graph Theory.</li>
-                    <li><strong>Mathematical Foundations:</strong> Strong theoretical grounding in modular arithmetic, finite fields, discrete structures, and algorithmic complexity.</li>
-                </ul>
+                <span class="item-date">Graduated Dec 2021</span>
             </div>
-        </section>
-    </div>
+            <ul class="bullets">
+                <li>Coursework in number theory, linear algebra, abstract algebra, discrete mathematics, probability, and graph theory.</li>
+            </ul>
+        </div>
+    </section>
 
 </body>
 </html>
