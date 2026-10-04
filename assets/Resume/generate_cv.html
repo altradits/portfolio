@@ -7,7 +7,7 @@
     <style>
         @page {
             size: letter portrait;
-            margin: 0.28in 0.36in 0.20in 0.36in;
+            margin: 0.25in 0.35in 0.18in 0.35in;
         }
         * {
             box-sizing: border-box;
@@ -18,8 +18,8 @@
             background: #ffffff;
             color: #111827;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-size: 8.2pt;
-            line-height: 1.22;
+            font-size: 8.1pt;
+            line-height: 1.20;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
@@ -33,11 +33,11 @@
         .header {
             text-align: center;
             border-bottom: 2px solid #0f172a;
-            padding-bottom: 3.5px;
-            margin-bottom: 4.5px;
+            padding-bottom: 3px;
+            margin-bottom: 4px;
         }
         .name {
-            font-size: 17.5pt;
+            font-size: 17pt;
             font-weight: 800;
             letter-spacing: 0.5px;
             color: #09090b;
@@ -46,7 +46,7 @@
             margin-bottom: 1.5px;
         }
         .tagline {
-            font-size: 9.1pt;
+            font-size: 9pt;
             font-weight: 700;
             color: #b45309;
             text-transform: uppercase;
@@ -58,33 +58,43 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 7px;
-            font-size: 7.9pt;
+            row-gap: 2px;
+            column-gap: 12px;
+            font-size: 7.8pt;
             color: #4b5563;
             font-weight: 500;
         }
-        .contact-bar span {
-            color: #9ca3af;
+        .contact-item {
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .contact-bar span.bullet {
+            color: #cbd5e1;
         }
         .contact-bar a {
-            color: #1f2937;
+            color: #0f172a;
             font-weight: 600;
         }
+        .contact-bar a:hover {
+            color: #b45309;
+        }
         .section {
-            margin-bottom: 4.5px;
+            margin-bottom: 4px;
         }
         .section:last-child {
             margin-bottom: 0;
         }
         .section-title {
-            font-size: 8.7pt;
+            font-size: 8.6pt;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: #0f172a;
             border-bottom: 1.2px solid #e2e8f0;
             padding-bottom: 1px;
-            margin-bottom: 2.5px;
+            margin-bottom: 2px;
             display: flex;
             justify-content: space-between;
             align-items: baseline;
@@ -97,13 +107,13 @@
             letter-spacing: 0.3px;
         }
         .objective-text {
-            font-size: 8.1pt;
-            line-height: 1.25;
+            font-size: 7.9pt;
+            line-height: 1.22;
             color: #374151;
             text-align: justify;
         }
         .item {
-            margin-bottom: 3px;
+            margin-bottom: 2.5px;
         }
         .item:last-child {
             margin-bottom: 0;
@@ -115,17 +125,17 @@
             margin-bottom: 1px;
         }
         .item-title {
-            font-size: 8.6pt;
+            font-size: 8.4pt;
             font-weight: 700;
             color: #0f172a;
         }
         .item-subtitle {
-            font-size: 7.9pt;
+            font-size: 7.8pt;
             font-weight: 600;
             color: #b45309;
         }
         .item-date {
-            font-size: 7.8pt;
+            font-size: 7.6pt;
             font-weight: 600;
             color: #4b5563;
         }
@@ -137,8 +147,8 @@
             position: relative;
             padding-left: 10px;
             margin-bottom: 1px;
-            font-size: 7.9pt;
-            line-height: 1.21;
+            font-size: 7.8pt;
+            line-height: 1.19;
             color: #374151;
         }
         .bullets li::before {
@@ -146,8 +156,11 @@
             position: absolute;
             left: 0;
             color: #b45309;
-            font-size: 6.8pt;
+            font-size: 6.5pt;
             top: -0.5px;
+        }
+        .bullets strong {
+            color: #0f172a;
         }
         .skills-list {
             list-style: none;
@@ -157,8 +170,8 @@
             position: relative;
             padding-left: 10px;
             margin-bottom: 1px;
-            font-size: 7.9pt;
-            line-height: 1.21;
+            font-size: 7.8pt;
+            line-height: 1.19;
             color: #374151;
         }
         .skills-list li::before {
@@ -166,12 +179,20 @@
             position: absolute;
             left: 0;
             color: #0f172a;
-            font-size: 6.8pt;
+            font-size: 6.5pt;
             top: -0.5px;
         }
         .skills-list strong {
             color: #0f172a;
             font-weight: 700;
+        }
+        .code-tag {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 7.3pt;
+            background: #f1f5f9;
+            padding: 0.5px 2.5px;
+            border-radius: 2px;
+            color: #0f172a;
         }
         .two-col {
             display: grid;
@@ -184,17 +205,19 @@
 
     <header class="header">
         <h1 class="name">Stanley Chege Thuita</h1>
-        <div class="tagline">Open-Source Bitcoin Protocol Developer & Community Builder</div>
+        <div class="tagline">Open-Source Bitcoin Protocol Engineer & Systems Developer</div>
         <div class="contact-bar">
-            <span>Location:</span> Nairobi & Kisumu, Kenya
-            <span>•</span>
-            <span>Email:</span> <a href="mailto:altradits@gmail.com">altradits@gmail.com</a>
-            <span>•</span>
-            <span>Phone:</span> <a href="tel:+254707172370">+254 707 172 370</a>
-            <span>•</span>
-            <span>GitHub:</span> <a href="https://github.com/altradits">github.com/altradits</a>
-            <span>•</span>
-            <span>Portfolio:</span> <a href="https://altradits-portfolio.vercel.app">altradits-portfolio.vercel.app</a>
+            <span class="contact-item">Nairobi &amp; Kisumu, Kenya</span>
+            <span class="bullet">•</span>
+            <span class="contact-item"><a href="mailto:altradits@gmail.com">altradits@gmail.com</a></span>
+            <span class="bullet">•</span>
+            <span class="contact-item"><a href="tel:+254707172370">+254 707 172 370</a></span>
+            <span class="bullet">•</span>
+            <span class="contact-item">GitHub: <a href="https://github.com/altradits">github.com/altradits</a></span>
+            <span class="bullet">•</span>
+            <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/stanmobitech/">linkedin.com/in/stanmobitech</a></span>
+            <span class="bullet">•</span>
+            <span class="contact-item">Portfolio: <a href="https://altradits-portfolio.vercel.app">altradits-portfolio.vercel.app</a></span>
         </div>
     </header>
 
@@ -205,120 +228,134 @@
             <span class="focus-tag">Open Source Grants • Fellowships • Protocol Development</span>
         </div>
         <p class="objective-text">
-            Dedicated open-source Bitcoin and Lightning Network developer with formal mathematical training from the University of Nairobi. Engineering sovereign financial infrastructure, zero-dependency Go microservices, and grassroots community banking rails across East Africa. Co-founder and ecosystem lead of BitDevs Kisumu, educating emerging African software engineers on Bitcoin Core and Lightning protocol mechanics. Actively seeking open-source developer grants (Brink, Btrust, OpenSats, Spiral), research fellowships, or protocol volunteer roles to contribute full-time to Bitcoin codebases.
+            Systems developer and open-source Bitcoin engineer with formal mathematical training from the University of Nairobi. Specializes in zero-dependency Go architecture, Lightning Network Daemon (LND) gRPC integrations, and sovereign financial infrastructure. Graduate of the Btrust Builders / Africa Free Routing / HRF Lightning Bootcamp and co-founder of BitDevs Kisumu. Focused on full-time upstream Bitcoin Core and Lightning protocol development through open-source developer grants (Brink, Btrust, OpenSats, Spiral) and research fellowships.
         </p>
     </section>
 
-    <!-- TECHNICAL CAPABILITIES (Clean ATS Categorization, No Bars/Noise) -->
+    <!-- TECHNICAL CAPABILITIES -->
     <section class="section">
         <div class="section-title">
             <span>Technical Capabilities</span>
             <span class="focus-tag">ATS-Optimized Categorization</span>
         </div>
         <ul class="skills-list">
-            <li><strong>Bitcoin & Lightning Infrastructure:</strong> Lightning Network Daemon (LND), LND <span style="font-family: monospace;">RouterServer</span> gRPC, <span style="font-family: monospace;">SendPaymentV2</span>, LNURL-pay, WebLN, BOLT-11 / BOLT-12 invoices, Regtest cluster automation, payment channel state machines, Cashu / Fedimint architectures.</li>
-            <li><strong>Languages & Systems Engineering:</strong> Go (Goroutines, Channels, Zero-Dependency Standard Library Concurrency), SQL (PostgreSQL), Bash scripting, JavaScript (ES6+), Cryptographic Ledger Architecture.</li>
-            <li><strong>DevOps, Security & Tooling:</strong> Docker containerization, Linux systems hardening, Git (rebasing, collaborative PR reviews), CI/CD pipelines, multi-node network simulations.</li>
-            <li><strong>Community & Protocol Leadership:</strong> BitDevs Socratic seminar facilitation, open-source developer mentorship, technical protocol documentation, grassroots circular economy advocacy.</li>
+            <li><strong>Bitcoin & Lightning Protocol:</strong> Lightning Network Daemon (LND), LND gRPC client architecture (<span class="code-tag">SendPaymentSync</span>, <span class="code-tag">FeeLimit_Fixed</span>), BOLT-11 HRP invoice parser, LNURL-pay RFC resolution, Regtest cluster automation, <span class="code-tag">bitcoin-cli</span>, <span class="code-tag">OP_RETURN</span> transaction anchoring, Cashu / Fedimint architectures.</li>
+            <li><strong>Systems & Go Architecture:</strong> Go (Zero-Dependency Standard Library Architecture, Goroutines, Channels, <span class="code-tag">sync.Mutex</span>/<span class="code-tag">RWMutex</span>, <span class="code-tag">context</span>, native <span class="code-tag">net/http</span> multiplexing, <span class="code-tag">embed.FS</span>), SQL (PostgreSQL), Bash/Shell scripting, Linux systems administration, Docker containerization.</li>
+            <li><strong>Applied Mathematics & Cryptography:</strong> Elliptic curve cryptography (<span class="code-tag">secp256k1</span>), Schnorr signatures (BIP-340), Taproot key path & script tree commitment (BIP-341), RFC 6238 TOTP, AES-256-GCM AEAD, SHA-256, Ed25519 digital signatures, finite fields, graph pathfinding (Dijkstra).</li>
+            <li><strong>Protocol Leadership & Tooling:</strong> BitDevs Socratic seminar curation, technical documentation, Git upstream PR workflow (rebase, squash, code review), TTCN-3 test automation toolchains.</li>
         </ul>
     </section>
 
-    <!-- PRIORITIZED: OPEN SOURCE PROTOCOL CONTRIBUTIONS -->
+    <!-- OPEN SOURCE PROTOCOL CONTRIBUTIONS -->
     <section class="section">
         <div class="section-title">
-            <span>Open Source Protocol Contributions</span>
-            <span class="focus-tag">Direct Upstream Impact</span>
+            <span>Open Source Protocol Contributions & Upstream Pull Requests</span>
+            <span class="focus-tag">Verifiable Impact</span>
         </div>
 
-        <!-- Contribution 1: MINMOTO -->
+        <!-- MINMOTO -->
         <div class="item">
             <div class="item-header">
                 <div>
-                    <span class="item-title">MINMOTO (<a href="https://github.com/altradits">minmoto/payment-channels</a>)</span>
-                    <span class="item-subtitle">— Open Source Contributor</span>
+                    <span class="item-title"><a href="https://github.com/minmoto/payment-channels">minmoto/payment-channels</a></span>
+                    <span class="item-subtitle">— Open Source Protocol Contributor</span>
                 </div>
-                <span class="item-date">Merged PRs | June 2026 – Present</span>
+                <span class="item-date">Merged PRs #23, #24, #30 | June 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Authored</strong> and merged pull requests implementing portable cash channel schemas and multi-currency routing matrices for Western European and Central American market corridors.</li>
-                <li><strong>Engineered</strong> fiat gateway registry schemas mapping local currency endpoints to Lightning payment routes, enabling automated fiat-to-sats translation layers.</li>
+                <li><strong>Implemented</strong> portable payment channel schemas mapping East African (<a href="https://github.com/minmoto/payment-channels/pull/23">PR #23</a>) and Southern African (<a href="https://github.com/minmoto/payment-channels/pull/24">PR #24</a>) cash corridors using UN M49 geographical classifications and ISO 3166-1/4217 currency standards.</li>
+                <li><strong>Authored</strong> Ethiopian Telebirr payment channel specification (<a href="https://github.com/minmoto/payment-channels/pull/22">PR #22</a>) with E.164 phone number validation and explicit automation enum separation (<span class="code-tag">PaymentChannelAutomation.Manual</span> vs enterprise payout models).</li>
+                <li><strong>Engineered</strong> schema extensions for Western Sahara cash channels (<a href="https://github.com/minmoto/payment-channels/pull/30">PR #30</a>) and continental cash corridor registries utilizing centralized factory constructors.</li>
             </ul>
         </div>
 
-        <!-- Contribution 2: Btrust Builders & LND -->
+        <!-- BTRUST & ECOSYSTEM -->
         <div class="item">
             <div class="item-header">
                 <div>
-                    <span class="item-title">Btrust Builders & Lightning Network Daemon (LND)</span>
-                    <span class="item-subtitle">— Open Source Contributor</span>
+                    <span class="item-title"><a href="https://github.com/btrust-builders">Btrust Builders & Open Source Repositories</a></span>
+                    <span class="item-subtitle">— Protocol Contributor</span>
                 </div>
-                <span class="item-date">June 2026 – Present</span>
+                <span class="item-date">Merged PRs #139, #186, #133 | June 2026 – Present</span>
             </div>
             <ul class="bullets">
-                <li><strong>Contributed</strong> to African developer registry initiatives, open-source protocol milestones, and Lightning Network Daemon (<span style="font-family: monospace;">lnd</span>) integration testing frameworks (<span style="font-family: monospace;">itest</span> suites).</li>
-                <li><strong>Automated</strong> multi-node Regtest cluster suites simulating HTLC routing and channel state transitions across 25+ adversarial network latency and disconnect scenarios.</li>
-                <li><strong>Audited</strong> LND gRPC endpoints (<span style="font-family: monospace;">SendPaymentV2</span>, <span style="font-family: monospace;">TrackPaymentV2</span>, hold invoice interceptors) to verify payment settlement atomicity under high routing load.</li>
+                <li><strong>Completed</strong> intensive Addis Ababa Lightning Bootcamp sponsored by Btrust Builders, Africa Free Routing, and Human Rights Foundation (HRF), training on Lightning Network internals, routing gossip, and channel management.</li>
+                <li><strong>Contributed</strong> to African developer milestone registries and open-source portfolio repositories across <a href="https://github.com/btrust-builders/first-open-source-contributions/pull/139">PR #139</a>, <a href="https://github.com/btrust-builders/first-open-source-contributions/pull/186">PR #186</a>, and <a href="https://github.com/btrust-builders/open-source-code-contributions/pull/133">PR #133</a>.</li>
+                <li><strong>Authored</strong> merged sensor ingestion and telemetry engine patches for Lake Victoria water monitoring platform (<a href="https://github.com/annanodiyo/chemichemi">chemichemi</a>, PR #1, PR #5) and Windows CI test automation for TTCN-3 toolchains (<a href="https://github.com/nokia/ntt/pull/778">nokia/ntt</a> PR #778).</li>
             </ul>
         </div>
     </section>
 
-    <!-- BITCOIN PROOF OF WORK & COMMUNITY PROJECTS -->
+    <!-- BITCOIN PROOF OF WORK & PRODUCTION CODEBASES -->
     <section class="section">
         <div class="section-title">
-            <span>Bitcoin Community Proof Of Work & Live Platforms</span>
-            <span class="focus-tag">Grassroots Scale</span>
+            <span>Bitcoin Proof Of Work & Production Codebases</span>
+            <span class="focus-tag">Deployed Systems</span>
         </div>
 
-        <!-- Project 1: BitDevs Kisumu -->
+        <!-- BitDevs Kisumu -->
         <div class="item">
             <div class="item-header">
                 <div>
                     <span class="item-title">BitDevs Kisumu Chapter</span>
-                    <span class="item-subtitle">— Co-Founder, Partnerships & Ecosystem Lead</span>
+                    <span class="item-subtitle">— Co-Founder & Technical Facilitator</span>
                 </div>
                 <span class="item-date">April 2026 – Present | <a href="https://bitdevs-kisumu.vercel.app">bitdevs-kisumu.vercel.app</a></span>
             </div>
             <ul class="bullets">
-                <li><strong>Organized</strong> and facilitated 8+ technical Socratic seminars averaging 25+ engineers per session on Bitcoin Core PRs, BIP proposals, and Layer-2 gossip routing.</li>
-                <li><strong>Mentored</strong> 6 African software engineers into open-source Bitcoin contributions and fellowship cohorts, establishing direct talent bridges to global grant committees.</li>
-                <li><strong>Curated</strong> 30+ technical deep-dive agendas analyzing Schnorr/Taproot (BIP-340/341), BIP-21 unified URI schemes, and payment channel liquidity management.</li>
+                <li><strong>Co-founded</strong> Western Kenya's Bitcoin developer community; organized Socratic Seminar #1 at LakeHub Kisumu, facilitating technical discussions on Bitcoin Core PRs, BIPs, and Layer-2 protocol mechanics under the Chatham House Rule.</li>
+                <li><strong>Engineered</strong> zero-JavaScript community documentation portal with Astro and Tailwind CSS; published research on Blockstream Satellite 2.0 dish alignment (Azimuth 82.4°, Elevation 54.8°) for offline Lake Victoria node synchronization.</li>
             </ul>
         </div>
 
-        <!-- Project 2: YeboBank & Yebente -->
+        <!-- YeboBank & Yebente -->
         <div class="item">
             <div class="item-header">
                 <div>
                     <span class="item-title">YeboBank & Yebente</span>
-                    <span class="item-subtitle">— Founder & Lead Architect (Community Banking & Settlement)</span>
+                    <span class="item-subtitle">— Founder & Lead Systems Architect</span>
                 </div>
                 <span class="item-date">June 2026 – Present | <a href="https://yebobank.vercel.app">yebobank.vercel.app</a></span>
             </div>
             <ul class="bullets">
-                <li><strong>Architected</strong> an open-source Bitcoin community bank (<a href="https://yebobank.vercel.app">YeboBank</a>) and settlement layer (<a href="https://yebente.onrender.com">Yebente</a>) connecting regional communities across Kenya, Ethiopia, and Somalia.</li>
-                <li><strong>Engineered</strong> zero-dependency Go microservices achieving &lt;15ms p99 latency and &lt;20MB base resident memory footprint under concurrent load with 99.9% uptime.</li>
-                <li><strong>Integrated</strong> LND gRPC client facilitating rapid USD/sats settlements into regional mobile money systems (M-Pesa, Tele-Birr, Zaad), serving unbanked populations.</li>
-                <li><strong>Decoupled</strong> payment routing technology from cross-border trade logistics (Buna Beta) to guarantee regulatory compliance across East African trade corridors.</li>
+                <li><strong>Architected</strong> pure-Go community banking engine (<a href="https://yebobank.vercel.app">YeboBank</a>) and settlement layer (<a href="https://yebente.onrender.com">Yebente</a>) executing dual-rail fiat-to-Lightning payment bridging across East African mobile money corridors.</li>
+                <li><strong>Implemented</strong> custom LND gRPC client with <span class="code-tag">MacaroonCredential</span> PerRPCCredentials authentication, TLS x509 cert pool validation, and bounded fee limits (<span class="code-tag">FeeLimit_Fixed</span>) executing synchronized payments via <span class="code-tag">SendPaymentSync</span>.</li>
+                <li><strong>Engineered</strong> custom BOLT-11 HRP invoice decoder parsing multiplier prefixes (<span class="code-tag">m</span>, <span class="code-tag">u</span>, <span class="code-tag">n</span>, <span class="code-tag">p</span>) into satoshis and HTTP client resolving LNURL-pay RFC endpoints with deterministic SHA-256 invoice hashing.</li>
             </ul>
         </div>
 
-        <!-- Project 3: Altradits Forge & AltSocial -->
+        <!-- ProofChain & Authentification -->
         <div class="item">
             <div class="item-header">
                 <div>
-                    <span class="item-title">Altradits Forge & AltSocial</span>
-                    <span class="item-subtitle">— Autonomous Go Systems & Peer-to-Peer Coordination</span>
+                    <span class="item-title">ProofChain & Authentification</span>
+                    <span class="item-subtitle">— Applied Cryptography & Bitcoin Core Regtest Automation</span>
                 </div>
-                <span class="item-date">April 2026 – Present | <a href="https://altradits.vercel.app">altradits.vercel.app</a></span>
+                <span class="item-date">August 2026 – Present | <a href="https://github.com/altradits">github.com/altradits</a></span>
             </div>
             <ul class="bullets">
-                <li><strong>Developed</strong> autonomous Go backend microservices and peer-to-peer social coordination interfaces (<a href="https://altsocial-one.vercel.app">AltSocial</a>) supporting uncensorable developer communication.</li>
-                <li><strong>Authored</strong> concurrent HTTP engines utilizing native Go standard library goroutines and channels with zero third-party framework dependencies.</li>
+                <li><strong>Automated</strong> local Bitcoin Core Regtest testbeds using shell automation and <span class="code-tag">bitcoin-cli</span>, scripting 101-block coinbase maturation and anchoring SHA-256 certificate hashes into blockchain transactions via <span class="code-tag">OP_RETURN</span> script outputs.</li>
+                <li><strong>Implemented</strong> RFC 6238 Time-Based One-Time Password (TOTP) from first principles in Go using <span class="code-tag">crypto/hmac</span>, <span class="code-tag">crypto/sha1</span>, big-endian binary buffers, dynamic 4-bit truncation modulo 10^6, and AES-256-GCM authenticated symmetric encryption.</li>
+            </ul>
+        </div>
+
+        <!-- TouchType & AltSocial -->
+        <div class="item">
+            <div class="item-header">
+                <div>
+                    <span class="item-title">TouchType & AltSocial</span>
+                    <span class="item-subtitle">— Zero-Dependency Go Systems</span>
+                </div>
+                <span class="item-date">April 2026 – Present | <a href="https://touchtype-72i6.onrender.com">touchtype-72i6.onrender.com</a></span>
+            </div>
+            <ul class="bullets">
+                <li><strong>Engineered</strong> high-concurrency web services in pure Go standard library with zero external dependencies, leveraging <span class="code-tag">sync.Mutex</span> state synchronization, native <span class="code-tag">net/http</span> multiplexers, and <span class="code-tag">embed.FS</span> asset compilation.</li>
+                <li><strong>Maintained</strong> automated cross-compilation toolchains producing standalone single-binary distributions across Darwin, Linux, and Windows architectures (amd64, arm64).</li>
             </ul>
         </div>
     </section>
 
-    <!-- EXPERIENCE & EDUCATION -->
+    <!-- APPRENTICESHIP & EDUCATION -->
     <div class="two-col">
         <section class="section">
             <div class="section-title">
@@ -331,11 +368,11 @@
                     </div>
                     <span class="item-date">April 2026 – Present</span>
                 </div>
-                <div class="item-subtitle" style="margin-bottom: 2px;">Software Engineering Apprentice</div>
+                <div class="item-subtitle" style="margin-bottom: 1.5px;">Software Engineering Apprentice</div>
                 <ul class="bullets">
-                    <li><strong>Built</strong> backend microservices and CLI developer tools using Go standard library concurrency features.</li>
-                    <li><strong>Maintained</strong> disciplined Git branching strategies and conducted rigorous peer reviews across 40+ engineering projects.</li>
-                    <li><strong>Containerized</strong> distributed applications using Docker across Linux production server environments.</li>
+                    <li>Completed 158 structured Go challenges mastering concurrency, pointers, channels, and network protocols.</li>
+                    <li>Maintained strict Git hygiene, branch rebasing, and peer review rigor across distributed microservice and CLI projects.</li>
+                    <li>Configured Docker containerization across Linux server production environments.</li>
                 </ul>
             </div>
         </section>
@@ -349,12 +386,12 @@
                     <div>
                         <span class="item-title">University of Nairobi</span>
                     </div>
-                    <span class="item-date">December 2021</span>
+                    <span class="item-date">Graduated Dec 2021</span>
                 </div>
-                <div class="item-subtitle" style="margin-bottom: 2px;">B.Sc. in Mathematics (Second Class Upper)</div>
+                <div class="item-subtitle" style="margin-bottom: 1.5px;">B.Sc. in Mathematics (Second Class Upper)</div>
                 <ul class="bullets">
-                    <li><strong>Number Theory & Cryptography:</strong> Applied elliptic curves over finite fields (<span style="font-family: monospace;">secp256k1</span>) and modular arithmetic to Schnorr/Taproot signatures (BIP-340).</li>
-                    <li><strong>Graph Theory & Algorithms:</strong> Applied Dijkstra and probabilistic pathfinding algorithms to Lightning Network payment channel routing and liquidity graphs.</li>
+                    <li><strong>Number Theory & Cryptography:</strong> Applied finite fields and modular arithmetic to <span class="code-tag">secp256k1</span> curves and Taproot key path / script aggregation (BIP-340/341).</li>
+                    <li><strong>Graph Theory & Algorithms:</strong> Analyzed Dijkstra and min-cost flow algorithms for Lightning Network payment channel routing and balance state graphs.</li>
                 </ul>
             </div>
         </section>
