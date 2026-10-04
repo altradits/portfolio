@@ -43,11 +43,77 @@
             }
         }
     </script>
-    <style>:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark;--bg:#080808;--text:#f4f4f1;--muted:#f4f4f1a6;--line:#ffffff24;--glass:#0e0f12a6}body{color:#f4f4f1;background-color:#080808;font-family:Manrope,sans-serif;overflow-x:hidden}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:#080808}::-webkit-scrollbar-thumb{background:#ffffff2e;border-radius:999px}::-webkit-scrollbar-thumb:hover{background:#ffffff59}.ambient-grain{pointer-events:none;opacity:.038;z-index:99;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");background-repeat:repeat;width:200%;height:200%;position:fixed;inset:-50%}.glass-pill{-webkit-backdrop-filter:blur(16px)saturate(130%);background:#0e0f12a6;border:1px solid #ffffff1f;box-shadow:0 16px 40px #0006}.glass-card{-webkit-backdrop-filter:blur(20px);background:#12131899;border:1px solid #ffffff17}.glass-card:hover{border-color:#fff3;box-shadow:0 20px 50px #0009}</style>
-  <script type="module" crossorigin src="/assets/index-sMgL8P2a.js"></script>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #080808;
+            --text: #f4f4f1;
+            --muted: rgba(244, 244, 241, 0.65);
+            --line: rgba(255, 255, 255, 0.14);
+            --glass: rgba(14, 15, 18, 0.65);
+        }
+
+        body {
+            background-color: #080808;
+            color: #f4f4f1;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080808;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        /* Ambient Grain Simulation */
+        .ambient-grain {
+            position: fixed;
+            inset: -50%;
+            width: 200%;
+            height: 200%;
+            pointer-events: none;
+            opacity: 0.038;
+            z-index: 99;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+        }
+
+        /* Glassmorphism helpers */
+        .glass-pill {
+            background: rgba(14, 15, 18, 0.65);
+            backdrop-filter: blur(16px) saturate(130%);
+            -webkit-backdrop-filter: blur(16px) saturate(130%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-card {
+            background: rgba(18, 19, 24, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        }
+    </style>
 </head>
 <body class="bg-[#080808] text-[#f4f4f1] antialiased selection:bg-[#ff4b3e] selection:text-white">
     <div class="ambient-grain" aria-hidden="true"></div>
     <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>

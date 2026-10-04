@@ -1,56 +1,57 @@
 /*
-Theme Name: Altradits Syndicate
+Theme Name: Altradits Precision Syndicate
 Theme URI: https://altradits.com
 Author: Stanley Chege Thuita
-Description: Custom light luxury lifestyle portfolio theme for remote software engineering, extreme expeditions, and Bitcoin rails.
-Version: 3.0.0
+Description: Luxury light theme for Altradits Precision Social Media Automation & Multi-Channel Distribution Syndicate.
+Version: 4.0.0
 License: MIT License
 */
 
 :root {
-  /* Brand Primary: Cornflower / Periwinkle Blue */
+  /* Brand Dominant: Open Sans Wordmark Cornflower Blue */
   --al-blue-light: #6A8EDD;
   --al-blue-core:  #4A6FC3;
   --al-blue-deep:  #3657A8;
   --al-blue-dark:  #253D7A;
-  --al-blue-glow:  rgba(74, 111, 195, 0.25);
+  --al-blue-glow:  rgba(74, 111, 195, 0.20);
 
   /* Brand Action: Vivid Coral-Red (Swoosh Standard) */
-  --al-coral-light: #FF6E75;
+  --al-coral-light: #FF6E6E;
   --al-coral-core:  #E55252;
-  --al-coral-deep:  #C93B3B;
-  --al-coral-dark:  #A32828;
-  --al-coral-glow:  rgba(229, 82, 82, 0.35);
+  --al-coral-deep:  #D43A42;
+  --al-coral-dark:  #B32028;
+  --al-coral-glow:  rgba(229, 82, 82, 0.28);
 
   /* Sound Money: Bitcoin Gold */
   --al-gold-bright: #FBBF24;
   --al-gold-core:   #D97706;
   --al-gold-deep:   #B45309;
-  --al-gold-glow:   rgba(217, 119, 6, 0.25);
+  --al-gold-glow:   rgba(217, 119, 6, 0.20);
 
-  /* Settlement: Emerald Velocity */
+  /* Settlement Rails: Emerald Velocity */
   --al-emerald-light: #34D399;
   --al-emerald-core:  #059669;
   --al-emerald-deep:  #047857;
-  --al-emerald-glow:  rgba(5, 150, 105, 0.25);
+  --al-emerald-glow:  rgba(5, 150, 105, 0.20);
 
-  /* Luxury Light Canvas Foundation */
+  /* Luxury Light Foundation Canvas */
   --al-surface-bg:    #FAFAFA;
   --al-surface-card:  #FFFFFF;
   --al-surface-subtle:#F4F4F5;
-  --al-border-light:  rgba(0, 0, 0, 0.08);
-  --al-border-hover:  rgba(229, 82, 82, 0.40);
+  --al-border-light:  #E4E4E7;
+  --al-border-hover:  #CBD5E1;
 
   /* Typography Colors */
   --al-text-primary:  #09090B;
   --al-text-secondary:#52525B;
   --al-text-muted:    #71717A;
 
-  /* Glass Borders & Shadows */
-  --al-glass-bg:      rgba(255, 255, 255, 0.88);
-  --al-glass-border:  rgba(0, 0, 0, 0.08);
-  --al-shadow-card:   0 4px 20px rgba(0, 0, 0, 0.05);
-  --al-shadow-hover:  0 12px 32px rgba(0, 0, 0, 0.10);
+  /* Glass Effects */
+  --al-glass-bg:      rgba(255, 255, 255, 0.90);
+  --al-glass-border:  rgba(228, 228, 231, 0.85);
+  --al-shadow-sm:     0 2px 8px rgba(0, 0, 0, 0.04);
+  --al-shadow-card:   0 8px 30px rgba(0, 0, 0, 0.05);
+  --al-shadow-hover:  0 16px 40px rgba(0, 0, 0, 0.09);
 }
 
 body {
@@ -62,21 +63,25 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, .font-heading {
+  font-family: 'Open Sans', 'Plus Jakarta Sans', sans-serif;
+}
+
 ::selection {
   background-color: var(--al-coral-core);
   color: #FFFFFF;
 }
 
-/* Glassmorphism Light Capsule Navbar */
+/* Glassmorphism Capsule Navbar */
 .al-glass-nav {
   background: var(--al-glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--al-glass-border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Glassmorphic Navlink Hover System */
+/* Navigation Links */
 .al-nav-link {
   position: relative;
   display: inline-flex;
@@ -85,7 +90,7 @@ body {
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #52525B;
+  color: var(--al-text-secondary);
   border: 1px solid transparent;
   background: transparent;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
@@ -94,93 +99,194 @@ body {
 }
 
 .al-nav-link:hover {
-  color: #09090B;
-  background: rgba(255, 255, 255, 0.92);
+  color: var(--al-text-primary);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-color: rgba(228, 228, 231, 0.95);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 1);
-  transform: translateY(-1px) scale(1.04);
-}
-
-.al-nav-link:active {
-  transform: translateY(0) scale(0.97);
-}
-
-.al-nav-link.active {
-  color: #09090B;
-  background: #FFFFFF;
-  border-color: rgba(228, 228, 231, 1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-/* Glassmorphic Mobile Navlink */
-.al-mobile-nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.85rem 1.15rem;
-  border-radius: 1rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #27272A;
-  border: 1px solid transparent;
-  background: transparent;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  text-decoration: none;
-}
-
-.al-mobile-nav-link:hover {
-  color: #09090B;
-  background: rgba(244, 244, 245, 0.90);
-  border-color: rgba(228, 228, 231, 0.85);
-  transform: translateX(4px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-/* Figma & Plasticity Capability Mode Pills */
-.mode-pill {
-  cursor: pointer;
-  outline: none;
-  font-family: inherit;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
-}
-
-.mode-pill:hover {
+  border-color: var(--al-border-light);
+  box-shadow: var(--al-shadow-sm);
   transform: translateY(-1px);
 }
 
-.mode-pill:active {
-  transform: translateY(0) scale(0.96);
+.al-nav-link:active {
+  transform: translateY(0);
 }
 
-.mode-pill.active {
+.al-nav-link.active {
+  color: var(--al-text-primary);
+  background: #FFFFFF;
+  border-color: var(--al-border-light);
+  box-shadow: var(--al-shadow-sm);
+}
+
+/* Button Standard Constraints (Rule 1: ZERO emojis/icons, text only, bold) */
+.al-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--al-coral-core);
+  color: #FFFFFF;
   font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 0.625rem;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 14px var(--al-coral-glow);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+.al-btn-primary:hover {
+  background-color: var(--al-coral-light);
+  box-shadow: 0 6px 20px rgba(255, 110, 110, 0.45);
+  transform: translateY(-1px);
+}
+
+.al-btn-primary:active {
+  transform: translateY(0);
+  background-color: var(--al-coral-deep);
+}
+
+.al-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.al-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  background-color: #FFFFFF;
+  color: #18181B;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 0.625rem;
+  border: 1px solid var(--al-border-light);
+  box-shadow: var(--al-shadow-sm);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+.al-btn-secondary:hover {
+  background-color: var(--al-surface-subtle);
+  border-color: var(--al-border-hover);
+  color: #09090B;
+  transform: translateY(-1px);
+}
+
+.al-btn-secondary:active {
+  transform: translateY(0);
+}
+
+.al-btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Card Foundations */
+.al-card {
+  background-color: var(--al-surface-card);
+  border: 1px solid var(--al-border-light);
+  border-radius: 1rem;
+  box-shadow: var(--al-shadow-card);
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.al-card:hover {
+  border-color: var(--al-border-hover);
+  box-shadow: var(--al-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Studio Tab Buttons */
+.al-tab-btn {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--al-text-secondary);
+}
+
+.al-tab-btn.active {
+  background-color: #FFFFFF;
+  color: var(--al-blue-core);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--al-border-light);
 }
 
-/* Premium Animated Hero Dynamic Text */
-.hero-dynamic-text {
-  display: inline-block;
-  background: linear-gradient(135deg, #E55252 0%, #FF6E75 45%, #C93B3B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0px);
-  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.32s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform, filter;
-  text-shadow: 0 10px 30px rgba(229, 82, 82, 0.15);
+.al-tab-btn:hover:not(.active) {
+  color: var(--al-text-primary);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
-.hero-dynamic-text.is-transitioning {
-  opacity: 0;
-  transform: translateY(12px) scale(0.96);
-  filter: blur(5px);
+/* Channel Platform Badges */
+.channel-pill {
+  cursor: pointer;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--al-border-light);
+  background-color: #FFFFFF;
+  color: var(--al-text-secondary);
+  transition: all 0.18s ease;
+  user-select: none;
 }
 
+.channel-pill.active {
+  background-color: #09090B;
+  color: #FFFFFF;
+  border-color: #09090B;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
 
+.channel-pill:hover:not(.active) {
+  border-color: var(--al-border-hover);
+  color: var(--al-text-primary);
+}
+
+/* Tone Selection Badges */
+.tone-pill {
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--al-border-light);
+  background-color: var(--al-surface-subtle);
+  color: var(--al-text-secondary);
+  transition: all 0.16s ease;
+}
+
+.tone-pill.active {
+  background-color: var(--al-blue-core);
+  color: #FFFFFF;
+  border-color: var(--al-blue-core);
+}
+
+/* Modal Backdrop */
+.al-modal-overlay {
+  background: rgba(9, 9, 11, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
