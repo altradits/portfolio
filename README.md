@@ -4,11 +4,13 @@
 [![Altradits](https://img.shields.io/badge/Brand-Altradits-E55252)](https://altradits-portfolio.vercel.app)
 [![Bitcoin & Lightning](https://img.shields.io/badge/Bitcoin-Lightning_Network-f7931a?logo=bitcoin)](https://altradits-portfolio.vercel.app)
 [![Go Standard Library](https://img.shields.io/badge/Go-Zero_Dependency-00ADD8?logo=go)](https://altradits-portfolio.vercel.app)
+[![Bitcoin Protocol CV](https://img.shields.io/badge/Curriculum_Vitae-Bitcoin_Protocol-D97706?logo=bitcoin)](assets/Resume/Stanley_Chege_Thuita_Bitcoin_CV.pdf)
 
 > Sovereign Bitcoin Lightning rails, zero-dependency Go microservices, and cross-border settlement infrastructure engineered for African corridors and global open source protocols by **Stanley Chege Thuita**.
 
 🔗 **Live Production Deployment:** [https://altradits-portfolio.vercel.app](https://altradits-portfolio.vercel.app)  
-🌐 **Short Domain Alias:** [https://altradits.vercel.app](https://altradits.vercel.app)
+🌐 **Short Domain Alias:** [https://altradits.vercel.app](https://altradits.vercel.app)  
+📄 **Download Technical CV:** [Stanley_Chege_Thuita_Bitcoin_CV.pdf](assets/Resume/Stanley_Chege_Thuita_Bitcoin_CV.pdf)
 
 ---
 
@@ -45,6 +47,7 @@
 * **Email:** [altradits@gmail.com](mailto:altradits@gmail.com)
 * **Phone / WhatsApp:** [+254 707 172 370](https://wa.me/254707172370)
 * **GitHub:** [@altradits](https://github.com/altradits)
+* **Bitcoin Protocol CV:** [Stanley_Chege_Thuita_Bitcoin_CV.pdf](assets/Resume/Stanley_Chege_Thuita_Bitcoin_CV.pdf)
 
 ---
 
